@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Advanced AI Chatbot with Service-Wise Reach Messages for Jaikvik Technology Pvt Ltd"
+    />
+    <title>Jaikvik Technology AI Chatbot</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /* Chatbot Container */
+      .jkv-chat {
+        display: none;
+        position: fixed;
+        bottom: clamp(16px, 4vw, 24px);
+        right: clamp(16px, 4vw, 24px);
+        background: #ffffff;
+        padding: clamp(12px, 3vw, 16px);
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(26, 42, 68, 0.15);
+        width: clamp(280px, 80%, 360px);
+        z-index: 1000;
+        animation: slideUp 0.6s ease-out;
+        font-family: "Segoe UI", Roboto, sans-serif;
+      }
+
+      /* Header */
+      .jkv-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+
+      .jkv-header h3 {
+        margin: 0;
+        font-size: clamp(16px, 4vw, 18px);
+        font-weight: 600;
+        color: #1a2a44;
+      }
+
+      /* Messages */
+      .jkv-messages {
+        max-height: 320px;
+        overflow-y: auto;
+        margin-bottom: 12px;
+        padding: 12px;
+        border: 1px solid #e0e7ff;
+        border-radius: 8px;
+        background: #f8fafc;
+      }
+
+      .jkv-message {
+        margin: 8px 12px;
+        font-size: 14px;
+        color: #1a2a44;
+        padding: 10px 14px;
+        border-radius: 8px;
+        max-width: 80%;
+        word-wrap: break-word;
+      }
+
+      .jkv-message.user {
+        background: #e0f2fe;
+        margin-left: auto;
+        text-align: right;
+      }
+
+      .jkv-message.bot {
+        background: #e0e7ff;
+        margin-right: auto;
+        text-align: left;
+      }
+
+      .jkv-message.typing {
+        background: #e0e7ff;
+        font-style: italic;
+        color: #4b5e7a;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .jkv-message.typing::before {
+        content: "•••";
+        animation: typing 1s infinite;
+      }
+
+      .jkv-message .timestamp {
+        font-size: 12px;
+        color: #64748b;
+        margin-top: 4px;
+        display: block;
+        text-align: right;
+      }
+
+      .jkv-message a {
+        color: #3b82f6;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .jkv-message a:hover {
+        text-decoration: underline;
+      }
+
+      /* Input */
+      .jkv-input {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .jkv-input select {
+        padding: 10px;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        font-size: 14px;
+        background: #fff;
+        cursor: pointer;
+        max-height: 150px;
+        overflow-y: auto;
+      }
+
+      .jkv-input select:focus {
+        outline: none;
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+      }
+
+      .jkv-input select optgroup {
+        font-weight: 600;
+        color: #1a2a44;
+      }
+
+      .jkv-input input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        font-size: 14px;
+      }
+
+      .jkv-input input:focus {
+        outline: none;
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+      }
+
+      .jkv-input input[aria-invalid="true"] {
+        border-color: #ef4444;
+        background: #fef2f2;
+      }
+
+      .jkv-input .input-row {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .jkv-input button {
+        padding: 10px 16px;
+        background: linear-gradient(90deg, #3b82f6, #60a5fc);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .jkv-input button:hover:not(:disabled) {
+        background: linear-gradient(90deg, #2563eb, #3b82f6);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+      }
+
+      .jkv-input button:disabled {
+        background: #e0e7ff;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+      }
+
+      .jkv-input .reset-btn {
+        background: linear-gradient(90deg, #ef4444, #f87171);
+      }
+
+      .jkv-input .reset-btn:hover:not(:disabled) {
+        background: linear-gradient(90deg, #dc2626, #ef4444);
+      }
+
+      .jkv-input .contact-btn {
+        background: linear-gradient(90deg, #10b981, #34d399);
+      }
+
+      .jkv-input .contact-btn:hover:not(:disabled) {
+        background: linear-gradient(90deg, #059669, #10b981);
+      }
+
+      /* Close Button */
+      .jkv-close {
+        font-size: 24px;
+        cursor: pointer;
+        color: #1a2a44;
+        transition: all 0.3s ease;
+      }
+
+      .jkv-close:hover {
+        color: #3b82f6;
+        transform: rotate(90deg);
+      }
+
+      /* Contact Popup */
+      .jkv-contact-popup-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(26, 42, 68, 0.5);
+        z-index: 1100;
+        animation: fadeIn 0.3s ease-in;
+      }
+
+      .jkv-contact-popup-overlay.show {
+        display: block;
+      }
+
+      .jkv-contact-popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #ffffff;
+        padding: clamp(16px, 4vw, 24px);
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(26, 42, 68, 0.2);
+        width: clamp(280px, 90%, 600px);
+        max-height: 90vh;
+        overflow-y: auto;
+        z-index: 1200;
+        animation: popUp 0.4s ease-out;
+      }
+
+      .jkv-contact-popup-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+      }
+
+      .jkv-contact-popup-header h4 {
+        font-size: clamp(18px, 5vw, 22px);
+        color: #1a2a44;
+        margin: 0;
+      }
+
+      .jkv-contact-popup-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+
+      .jkv-contact-form .input-contain {
+        position: relative;
+        margin-bottom: 16px;
+      }
+
+      .jkv-contact-form input,
+      .jkv-contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        font-size: 14px;
+        background: #f8fafc;
+      }
+
+      .jkv-contact-form input:focus,
+      .jkv-contact-form textarea:focus {
+        outline: none;
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+      }
+
+      .jkv-contact-form input[aria-invalid="true"],
+      .jkv-contact-form textarea[aria-invalid="true"] {
+        border-color: #ef4444;
+        background: #fef2f2;
+      }
+
+      .jkv-contact-form textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .jkv-contact-form label {
+        position: absolute;
+        top: -10px;
+        left: 12px;
+        background: #ffffff;
+        padding: 0 4px;
+        font-size: 12px;
+        color: #4b5e7a;
+      }
+
+      .jkv-contact-form button {
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(90deg, #3b82f6, #60a5fc);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .jkv-contact-form button:hover:not(:disabled) {
+        background: linear-gradient(90deg, #2563eb, #3b82f6);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+      }
+
+      .jkv-contact-form button:disabled {
+        background: #e0e7ff;
+        cursor: not-allowed;
+      }
+
+      .jkv-contact-info {
+        padding: 16px;
+        background: #f8fafc;
+        border-radius: 8px;
+      }
+
+      .jkv-contact-info h5 {
+        font-size: 16px;
+        color: #1a2a44;
+        margin-bottom: 12px;
+      }
+
+      .jkv-contact-info p {
+        font-size: 14px;
+        color: #4b5e7a;
+        margin: 8px 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .jkv-contact-info a {
+        color: #3b82f6;
+        text-decoration: none;
+      }
+
+      .jkv-contact-info a:hover {
+        text-decoration: underline;
+      }
+
+      .jkv-contact-info i {
+        color: #3b82f6;
+        font-size: 16px;
+      }
+
+      .jkv-form-feedback {
+        margin-top: 12px;
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 14px;
+        text-align: center;
+        display: none;
+      }
+
+      .jkv-form-feedback.success {
+        background: #ecfdf5;
+        color: #059669;
+      }
+
+      .jkv-form-feedback.error {
+        background: #fef2f2;
+        color: #dc2626;
+      }
+
+      /* Animations */
+      @keyframes slideUp {
+        from {
+          transform: translateY(100px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+      @keyframes popUp {
+        from {
+          transform: translate(-50%, -50%) scale(0.8);
+          opacity: 0;
+        }
+        to {
+          transform: translate(-50%, -50%) scale(1);
+          opacity: 1;
+        }
+      }
+
+      @keyframes typing {
+        0% {
+          content: "•  ";
+        }
+        33% {
+          content: "•• ";
+        }
+        66% {
+          content: "•••";
+        }
+        100% {
+          content: "•  ";
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 600px) {
+        .jkv-contact-popup-content {
+          grid-template-columns: 1fr;
+        }
+        .jkv-chat {
+          width: clamp(240px, 95%, 320px);
+          padding: 12px;
+        }
+        .jkv-contact-popup {
+          width: clamp(280px, 95%, 360px);
+          padding: 16px;
+        }
+        .jkv-input .input-row {
+          flex-direction: column;
+        }
+        .jkv-input button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Chatbot -->
+    <div
+      id="jkvChat"
+      class="jkv-chat"
+      role="dialog"
+      aria-hidden="true"
+      aria-label="Jaikvik AI Chatbot"
+    >
+      <div class="jkv-header">
+        <h3>Jaikvik Technology Chatbot</h3>
+        <span
+          class="jkv-close"
+          role="button"
+          aria-label="Close chatbot"
+          onclick="hideJkvChat()"
+          >×</span
+        >
+      </div>
+      <div class="jkv-messages" id="jkvMessages" aria-live="polite">
+        <div class="jkv-message bot">
+          Welcome to Jaikvik Technology! How can I assist you today? Select a
+          service or type a message below.
+          <span class="timestamp"></span>
+        </div>
+      </div>
+      <div class="jkv-input">
+        <select
+          id="jkvServiceSelect"
+          onchange="handleServiceSelect()"
+          aria-label="Select a service"
+        >
+          <option value="">Select a service...</option>
+          <optgroup label="Software Development">
+            <option value="Customised Software Development">
+              Customised Software Development
+            </option>
+            <option value="ERP Systems">ERP Systems</option>
+            <option value="CRM Solutions">CRM Solutions</option>
+            <option value="HRM Systems">HRM Systems</option>
+          </optgroup>
+          <optgroup label="Web Development">
+            <option value="Custom Web Development">
+              Custom Web Development
+            </option>
+            <option value="API Integration">API Integration</option>
+          </optgroup>
+          <optgroup label="Mobile Application Development">
+            <option value="Mobile Application Development">
+              Mobile Application Development
+            </option>
+            <option value="iOS & Android Apps">iOS & Android Apps</option>
+            <option value="UI/UX Design">UI/UX Design</option>
+            <option value="App Optimization">App Optimization</option>
+            <option value="Cross-Platform Development">
+              Cross-Platform Development
+            </option>
+            <option value="Maintenance & Support">Maintenance & Support</option>
+          </optgroup>
+          <optgroup label="SEO & Digital Marketing">
+            <option value="Search Engine Optimization">
+              Search Engine Optimization
+            </option>
+            <option value="Content Marketing">Content Marketing</option>
+            <option value="Social Media Campaigns">
+              Social Media Campaigns
+            </option>
+            <option value="PPC Advertising">PPC Advertising</option>
+            <option value="Analytics & Reporting">Analytics & Reporting</option>
+          </optgroup>
+          <optgroup label="Corporate Film Production">
+            <option value="Promotional Videos">Promotional Videos</option>
+            <option value="Corporate Films">Corporate Films</option>
+            <option value="Product Demos">Product Demos</option>
+            <option value="Animation & Motion Graphics">
+              Animation & Motion Graphics
+            </option>
+            <option value="Event Coverage">Event Coverage</option>
+          </optgroup>
+        </select>
+        <div class="input-row">
+          <input
+            type="text"
+            id="jkvInput"
+            placeholder="Type a message..."
+            onkeydown="handleKeyPress(event)"
+            aria-label="Type your message"
+            maxlength="200"
+          />
+          <button
+            id="jkvSubmit"
+            onclick="sendJkvMessage()"
+            aria-label="Send message"
+          >
+            Send
+          </button>
+          <button
+            id="jkvReset"
+            class="reset-btn"
+            onclick="resetConversation()"
+            aria-label="Clear conversation"
+          >
+            Clear
+          </button>
+          <button
+            id="jkvContact"
+            class="contact-btn"
+            onclick="showContactPopup()"
+            aria-label="Open contact form"
+          >
+            Contact
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Popup -->
+    <div
+      id="jkvContactPopupOverlay"
+      class="jkv-contact-popup-overlay"
+      onclick="hideContactPopup()"
+      role="button"
+      aria-label="Close contact popup"
+    >
+      <div
+        id="jkvContactPopup"
+        class="jkv-contact-popup"
+        onclick="event.stopPropagation()"
+        role="dialog"
+        aria-hidden="true"
+        aria-label="Contact Form"
+      >
+        <div class="jkv-contact-popup-header">
+          <h4>Get In Touch</h4>
+          <span
+            class="jkv-close"
+            role="button"
+            aria-label="Close contact popup"
+            onclick="hideContactPopup()"
+            >×</span
+          >
+        </div>
+        <div class="jkv-contact-popup-content">
+          <div class="jkv-contact-form">
+            <form
+              id="jkvContactForm"
+              action="contact-mail.php"
+              method="post"
+              onsubmit="return handleFormSubmit(event)"
+            >
+              <div class="input-contain">
+                <input
+                  type="text"
+                  name="fname"
+                  id="fname"
+                  required
+                  autocomplete="off"
+                  aria-label="Full Name"
+                />
+                <label for="fname">Full Name</label>
+              </div>
+              <div class="input-contain">
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  required
+                  autocomplete="off"
+                  aria-label="Phone Number"
+                />
+                <label for="phone">Phone Number</label>
+              </div>
+              <div class="input-contain">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  autocomplete="off"
+                  aria-label="Email Address"
+                />
+                <label for="email">Email Address</label>
+              </div>
+              <div class="input-contain">
+                <input
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  required
+                  autocomplete="off"
+                  aria-label="Subject"
+                />
+                <label for="subject">Subject</label>
+              </div>
+              <div class="input-contain">
+                <textarea
+                  name="msg"
+                  id="msg"
+                  rows="5"
+                  required
+                  autocomplete="off"
+                  aria-label="Your Message"
+                ></textarea>
+                <label for="msg">Your Message</label>
+              </div>
+              <button type="submit" id="jkvFormSubmit">Send Message</button>
+              <div
+                id="jkvFormFeedback"
+                class="jkv-form-feedback"
+                role="alert"
+              ></div>
+            </form>
+          </div>
+          <div class="jkv-contact-info">
+            <h5>Contact Us</h5>
+            <p>
+              <i class="fa-solid fa-location-dot"></i>
+              <a
+                href="https://www.google.com/maps/place/Jaikvik+Technology+India+Pvt.+Ltd./@28.6208897,77.3799222,17z"
+                target="_blank"
+              >
+                A-82, Sector 63, Noida, UP
+              </a>
+            </p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:info@jaikviktechnology.com"
+                >info@jaikviktechnology.com</a
+              >
+            </p>
+            <p>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919310907227">+91-9310907227</a>
+            </p>
+            <p>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+911204200970">+91-120-4200970</a>
+            </p>
+            <p>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919220826934">+91-9220826934</a>
+            </p>
+            <p>
+              <i class="fa-brands fa-whatsapp"></i>
+              <a href="https://wa.me/+918307802850" target="_blank"
+                >+91-8307802850</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let inactivityTimer;
+      let messageIndex = 0;
+      let conversationContext = [];
+
+      const inactivityMessages = [
+        "Need help with our services?",
+        "Any questions about Jaikvik Technology’s offerings?",
+        "How can I assist you today?",
+        "Curious about our software or digital marketing solutions?",
+        "Interested in our corporate films or mobile apps?",
+        "Got a project in mind? Let’s discuss!",
+      ];
+
+      // AI Responses
+      const aiResponses = {
+        greeting: {
+          keywords: ["hi", "hello", "hey"],
+          priority: 1,
+          responses: [
+            "Hello! Welcome to Jaikvik Technology. How can I assist you today?",
+            "Hey there! Excited to help with your tech needs!",
+            "Hi! Ready to explore our innovative solutions?",
+          ],
+          followUp:
+            "Interested in software development, mobile apps, or digital marketing?",
+          followUpThreshold: 0.3,
+          intent: "casual",
+        },
+        help: {
+          keywords: [
+            "help",
+            "support",
+            "issue",
+            "problem",
+            "maintenance & support",
+          ],
+          priority: 2,
+          responses: [
+            "I’m here to help! Please describe your issue or question.",
+            "Need support? Tell me more about what’s going on.",
+            "Let’s solve that! What’s the problem you’re facing?",
+          ],
+          followUp: "Can you provide more details so I can assist better?",
+          followUpThreshold: 0.5,
+          intent: "support",
+        },
+        contact: {
+          keywords: [
+            "contact",
+            "phone",
+            "email",
+            "address",
+            "reach",
+            "get in touch",
+          ],
+          priority: 3,
+          responses: [
+            `For quick assistance, message us on <a href="https://wa.me/+918307802850" target="_blank">WhatsApp (+918307802850)</a> or email <a href="mailto:info@jaikviktechnology.com">info@jaikviktechnology.com</a>. You can also call <a href="tel:+919310907227">+91-9310907227</a>. Visit us at A-82, Sector 63, Noida, UP.`,
+            `Reach us at <a href="mailto:info@jaikviktechnology.com">info@jaikviktechnology.com</a> or <a href="tel:+919220826934">+91-9220826934</a>. Our office is at A-82, Sector 63, Noida, UP.`,
+            `Contact us via <a href="https://wa.me/+918307802850" target="_blank">WhatsApp (+918307802850)</a> or call <a href="tel:+911204200970">+91-120-4200970</a>. We’re here to help!`,
+          ],
+          followUp:
+            "Would you like to open our contact form for a detailed inquiry?",
+          followUpThreshold: 0.4,
+          intent: "contact",
+        },
+        services: {
+          keywords: [
+            "customised software development",
+            "erp systems",
+            "crm solutions",
+            "hrm systems",
+            "custom web development",
+            "api integration",
+            "mobile application development",
+            "ios & android apps",
+            "ui/ux design",
+            "app optimization",
+            "cross-platform development",
+            "search engine optimization",
+            "content marketing",
+            "social media campaigns",
+            "ppc advertising",
+            "analytics & reporting",
+            "promotional videos",
+            "corporate films",
+            "product demos",
+            "animation & motion graphics",
+            "event coverage",
+            "services",
+            "offerings",
+          ],
+          priority: 2,
+          responses: [
+            "Our [SERVICE] solutions are designed to elevate your business. Want to learn how?",
+            "We specialize in [SERVICE]. Interested in a tailored solution?",
+            "Jaikvik Technology’s [SERVICE] can transform your operations. Let’s discuss!",
+          ],
+          followUp:
+            "Ready to discuss [SERVICE]? Open our contact form or reach out directly!",
+          followUpThreshold: 0.5,
+          intent: "informational",
+          reachMessages: {
+            "customised software development":
+              "For Customised Software Development, reach our experts via <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a> or email <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>. Call <a href='tel:+919310907227'>+91-9310907227</a> or visit us at A-82, Sector 63, Noida, UP.",
+            "erp systems":
+              "Interested in ERP Systems? Contact us on <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a>, email <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>, or call <a href='tel:+919310907227'>+91-9310907227</a>. Visit our office at A-82, Sector 63, Noida, UP.",
+            "crm solutions":
+              "For CRM Solutions, get in touch via <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a> or <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>. Call <a href='tel:+919310907227'>+91-9310907227</a> or stop by A-82, Sector 63, Noida, UP.",
+            "hrm systems":
+              "Explore HRM Systems with us! Reach out on <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a>, email <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>, or call <a href='tel:+919310907227'>+91-9310907227</a>. Visit A-82, Sector 63, Noida, UP.",
+            "custom web development":
+              "For Custom Web Development, contact our team via <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a> or <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>. Call <a href='tel:+919310907227'>+91-9310907227</a> or visit A-82, Sector 63, Noida, UP.",
+            "api integration":
+              "Need API Integration? Reach us on <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a>, email <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>, or call <a href='tel:+919310907227'>+91-9310907227</a>. Visit A-82, Sector 63, Noida, UP.",
+            "mobile application development":
+              "For Mobile Application Development, connect via <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a> or <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>. Call <a href='tel:+919310907227'>+91-9310907227</a> or visit A-82, Sector 63, Noida, UP.",
+            "ios & android apps":
+              "Interested in iOS & Android Apps? Contact us on <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a>, email <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>, or call <a href='tel:+919310907227'>+91-9310907227</a>. Visit A-82, Sector 63, Noida, UP.",
+            "ui/ux design":
+              "For UI/UX Design, reach out via <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a> or <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>. Call <a href='tel:+919310907227'>+91-9310907227</a> or visit A-82, Sector 63, Noida, UP.",
+            "app optimization":
+              "Explore App Optimization with us! Contact <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a>, email <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>, or call <a href='tel:+919310907227'>+91-9310907227</a>. Visit A-82, Sector 63, Noida, UP.",
+            "cross-platform development":
+              "For Cross-Platform Development, reach us on <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a> or <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>. Call <a href='tel:+919310907227'>+91-9310907227</a> or visit A-82, Sector 63, Noida, UP.",
+            "maintenance & support":
+              "Need Maintenance & Support? Contact us via <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a> or <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>. Call <a href='tel:+919310907227'>+91-9310907227</a> or visit A-82, Sector 63, Noida, UP.",
+            "search engine optimization":
+              "For Search Engine Optimization, reach our experts via <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a> or <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>. Call <a href='tel:+919310907227'>+91-9310907227</a> or visit A-82, Sector 63, Noida, UP.",
+            "content marketing":
+              "Interested in Content Marketing? Contact us on <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a>, email <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>, or call <a href='tel:+919310907227'>+91-9310907227</a>. Visit A-82, Sector 63, Noida, UP.",
+            "social media campaigns":
+              "For Social Media Campaigns, get in touch via <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a> or <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>. Call <a href='tel:+919310907227'>+91-9310907227</a> or visit A-82, Sector 63, Noida, UP.",
+            "ppc advertising":
+              "Explore PPC Advertising with us! Reach out on <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a>, email <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>, or call <a href='tel:+919310907227'>+91-9310907227</a>. Visit A-82, Sector 63, Noida, UP.",
+            "analytics & reporting":
+              "For Analytics & Reporting, contact our team via <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a> or <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>. Call <a href='tel:+919310907227'>+91-9310907227</a> or visit A-82, Sector 63, Noida, UP.",
+            "promotional videos":
+              "For Promotional Videos, reach us on <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a> or <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>. Call <a href='tel:+919310907227'>+91-9310907227</a> or visit A-82, Sector 63, Noida, UP.",
+            "corporate films":
+              "Interested in Corporate Films? Contact us via <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a> or <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>. Call <a href='tel:+919310907227'>+91-9310907227</a> or visit A-82, Sector 63, Noida, UP.",
+            "product demos":
+              "For Product Demos, reach out via <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a> or <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>. Call <a href='tel:+919310907227'>+91-9310907227</a> or visit A-82, Sector 63, Noida, UP.",
+            "animation & motion graphics":
+              "Explore Animation & Motion Graphics with us! Contact <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a>, email <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>, or call <a href='tel:+919310907227'>+91-9310907227</a>. Visit A-82, Sector 63, Noida, UP.",
+            "event coverage":
+              "For Event Coverage, reach us on <a href='https://wa.me/+918307802850' target='_blank'>WhatsApp (+918307802850)</a> or <a href='mailto:info@jaikviktechnology.com'>info@jaikviktechnology.com</a>. Call <a href='tel:+919310907227'>+91-9310907227</a> or visit A-82, Sector 63, Noida, UP.",
+          },
+        },
+        about: {
+          keywords: ["who are you", "about", "company", "jaikvik", "about us"],
+          priority: 2,
+          responses: [
+            "Jaikvik Technology Pvt Ltd is a Noida-based leader in software, mobile apps, digital marketing, and corporate film production.",
+            "We’re Jaikvik Technology, delivering innovative solutions from A-82, Sector 63, Noida, UP.",
+            "Jaikvik Technology transforms businesses with cutting-edge tech and creative services.",
+          ],
+          followUp: "Want to know more about our services or contact us?",
+          followUpThreshold: 0.5,
+          intent: "informational",
+        },
+        default: {
+          priority: 0,
+          responses: [
+            "I’m not sure I understood that. Could you clarify?",
+            "Hmm, let’s try again. What do you mean?",
+            "Could you rephrase? I’m here to help!",
+          ],
+          followUp: "Anything else I can assist with?",
+          followUpThreshold: 0.6,
+          intent: "unknown",
+        },
+      };
+
+      // Sanitize HTML
+      function sanitizeHTML(str) {
+        const allowedTags = ["a", "b", "i", "strong", "em"];
+        const allowedAttributes = { a: ["href", "target"] };
+        const div = document.createElement("div");
+        div.innerHTML = str;
+        const sanitizeNode = (node) => {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            const tag = node.tagName.toLowerCase();
+            if (!allowedTags.includes(tag)) {
+              node.replaceWith(...node.childNodes);
+              return;
+            }
+            Array.from(node.attributes).forEach((attr) => {
+              if (!allowedAttributes[tag]?.includes(attr.name)) {
+                node.removeAttribute(attr.name);
+              }
+            });
+            node.childNodes.forEach(sanitizeNode);
+          }
+        };
+        sanitizeNode(div);
+        return div.innerHTML;
+      }
+
+      // Log with timestamp
+      function log(message, type = "info") {
+        console[type](`[${new Date().toLocaleString()}] ${message}`);
+      }
+
+      // Get timestamp
+      function getTimestamp() {
+        return new Date().toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+      }
+
+      // Show chatbot
+      function showJkvChat() {
+        setTimeout(() => {
+          const chat = document.getElementById("jkvChat");
+          if (chat) {
+            chat.setAttribute("aria-hidden", "false");
+            chat.style.display = "block";
+            log("Chatbot displayed");
+            startInactivityTimer();
+            updateTimestamps();
+          } else {
+            log("Chatbot element not found", "error");
+          }
+        }, 10000);
+      }
+
+      // Hide chatbot
+      function hideJkvChat() {
+        const chat = document.getElementById("jkvChat");
+        if (chat) {
+          chat.style.animation = "fadeOut 0.5s ease-out";
+          setTimeout(() => {
+            chat.setAttribute("aria-hidden", "true");
+            chat.style.display = "none";
+          }, 500);
+          clearTimeout(inactivityTimer);
+          log("Chatbot hidden");
+        }
+      }
+
+      // Show contact popup
+      function showContactPopup() {
+        const overlay = document.getElementById("jkvContactPopupOverlay");
+        const popup = document.getElementById("jkvContactPopup");
+        if (overlay && popup) {
+          overlay.setAttribute("aria-hidden", "false");
+          overlay.classList.add("show");
+          popup.setAttribute("aria-hidden", "false");
+          document.getElementById("fname").focus();
+          log("Contact popup opened");
+          trackInteraction("contact_popup_opened");
+          document.addEventListener("keydown", handlePopupEscape);
+        }
+      }
+
+      // Hide contact popup
+      function hideContactPopup() {
+        const overlay = document.getElementById("jkvContactPopupOverlay");
+        const popup = document.getElementById("jkvContactPopup");
+        const feedback = document.getElementById("jkvFormFeedback");
+        if (overlay && popup) {
+          overlay.style.animation = "fadeOut 0.3s ease-out";
+          popup.style.animation = "fadeOut 0.3s ease-out";
+          setTimeout(() => {
+            overlay.setAttribute("aria-hidden", "true");
+            overlay.classList.remove("show");
+            popup.setAttribute("aria-hidden", "true");
+            feedback.style.display = "none";
+            feedback.className = "jkv-form-feedback";
+            document.getElementById("jkvContactForm").reset();
+          }, 300);
+          log("Contact popup closed");
+          document.removeEventListener("keydown", handlePopupEscape);
+        }
+      }
+
+      // Handle Esc key for popup
+      function handlePopupEscape(event) {
+        if (event.key === "Escape") {
+          hideContactPopup();
+        }
+      }
+
+      // Validate form
+      function validateForm(form) {
+        const fname = form.fname.value.trim();
+        const phone = form.phone.value.trim();
+        const email = form.email.value.trim();
+        const subject = form.subject.value.trim();
+        const msg = form.msg.value.trim();
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phoneRegex = /^\+?\d{10,15}$/;
+
+        if (!fname) {
+          form.fname.setAttribute("aria-invalid", "true");
+          return "Full Name is required.";
+        }
+        if (!phone || !phoneRegex.test(phone)) {
+          form.phone.setAttribute("aria-invalid", "true");
+          return "Valid phone number is required.";
+        }
+        if (!email || !emailRegex.test(email)) {
+          form.email.setAttribute("aria-invalid", "true");
+          return "Valid email address is required.";
+        }
+        if (!subject) {
+          form.subject.setAttribute("aria-invalid", "true");
+          return "Subject is required.";
+        }
+        if (!msg) {
+          form.msg.setAttribute("aria-invalid", "true");
+          return "Message is required.";
+        }
+
+        return null;
+      }
+
+      // Handle form submission
+      async function handleFormSubmit(event) {
+        event.preventDefault();
+        const form = event.target;
+        const feedback = document.getElementById("jkvFormFeedback");
+        const submitButton = document.getElementById("jkvFormSubmit");
+
+        // Reset validation
+        form.querySelectorAll("input, textarea").forEach((input) => {
+          input.setAttribute("aria-invalid", "false");
+        });
+
+        // Validate form
+        const error = validateForm(form);
+        if (error) {
+          feedback.textContent = error;
+          feedback.className = "jkv-form-feedback error";
+          feedback.style.display = "block";
+          log("Form validation failed: " + error, "error");
+          trackInteraction("contact_form_error", { error });
+          return false;
+        }
+
+        submitButton.disabled = true;
+        feedback.style.display = "none";
+
+        try {
+          const formData = new FormData(form);
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: { Accept: "application/json" },
+          });
+
+          if (!response.ok) {
+            throw new Error(`Server error: ${response.status}`);
+          }
+
+          feedback.textContent = "Message sent successfully!";
+          feedback.className = "jkv-form-feedback success";
+          feedback.style.display = "block";
+          form.reset();
+          log("Form submitted successfully");
+          trackInteraction("contact_form_submitted");
+          setTimeout(hideContactPopup, 2000);
+        } catch (error) {
+          feedback.textContent = "Failed to send message. Please try again.";
+          feedback.className = "jkv-form-feedback error";
+          feedback.style.display = "block";
+          log("Form submission failed: " + error.message, "error");
+          console.error(error);
+          trackInteraction("contact_form_error", { error: error.message });
+        } finally {
+          submitButton.disabled = false;
+        }
+
+        return false;
+      }
+
+      // Inactivity timer
+      function startInactivityTimer() {
+        clearTimeout(inactivityTimer);
+        inactivityTimer = setTimeout(() => {
+          const messages = document.getElementById("jkvMessages");
+          const botMessage = document.createElement("div");
+          botMessage.className = "jkv-message bot";
+          botMessage.innerHTML = `${sanitizeHTML(
+            inactivityMessages[messageIndex]
+          )}<span class="timestamp">${getTimestamp()}</span>`;
+          messages.appendChild(botMessage);
+          messages.scrollTop = messages.scrollHeight;
+          messageIndex = (messageIndex + 1) % inactivityMessages.length;
+          startInactivityTimer();
+          log("Inactivity message sent: " + inactivityMessages[messageIndex]);
+        }, 15000);
+      }
+
+      // Debounce function
+      function debounce(func, wait) {
+        let timeout;
+        return function (...args) {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => func.apply(this, args), wait);
+        };
+      }
+
+      // Handle key press
+      const handleKeyPress = debounce((event) => {
+        if (event.key === "Enter" && !event.shiftKey) {
+          event.preventDefault();
+          log("Enter key pressed");
+          sendJkvMessage();
+        }
+      }, 100);
+
+      // Handle service select
+      function handleServiceSelect() {
+        const select = document.getElementById("jkvServiceSelect");
+        const input = document.getElementById("jkvInput");
+        const messages = document.getElementById("jkvMessages");
+        const selectedValue = select.value;
+        if (selectedValue && input && messages) {
+          log("Selected service: " + selectedValue);
+          input.value = selectedValue;
+          input.focus();
+
+          // Show user message
+          const userMessage = document.createElement("div");
+          userMessage.className = "jkv-message user";
+          userMessage.innerHTML = `You: ${sanitizeHTML(
+            selectedValue
+          )}<span class="timestamp">${getTimestamp()}</span>`;
+          messages.appendChild(userMessage);
+          messages.scrollTop = messages.scrollHeight;
+
+          // Store user message
+          conversationContext.push({
+            sender: "user",
+            message: selectedValue,
+            category: null,
+          });
+
+          // Show typing indicator
+          showTypingIndicator(messages);
+
+          // Simulate AI delay
+          setTimeout(() => {
+            // Remove typing indicator
+            removeTypingIndicator(messages);
+
+            // Get AI response
+            const { response, category } = getAIResponse(
+              selectedValue,
+              conversationContext
+            );
+
+            // Show bot response
+            const botMessage = document.createElement("div");
+            botMessage.className = "jkv-message bot";
+            botMessage.innerHTML = `Bot: ${response}<span class="timestamp">${getTimestamp()}</span>`;
+            messages.appendChild(botMessage);
+            messages.scrollTop = messages.scrollHeight;
+
+            // Store bot response
+            conversationContext.push({
+              sender: "bot",
+              message: response,
+              category,
+            });
+
+            // Show reach message
+            const reachMessage = getReachMessage(selectedValue);
+            if (reachMessage) {
+              const reachMessageElement = document.createElement("div");
+              reachMessageElement.className = "jkv-message bot";
+              reachMessageElement.innerHTML = `Bot: ${reachMessage}<span class="timestamp">${getTimestamp()}</span>`;
+              messages.appendChild(reachMessageElement);
+              messages.scrollTop = messages.scrollHeight;
+              conversationContext.push({
+                sender: "bot",
+                message: reachMessage,
+                category: "services",
+              });
+              trackInteraction("reach_message_displayed", {
+                service: selectedValue,
+              });
+            }
+
+            trackInteraction("service_selected", { service: selectedValue });
+          }, 1000 + Math.random() * 500);
+
+          select.value = "";
+        }
+      }
+
+      // Reset conversation
+      function resetConversation() {
+        const messages = document.getElementById("jkvMessages");
+        const input = document.getElementById("jkvInput");
+        const submitButton = document.getElementById("jkvSubmit");
+        const initialMessage = document.createElement("div");
+        initialMessage.className = "jkv-message bot";
+        initialMessage.innerHTML = `Welcome to Jaikvik Technology! How can I assist you today? Select a service or type a message below.<span class="timestamp">${getTimestamp()}</span>`;
+        messages.innerHTML = "";
+        messages.appendChild(initialMessage);
+        conversationContext = [];
+        if (input) {
+          input.value = "";
+          input.disabled = false;
+        }
+        if (submitButton) submitButton.disabled = false;
+        startInactivityTimer();
+        log("Conversation reset");
+        trackInteraction("conversation_reset");
+      }
+
+      // Get reach message
+      function getReachMessage(service) {
+        const lowerService = service.toLowerCase();
+        return aiResponses.services.reachMessages[lowerService] || null;
+      }
+
+      // Get AI response
+      function getAIResponse(message, context) {
+        const lowerMessage = message.toLowerCase().trim();
+        let bestMatch = { category: "default", priority: -1 };
+        let responseData;
+
+        for (let key in aiResponses) {
+          // Skip 'default' or entries without keywords
+          if (
+            key === "default" ||
+            !aiResponses[key].keywords ||
+            !Array.isArray(aiResponses[key].keywords)
+          ) {
+            continue;
+          }
+          if (
+            aiResponses[key].keywords.some((keyword) =>
+              lowerMessage.includes(keyword)
+            )
+          ) {
+            if (aiResponses[key].priority > bestMatch.priority) {
+              bestMatch = {
+                category: key,
+                priority: aiResponses[key].priority,
+              };
+            }
+          }
+        }
+
+        responseData = aiResponses[bestMatch.category];
+        let response =
+          responseData.responses[
+            Math.floor(Math.random() * responseData.responses.length)
+          ];
+
+        if (bestMatch.category === "services") {
+          response = response.replace("[SERVICE]", message);
+        }
+
+        if (context.length > 0) {
+          const { category: lastCategory } = context[context.length - 1] || {};
+          const conversationLength = context.filter(
+            (item) => item.sender === "user"
+          ).length;
+          const recentIntents = context
+            .slice(-3)
+            .map((item) => aiResponses[item.category]?.intent || "unknown");
+          const isCasual =
+            recentIntents.includes("casual") &&
+            !recentIntents.includes("support") &&
+            !recentIntents.includes("contact");
+
+          if (
+            lastCategory === bestMatch.category &&
+            Math.random() < responseData.followUpThreshold
+          ) {
+            response = responseData.followUp.replace("[SERVICE]", message);
+          } else if (
+            isCasual &&
+            conversationLength > 2 &&
+            Math.random() < 0.2
+          ) {
+            response = `Loving our chat! Ready to dive into our software, apps, or marketing solutions?`;
+          } else if (conversationLength > 4 && Math.random() < 0.2) {
+            response = `Thanks for chatting! ${responseData.followUp.replace(
+              "[SERVICE]",
+              message
+            )}`;
+          }
+        }
+
+        return { response, category: bestMatch.category };
+      }
+
+      // Show typing indicator
+      function showTypingIndicator(messages) {
+        const typingMessage = document.createElement("div");
+        typingMessage.className = "jkv-message typing";
+        typingMessage.id = "jkvTypingIndicator";
+        typingMessage.textContent = "Bot is thinking";
+        messages.appendChild(typingMessage);
+        messages.scrollTop = messages.scrollHeight;
+        log("Typing indicator shown");
+      }
+
+      // Remove typing indicator
+      function removeTypingIndicator(messages) {
+        const typingMessage = document.getElementById("jkvTypingIndicator");
+        if (typingMessage) {
+          messages.removeChild(typingMessage);
+          log("Typing indicator removed");
+        }
+      }
+
+      // Update timestamps
+      function updateTimestamps() {
+        const timestamps = document.querySelectorAll(
+          ".jkv-message:not(.typing) .timestamp"
+        );
+        timestamps.forEach((timestamp) => {
+          if (!timestamp.textContent.trim()) {
+            timestamp.textContent = getTimestamp();
+          }
+        });
+        log("Timestamps updated");
+      }
+
+      // Track interactions
+      function trackInteraction(event, data = {}) {
+        log(`Analytics event: ${event}, data: ${JSON.stringify(data)}`);
+        // Implement analytics (e.g., send to server)
+      }
+
+      // Send message
+      async function sendJkvMessage() {
+        const input = document.getElementById("jkvInput");
+        const messages = document.getElementById("jkvMessages");
+        const submitButton = document.getElementById("jkvSubmit");
+
+        if (!input || !messages || !submitButton) {
+          log("Missing DOM elements", "error");
+          return;
+        }
+
+        const message = input.value.trim();
+        if (!message) {
+          log("Empty input detected");
+          input.setAttribute("aria-invalid", "true");
+          input.placeholder = "Please enter a message";
+          input.focus();
+          setTimeout(() => {
+            input.setAttribute("aria-invalid", "false");
+            input.placeholder = "Type a message...";
+          }, 2000);
+          return;
+        }
+
+        // Disable input
+        log("Sending message: " + message);
+        input.disabled = true;
+        submitButton.disabled = true;
+
+        // Show user message
+        const userMessage = document.createElement("div");
+        userMessage.className = "jkv-message user";
+        userMessage.innerHTML = `You: ${sanitizeHTML(
+          message
+        )}<span class="timestamp">${getTimestamp()}</span>`;
+        messages.appendChild(userMessage);
+        messages.scrollTop = messages.scrollHeight;
+
+        // Store user message
+        conversationContext.push({ sender: "user", message, category: null });
+
+        // Show typing indicator
+        showTypingIndicator(messages);
+
+        try {
+          // Simulate AI delay
+          await new Promise((resolve, reject) => {
+            const timeout = setTimeout(resolve, 1000 + Math.random() * 500);
+            setTimeout(() => reject(new Error("Response timeout")), 8000);
+          });
+
+          // Remove typing indicator
+          removeTypingIndicator(messages);
+
+          // Get AI response
+          const { response, category } = getAIResponse(
+            message,
+            conversationContext
+          );
+
+          // Show bot response
+          const botMessage = document.createElement("div");
+          botMessage.className = "jkv-message bot";
+          botMessage.innerHTML = `Bot: ${response}<span class="timestamp">${getTimestamp()}</span>`;
+          messages.appendChild(botMessage);
+          messages.scrollTop = messages.scrollHeight;
+
+          // Store bot response
+          conversationContext.push({
+            sender: "bot",
+            message: response,
+            category,
+          });
+
+          // Show reach message if service-related
+          if (category === "services") {
+            const reachMessage = getReachMessage(message);
+            if (reachMessage) {
+              const reachMessageElement = document.createElement("div");
+              reachMessageElement.className = "jkv-message bot";
+              reachMessageElement.innerHTML = `Bot: ${reachMessage}<span class="timestamp">${getTimestamp()}</span>`;
+              messages.appendChild(reachMessageElement);
+              messages.scrollTop = messages.scrollHeight;
+              conversationContext.push({
+                sender: "bot",
+                message: reachMessage,
+                category: "services",
+              });
+              trackInteraction("reach_message_displayed", { service: message });
+            }
+          }
+
+          trackInteraction("message_sent", { message, intent: category });
+        } catch (error) {
+          log("Error processing message: " + error.message, "error");
+          console.error(error);
+          const errorMessage = document.createElement("div");
+          errorMessage.className = "jkv-message bot";
+          errorMessage.innerHTML = `Bot: Sorry, something went wrong. Please try again.<span class="timestamp">${getTimestamp()}</span>`;
+          messages.appendChild(errorMessage);
+          messages.scrollTop = messages.scrollHeight;
+        } finally {
+          // Re-enable input
+          log("Re-enabling input and button");
+          input.value = "";
+          input.disabled = false;
+          submitButton.disabled = false;
+          input.focus();
+        }
+
+        startInactivityTimer();
+      }
+
+      // Initialize
+      document.addEventListener("DOMContentLoaded", () => {
+        log("Chatbot initialized");
+        showJkvChat();
+        updateTimestamps();
+      });
+    </script>
+  </body>
+</html>
