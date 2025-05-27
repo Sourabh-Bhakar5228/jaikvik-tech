@@ -4,9 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <meta name="description" content="Discover the power of Digital Marketing with Jaikvik Technology’s expert strategies to boost brand visibility, engagement, and conversions.">
     <title>Digital Marketing - Jaikvik Technology</title>
     <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+=======
+    <title>Digital Marketing, Social Media, PPC, Meta, YouTube Ads & Brand Promotion</title>
+    <meta name="description" content="Discover Digital Marketing, Social Media Marketing, PPC, Meta Ads, YouTube Ads, and Brand Promotion at Jaikvik Technology. Learn strategies to boost your online presence and business growth.">
+    <meta name="keywords" content="Digital Marketing, Social Media Marketing, PPC, Meta Ads, YouTube Ads, Brand Promotion, Jaikvik Technology">
+    <!-- Favicon Link -->
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
+    <!-- Jquery File Link -->
+>>>>>>> 52634270abcf772d9e8ce639becb1b0cedeedb08
     <script src="assets/js/jquery.js"></script>
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">

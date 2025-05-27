@@ -4,9 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <meta name="description" content="Master PPC, Meta, and YouTube Ads with Jaikvik Technology’s expert strategies to boost your brand’s visibility and conversions.">
     <title>PPC, Meta, and YouTube Ads - Jaikvik Technology</title>
     <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+=======
+    <title>PPC, META AND YOUTUBE ADS</title>
+    <meta name="description" content="Explore PPC, Meta, and YouTube Ads with Jaikvik Technology. Target smart, engage deeper, and convert faster with strategies across Google Ads, Meta platforms, and YouTube for measurable growth.">
+    <meta name="keywords" content="PPC Advertising, Meta Ads, YouTube Ads, Digital Marketing, Jaikvik Technology">
+    <!-- Favicon Link -->
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
+    <!-- Jquery File Link -->
+>>>>>>> 52634270abcf772d9e8ce639becb1b0cedeedb08
     <script src="assets/js/jquery.js"></script>
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">

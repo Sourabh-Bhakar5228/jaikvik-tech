@@ -8,7 +8,7 @@
     <meta name="description" content="Explore the power of Java programming at Jaikvik Technology to elevate your business. Our tailored solutions provide real-time insights and streamline critical operations, significantly enhancing decision-making capabilities.">
     <meta name="keywords" content="Java Programming, Enterprise Solutions, Business Growth, Jaikvik Technology">
     <!-- Favicon Link -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <!-- Jquery File Link -->
     <script src="assets/js/jquery.js"></script>
     <!-- FontAwesome File Link -->

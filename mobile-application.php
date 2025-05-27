@@ -8,7 +8,7 @@
     <meta name="description" content="Choose Jaikvik Technology for innovative approaches and creative, simple-to-use, and high-performing mobile apps that are customized to your company's demands.">
     <meta name="keywords" content="Mobile Apps, Mobile Application Development, Business Growth, Jaikvik Technology">
     <!-- Favicon Link -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <!-- Jquery File Link -->
     <script src="assets/js/jquery.js"></script>
     <!-- FontAwesome File Link -->

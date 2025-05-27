@@ -97,7 +97,7 @@
                 <div class="col-lg-1">
                     <div class="header-logo h1">
                         <a href="index.php">
-                            <img src="assets/img/logo/logo-1.png" alt="" width="100%">
+                            <img src="https://jaikvik.in/lab/new-post-video/img/logo/logo-1.png" alt="" width="100%">
                         </a>
                     </div>
                 </div>
@@ -109,31 +109,31 @@
                                     <div class="row gy-2 gx-3 mt-1 align-items-center justify-content-start">
                                         <div class="col-lg-2">
                                             <a href="crm.php" class="container-img">
-                                                <img src="assets/img/Jaikvik banner/new/crm.jpg" alt="CRM Software" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/crm.jpg" alt="CRM Software" width="100%" class="image">
                                                 <div class="image-text">CRM Software</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="mobile-application.php" class="container-img">
-                                                <img src="assets/img/Jaikvik banner/new/mobile-Application.jpg" alt="Mobile Application" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/mobile-Application.jpg" alt="Mobile Application" width="100%" class="image">
                                                 <div class="image-text">Mobile Application</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="ERP.php" class="container-img">
-                                                <img src="assets/img/Jaikvik banner/new/ERP.jpg" alt="ERP Software" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/ERP.jpg" alt="ERP Software" width="100%" class="image">
                                                 <div class="image-text">ERP Software</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="Customized_Software.php" class="container-img">
-                                                <img src="assets/img/Jaikvik banner/new/Costumized Software.jpg" alt="Customized Software" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/Costumized Software.jpg" alt="Customized Software" width="100%" class="image">
                                                 <div class="image-text">Customized Software</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="Customized_Software.php" class="container-img">
-                                                <img src="assets/img/Jaikvik banner/new/packages.jpg" alt="Packages" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/packages.jpg" alt="Packages" width="100%" class="image">
                                                 <div class="image-text">Packages</div>
                                             </a>
                                         </div>
@@ -145,31 +145,31 @@
                                     <div class="row mt-1 gy-2 gx-3 align-items-center justify-content-start">
                                         <div class="col-lg-2">
                                             <a href="website-development-page.php#web-ecommerce" class="container-img">
-                                                <img src="assets/img/Jaikvik banner/new/e-commerce.jpg" alt="E-Commerce" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/e-commerce.jpg" alt="E-Commerce" width="100%" class="image">
                                                 <div class="image-text">E-Commerce</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="website-development-page.php#web-woocommerce" class="container-img">
-                                                <img src="assets/img/Jaikvik banner/new/woo-commerce.jpg" alt="WooCommerce" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/woo-commerce.jpg" alt="WooCommerce" width="100%" class="image">
                                                 <div class="image-text">WooCommerce</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="website-development-page.php#web-corporate" class="container-img">
-                                                <img src="assets/img/Jaikvik banner/new/corporate-website.jpg" alt="Corporate Website" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/corporate-website.jpg" alt="Corporate Website" width="100%" class="image">
                                                 <div class="image-text">Corporate Website</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="website-development-page.php#web-portal" class="container-img">
-                                                <img src="assets/img/Jaikvik banner/new/online-portal.jpg" alt="Online Portal" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/online-portal.jpg" alt="Online Portal" width="100%" class="image">
                                                 <div class="image-text">Online Portal</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="website-development-page.php" class="container-img">
-                                                <img src="assets/img/Jaikvik banner/new/packages.jpg" alt="Packages" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/packages.jpg" alt="Packages" width="100%" class="image">
                                                 <div class="image-text">Packages</div>
                                             </a>
                                         </div>
@@ -181,25 +181,25 @@
                                     <div class="row mt-1 gy-2 gx-3 align-items-center justify-content-start">
                                         <div class="col-lg-2">
                                             <a href="social-media-page.php" class="container-img">
-                                                <img src="assets/img/Jaikvik banner/new/social-media-marketing.jpg" alt="Social Media Marketing" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/social-media-marketing.jpg" alt="Social Media Marketing" width="100%" class="image">
                                                 <div class="image-text">Social Media Marketing</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="PPC-Meta-YouTube-Ads.php" class="container-img">
-                                                <img src="assets/img/Jaikvik banner/new/youtube-ads.jpg" alt="YouTube & Meta Ads" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/youtube-ads.jpg" alt="YouTube & Meta Ads" width="100%" class="image">
                                                 <div class="image-text">YouTube & Meta Ads</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="Brand-promotion.php" class="container-img">
-                                                <img src="assets/img/Jaikvik banner/new/brand-identity-2.jpg" alt="Brand Identity" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/brand-identity-2.jpg" alt="Brand Identity" width="100%" class="image">
                                                 <div class="image-text">Brand Identity</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="digital-marketing.php" class="container-img">
-                                                <img src="assets/img/Jaikvik banner/new/packages.jpg" alt="Packages" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/packages.jpg" alt="Packages" width="100%" class="image">
                                                 <div class="image-text">Packages</div>
                                             </a>
                                         </div>
@@ -211,31 +211,31 @@
                                     <div class="row mt-1 gy-2 gx-3 align-items-center justify-content-start">
                                         <div class="col-lg-2">
                                             <a href="SEO-service.php#website-audit" class="container-img">
-                                                <img src="assets/img/Jaikvik banner/new/website-audit.jpg" alt="Website Audit" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/website-audit.jpg" alt="Website Audit" width="100%" class="image">
                                                 <div class="image-text">Website Audit</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="SEO-service.php#technical-seo" class="container-img">
-                                                <img src="assets/img/Jaikvik banner/new/technical-seo.jpg" alt="Technical SEO" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/technical-seo.jpg" alt="Technical SEO" width="100%" class="image">
                                                 <div class="image-text">Technical SEO</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="SEO-service.php#on-page-seo" class="container-img">
-                                                <img src="assets/img/Jaikvik banner/new/on-page-seo.jpg" alt="On-Page SEO" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/on-page-seo.jpg" alt="On-Page SEO" width="100%" class="image">
                                                 <div class="image-text">On-Page SEO</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="SEO-service.php#off-page-seo" class="container-img">
-                                                <img src="assets/img/Jaikvik banner/new/off-page-seo.jpg" alt="Off-Page SEO" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/off-page-seo.jpg" alt="Off-Page SEO" width="100%" class="image">
                                                 <div class="image-text">Off-Page SEO</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="SEO-service.php" class="container-img">
-                                                <img src="assets/img/Jaikvik banner/new/packages.jpg" alt="SEO Packages" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/packages.jpg" alt="SEO Packages" width="100%" class="image">
                                                 <div class="image-text">SEO Packages</div>
                                             </a>
                                         </div>
@@ -246,49 +246,49 @@
                                     <div class="row mt-1 gy-2 gx-3 align-items-center justify-content-start">
                                         <div class="col-lg-2">
                                             <a href="Film_production.php#corporate-video" class="container-img" data-section="corporate-video">
-                                                <img src="assets/img/Jaikvik banner/new/corporate-video-presentaion.jpg" alt="Corporate Video Presentation" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/corporate-video-presentaion.jpg" alt="Corporate Video Presentation" width="100%" class="image">
                                                 <div class="image-text">Corporate Video Presentation</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="Film_production.php#product-explainer" class="container-img" data-section="explanatory-video">
-                                                <img src="assets/img/Jaikvik banner/new/explanatory-video.jpg" alt="Explanatory Video" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/explanatory-video.jpg" alt="Explanatory Video" width="100%" class="image">
                                                 <div class="image-text">Explanatory Video</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="Film_production.php#tv-commercial" class="container-img" data-section="tv-commercial">
-                                                <img src="assets/img/Jaikvik banner/new/tv-commercial-ads.jpg" alt="TV Commercial Ads" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/tv-commercial-ads.jpg" alt="TV Commercial Ads" width="100%" class="image">
                                                 <div class="image-text">TV Commercial Ads</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="Film_production.php#youtube-ads" class="container-img" data-section="youtube-ads">
-                                                <img src="assets/img/Jaikvik banner/new/youtube-ads.jpg" alt="YouTube Ads" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/youtube-ads.jpg" alt="YouTube Ads" width="100%" class="image">
                                                 <div class="image-text">YouTube Ads</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="Film_production.php#photoshoot" class="container-img" data-section="photoshoot">
-                                                <img src="assets/img/Jaikvik banner/new/photoshoot .jpg" alt="Photoshoot" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/photoshoot .jpg" alt="Photoshoot" width="100%" class="image">
                                                 <div class="image-text">Photoshoot</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="Film_production.php#model-shoot" class="container-img" data-section="model-shoot">
-                                                <img src="assets/img/Jaikvik banner/new/model-shoot.jpg" alt="Model Shoot" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/model-shoot.jpg" alt="Model Shoot" width="100%" class="image">
                                                 <div class="image-text">Model Shoot</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="Film_production.php#interview-videos" class="container-img" data-section="interview">
-                                                <img src="assets/img/Jaikvik banner/new/interview.jpg" alt="Interview" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/interview.jpg" alt="Interview" width="100%" class="image">
                                                 <div class="image-text">Interview and Podcast</div>
                                             </a>
                                         </div>
                                         <div class="col-lg-2">
                                             <a href="Film_production.php" class="container-img" data-section="packages">
-                                                <img src="assets/img/Jaikvik banner/new/packages.jpg" alt="Packages" width="100%" class="image">
+                                                <img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/packages.jpg" alt="Packages" width="100%" class="image">
                                                 <div class="image-text">Packages</div>
                                             </a>
                                         </div>
@@ -311,7 +311,7 @@
                 <div class="header-actions mobile-view row">
                     <div class="col-6">
                         <a href="index.php">
-                            <img src="assets/img/logo/logo-1.png" alt="" width="90%">
+                            <img src="https://jaikvik.in/lab/new-post-video/img/logo/logo-1.png" alt="" width="90%">
                         </a>
                     </div>
                     <div class="col-6">
@@ -341,19 +341,19 @@
                         <li>
                             <a href="Customized_Software.php"><span class="menu-text">Software Development</span></a>
                             <ul class="sub-menu">
-                                <li><a href="crm.php" class="container-img"><img src="assets/img/Jaikvik banner/new/crm.jpg" alt="CRM Software" width="100%" class="image">
+                                <li><a href="crm.php" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/crm.jpg" alt="CRM Software" width="100%" class="image">
                                         <div class="image-text">CRM Software</div>
                                     </a></li>
-                                <li><a href="mobile-application.php" class="container-img"><img src="assets/img/Jaikvik banner/new/mobile-Application.jpg" alt="Mobile Application" width="100%" class="image">
+                                <li><a href="mobile-application.php" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/mobile-Application.jpg" alt="Mobile Application" width="100%" class="image">
                                         <div class="image-text">Mobile Application</div>
                                     </a></li>
-                                <li><a href="ERP.php" class="container-img"><img src="assets/img/Jaikvik banner/new/ERP.jpg" alt="ERP Software" width="100%" class="image">
+                                <li><a href="ERP.php" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/ERP.jpg" alt="ERP Software" width="100%" class="image">
                                         <div class="image-text">ERP Software</div>
                                     </a></li>
-                                <li><a href="Customized_Software.php" class="container-img"><img src="assets/img/Jaikvik banner/new/Costumized Software.jpg" alt="Customized Software" width="100%" class="image">
+                                <li><a href="Customized_Software.php" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/Costumized Software.jpg" alt="Customized Software" width="100%" class="image">
                                         <div class="image-text">Customized Software</div>
                                     </a></li>
-                                <li><a href="Customized_Software.php" class="container-img"><img src="assets/img/Jaikvik banner/new/packages.jpg" alt="Packages" width="100%" class="image">
+                                <li><a href="Customized_Software.php" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/packages.jpg" alt="Packages" width="100%" class="image">
                                         <div class="image-text">Packages</div>
                                     </a></li>
                             </ul>
@@ -361,19 +361,19 @@
                         <li>
                             <a href="website-development-page.php"><span class="menu-text">Website Development</span></a>
                             <ul class="sub-menu">
-                                <li><a href="website-development-page.php#web-ecommerce" class="container-img"><img src="assets/img/Jaikvik banner/new/e-commerce.jpg" alt="E-Commerce" width="100%" class="image">
+                                <li><a href="website-development-page.php#web-ecommerce" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/e-commerce.jpg" alt="E-Commerce" width="100%" class="image">
                                         <div class="image-text">E-Commerce</div>
                                     </a></li>
-                                <li><a href="website-development-page.php#web-woocommerce" class="container-img"><img src="assets/img/Jaikvik banner/new/woo-commerce.jpg" alt="WooCommerce" width="100%" class="image">
+                                <li><a href="website-development-page.php#web-woocommerce" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/woo-commerce.jpg" alt="WooCommerce" width="100%" class="image">
                                         <div class="image-text">WooCommerce</div>
                                     </a></li>
-                                <li><a href="website-development-page.php#web-corporate" class="container-img"><img src="assets/img/Jaikvik banner/new/corporate-website.jpg" alt="Corporate Website" width="100%" class="image">
+                                <li><a href="website-development-page.php#web-corporate" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/corporate-website.jpg" alt="Corporate Website" width="100%" class="image">
                                         <div class="image-text">Corporate Website</div>
                                     </a></li>
-                                <li><a href="website-development-page.php#web-portal" class="container-img"><img src="assets/img/Jaikvik banner/new/online-portal.jpg" alt="Online Portal" width="100%" class="image">
+                                <li><a href="website-development-page.php#web-portal" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/online-portal.jpg" alt="Online Portal" width="100%" class="image">
                                         <div class="image-text">Online Portal</div>
                                     </a></li>
-                                <li><a href="website-development-page.php" class="container-img"><img src="assets/img/Jaikvik banner/new/packages.jpg" alt="Packages" width="100%" class="image">
+                                <li><a href="website-development-page.php" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/packages.jpg" alt="Packages" width="100%" class="image">
                                         <div class="image-text">Packages</div>
                                     </a></li>
                             </ul>
@@ -381,16 +381,16 @@
                         <li>
                             <a href="digital-marketing.php"><span class="menu-text">Digital Marketing</span></a>
                             <ul class="sub-menu">
-                                <li><a href="social-media-page.php" class="container-img"><img src="assets/img/Jaikvik banner/new/social-media-marketing.jpg" alt="Social Media Marketing" width="100%" class="image">
+                                <li><a href="social-media-page.php" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/social-media-marketing.jpg" alt="Social Media Marketing" width="100%" class="image">
                                         <div class="image-text">Social Media Marketing</div>
                                     </a></li>
-                                <li><a href="PPC-Meta-YouTube-Ads.php" class="container-img"><img src="assets/img/Jaikvik banner/new/youtube-ads.jpg" alt="YouTube & Meta Ads" width="100%" class="image">
+                                <li><a href="PPC-Meta-YouTube-Ads.php" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/youtube-ads.jpg" alt="YouTube & Meta Ads" width="100%" class="image">
                                         <div class="image-text">YouTube & Meta Ads</div>
                                     </a></li>
-                                <li><a href="Brand-promotion.php" class="container-img"><img src="assets/img/Jaikvik banner/new/brand-identity-2.jpg" alt="Brand Identity" width="100%" class="image">
+                                <li><a href="Brand-promotion.php" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/brand-identity-2.jpg" alt="Brand Identity" width="100%" class="image">
                                         <div class="image-text">Brand Identity</div>
                                     </a></li>
-                                <li><a href="digital-marketing.php" class="container-img"><img src="assets/img/Jaikvik banner/new/packages.jpg" alt="Packages" width="100%" class="image">
+                                <li><a href="digital-marketing.php" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/packages.jpg" alt="Packages" width="100%" class="image">
                                         <div class="image-text">Packages</div>
                                     </a></li>
                             </ul>
@@ -398,19 +398,19 @@
                         <li>
                             <a href="SEO-service.php"><span class="menu-text">Google SEO Services</span></a>
                             <ul class="sub-menu">
-                                <li><a href="SEO-service.php#website-audit" class="container-img"><img src="assets/img/Jaikvik banner/new/website-audit.jpg" alt="Website Audit" width="100%" class="image">
+                                <li><a href="SEO-service.php#website-audit" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/website-audit.jpg" alt="Website Audit" width="100%" class="image">
                                         <div class="image-text">Website Audit</div>
                                     </a></li>
-                                <li><a href="SEO-service.php#technical-seo" class="container-img"><img src="assets/img/Jaikvik banner/new/technical-seo.jpg" alt="Technical SEO" width="100%" class="image">
+                                <li><a href="SEO-service.php#technical-seo" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/technical-seo.jpg" alt="Technical SEO" width="100%" class="image">
                                         <div class="image-text">Technical SEO</div>
                                     </a></li>
-                                <li><a href="SEO-service.php#on-page-seo" class="container-img"><img src="assets/img/Jaikvik banner/new/on-page-seo.jpg" alt="On-Page SEO" width="100%" class="image">
+                                <li><a href="SEO-service.php#on-page-seo" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/on-page-seo.jpg" alt="On-Page SEO" width="100%" class="image">
                                         <div class="image-text">On-Page SEO</div>
                                     </a></li>
-                                <li><a href="SEO-service.php#off-page-seo" class="container-img"><img src="assets/img/Jaikvik banner/new/off-page-seo.jpg" alt="Off-Page SEO" width="100%" class="image">
+                                <li><a href="SEO-service.php#off-page-seo" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/off-page-seo.jpg" alt="Off-Page SEO" width="100%" class="image">
                                         <div class="image-text">Off-Page SEO</div>
                                     </a></li>
-                                <li><a href="SEO-service.php" class="container-img"><img src="assets/img/Jaikvik banner/new/packages.jpg" alt="SEO Packages" width="100%" class="image">
+                                <li><a href="SEO-service.php" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/packages.jpg" alt="SEO Packages" width="100%" class="image">
                                         <div class="image-text">SEO Packages</div>
                                     </a></li>
                             </ul>
@@ -418,28 +418,28 @@
                         <li>
                             <a href="Film_production.php"><span class="menu-text">Film Production</span></a>
                             <ul class="sub-menu">
-                                <li><a href="Film_production.php#corporate-video" class="container-img"><img src="assets/img/Jaikvik banner/new/corporate-video-presentaion.jpg" alt="Corporate Video Presentation" width="100%" class="image">
+                                <li><a href="Film_production.php#corporate-video" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/corporate-video-presentaion.jpg" alt="Corporate Video Presentation" width="100%" class="image">
                                         <div class="image-text">Corporate Video Presentation</div>
                                     </a></li>
-                                <li><a href="Film_production.php#product-explainer" class="container-img"><img src="assets/img/Jaikvik banner/new/explanatory-video.jpg" alt="Explanatory Video" width="100%" class="image">
+                                <li><a href="Film_production.php#product-explainer" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/explanatory-video.jpg" alt="Explanatory Video" width="100%" class="image">
                                         <div class="image-text">Explanatory Video</div>
                                     </a></li>
-                                <li><a href="Film_production.php#tv-commercial" class="container-img"><img src="assets/img/Jaikvik banner/new/tv-commercial-ads.jpg" alt="TV Commercial Ads" width="100%" class="image">
+                                <li><a href="Film_production.php#tv-commercial" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/tv-commercial-ads.jpg" alt="TV Commercial Ads" width="100%" class="image">
                                         <div class="image-text">TV Commercial Ads</div>
                                     </a></li>
-                                <li><a href="Film_production.php#youtube-ads" class="container-img"><img src="assets/img/Jaikvik banner/new/youtube-ads.jpg" alt="YouTube Ads" width="100%" class="image">
+                                <li><a href="Film_production.php#youtube-ads" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/youtube-ads.jpg" alt="YouTube Ads" width="100%" class="image">
                                         <div class="image-text">YouTube Ads</div>
                                     </a></li>
-                                <li><a href="Film_production.php#photoshoot" class="container-img"><img src="assets/img/Jaikvik banner/new/photoshoot .jpg" alt="Photoshoot" width="100%" class="image">
+                                <li><a href="Film_production.php#photoshoot" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/photoshoot .jpg" alt="Photoshoot" width="100%" class="image">
                                         <div class="image-text">Photoshoot</div>
                                     </a></li>
-                                <li><a href="Film_production.php#model-shoot" class="container-img"><img src="assets/img/Jaikvik banner/new/model-shoot.jpg" alt="Model Shoot" width="100%" class="image">
+                                <li><a href="Film_production.php#model-shoot" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/model-shoot.jpg" alt="Model Shoot" width="100%" class="image">
                                         <div class="image-text">Model Shoot</div>
                                     </a></li>
-                                <li><a href="Film_production.php#interview-videos" class="container-img"><img src="assets/img/Jaikvik banner/new/interview.jpg" alt="Interview" width="100%" class="image">
+                                <li><a href="Film_production.php#interview-videos" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/interview.jpg" alt="Interview" width="100%" class="image">
                                         <div class="image-text">Interview and Podcast</div>
                                     </a></li>
-                                <li><a href="Film_production.php" class="container-img"><img src="assets/img/Jaikvik banner/new/packages.jpg" alt="Packages" width="100%" class="image">
+                                <li><a href="Film_production.php" class="container-img"><img src="https://jaikvik.in/lab/new-post-video/img/Jaikvik banner/new/packages.jpg" alt="Packages" width="100%" class="image">
                                         <div class="image-text">Packages</div>
                                     </a></li>
                             </ul>

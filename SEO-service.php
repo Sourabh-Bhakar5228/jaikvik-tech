@@ -8,7 +8,7 @@
     <meta name="description" content="Discover Google SEO Services and Website Audit Reports at Jaikvik Technology. Learn strategies for On-Page SEO, Off-Page SEO, and Technical SEO to boost your website’s ranking and performance.">
     <meta name="keywords" content="Google SEO Services, Website Audit, On-Page SEO, Off-Page SEO, Technical SEO, Jaikvik Technology">
     <!-- Favicon Link -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <!-- Jquery File Link -->
     <script src="assets/js/jquery.js"></script>
     <!-- FontAwesome File Link -->

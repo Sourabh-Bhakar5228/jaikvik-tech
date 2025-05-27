@@ -7,102 +7,102 @@
         <ul class="tag-list scroller__inner">
             <li>
                 <a href="https://bweld.in/" target="_blank">
-                    <img src="assets/img/client/1.png" alt="Bweld">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/client/1.png" alt="Bweld">
                 </a>
             </li>
             <li>
                 <a href="https://www.glowgreen.in/" target="_blank">
-                    <img src="assets/img/client/2.png" alt="Glowgreen">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/client/2.png" alt="Glowgreen">
                 </a>
             </li>
             <li>
                 <a href="https://www.radiconlab.com/" target="_blank">
-                    <img src="assets/img/client/3.png" alt="Radiconlab">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/client/3.png" alt="Radiconlab">
                 </a>
             </li>
             <li>
                 <a href="https://speedofer.com/" target="_blank">
-                    <img src="assets/img/client/4.png" alt="Speedofer">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/client/4.png" alt="Speedofer">
                 </a>
             </li>
             <li>
                 <a href="https://www.envirotechltd.com/" target="_blank">
-                    <img src="assets/img/client/5.png" alt="Envirotech">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/client/5.png" alt="Envirotech">
                 </a>
             </li>
             <li>
                 <a href="https://www.acousticnest.com/" target="_blank">
-                    <img src="assets/img/client/6.png" alt="Acousticnest">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/client/6.png" alt="Acousticnest">
                 </a>
             </li>
             <!-- <li>
                 <a href="https://www.anpbeenatural.com/" target="_blank">
-                    <img src="assets/img/client/7.png" alt="Anpbee Natural">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/client/7.png" alt="Anpbee Natural">
                 </a>
             </li> -->
             <!-- <li>
                 <a href="https://www.funtwist.in" target="_blank">
-                    <img src="assets/img/client/8.png" alt="Funtwist">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/client/8.png" alt="Funtwist">
                 </a>
             </li> -->
             <li>
                 <a href="https://bharatautoparts.com/" target="_blank">
-                    <img src="assets/img/client/9.png" alt="Bharat Auto Parts">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/client/9.png" alt="Bharat Auto Parts">
                 </a>
             </li>
             <li>
                 <a href="https://amradmedical.in/" target="_blank">
-                    <img src="assets/img/client/10.png" alt="Amrad Medical">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/client/10.png" alt="Amrad Medical">
                 </a>
             </li>
             <li>
                 <a href="https://www.c-med.in/" target="_blank">
-                    <img src="assets/img/client/11.png" alt="C-Med">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/client/11.png" alt="C-Med">
                 </a>
             </li>
             <li>
                 <a href="https://www.martinkitchenware.com" target="_blank">
-                    <img src="assets/img/client/12.png" alt="Martin Kitchenware">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/client/12.png" alt="Martin Kitchenware">
                 </a>
             </li>
             <li>
                 <a href="https://luxaindustries.com/" target="_blank">
-                    <img src="assets/img/client/13.png" alt="Luxa Industries">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/client/13.png" alt="Luxa Industries">
                 </a>
             </li>
             <li>
                 <a href="https://www.jaikviktechnology.com/" target="_blank">
-                    <img src="assets/img/client/14.png" alt="Jaikvik Technology">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/client/14.png" alt="Jaikvik Technology">
                 </a>
             </li>
             <li>
                 <a href="https://www.gtigti.com/" target="_blank">
-                    <img src="assets/img/client/15.png" alt="GTI">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/client/15.png" alt="GTI">
                 </a>
             </li>
             <li>
                 <a href="https://www.airtechmax.com/" target="_blank">
-                    <img src="assets/img/client/16.png" alt="Airtech Max">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/client/16.png" alt="Airtech Max">
                 </a>
             </li>
             <li>
                 <a href="https://addwatt.com/" target="_blank">
-                    <img src="assets/img/client/17.png" alt="Addwatt">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/client/17.png" alt="Addwatt">
                 </a>
             </li>
             <li>
                 <a href="https://www.comfortthermowares.com/" target="_blank">
-                    <img src="assets/img/client/18.png" alt="Comfort Thermowares">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/client/18.png" alt="Comfort Thermowares">
                 </a>
             </li>
             <li>
                 <a href="https://www.thefoodprocessingmachine.com/" target="_blank">
-                    <img src="assets/img/client/19.png" alt="Food Processing Machine">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/client/19.png" alt="Food Processing Machine">
                 </a>
             </li>
             <li>
                 <a href="https://anphoney.com/" target="_blank">
-                    <img src="assets/img/client/20.png" alt="Anphoney">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/client/20.png" alt="Anphoney">
                 </a>
             </li>
         </ul>

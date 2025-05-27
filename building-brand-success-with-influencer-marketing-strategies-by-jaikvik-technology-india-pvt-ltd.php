@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jaikvik Technology</title>
     <!-- Favicon Link  -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <!-- Jquery File Link -->
     <script src="assets/js/jquery.js"></script>
     <!-- FontAwesome File Link -->
@@ -32,7 +32,7 @@
 
     <!-- ========== Start Breadcrumb Section ========== -->
     <div class="breadcrumb">
-        <img src="assets/img/breadcrumb/corporate-world-news.webp" alt="" width="100%">
+        <img src="https://jaikvik.in/lab/new-post-video/img/breadcrumb/corporate-world-news.webp" alt="" width="100%">
     </div>
     <!-- ========== End Breadcrumb Section ========== -->
 
@@ -41,7 +41,7 @@
         <div class="row g-lg-5">
             <div class="col-lg-9">
                 <div class="blogDetailsLeft">
-                    <img src="assets/img/blog/blog2.png" alt="Blog Img" width="100%">
+                    <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog2.png" alt="Blog Img" width="100%">
                     <div class="blogPerson">
                         <a href="#">Social Media Marketing</a>
                         <div>
@@ -180,7 +180,7 @@
                         <p class="b-heading">Recent Blog</p>
                         <div class="blogPageCard">
                             <div class="blogImg">
-                                <img src="assets/img/blog/blog.png" alt="Blog Img">
+                                <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog.png" alt="Blog Img">
                             </div>
                             <div class="blogCardContent">
                                 <div class="blogPerson">

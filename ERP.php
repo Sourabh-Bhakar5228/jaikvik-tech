@@ -8,7 +8,7 @@
     <meta name="description" content="Discover the power of top-notch ERP solutions at Jaikvik Technology to bring your business up to speed. Our customized approaches offer real-time insights and automatically coordinate crucial features, considerably improving decision-making abilities.">
     <meta name="keywords" content="ERP Solutions, Enterprise Resource Planning, Business Growth, Jaikvik Technology">
     <!-- Favicon Link -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <!-- Jquery File Link -->
     <script src="assets/js/jquery.js"></script>
     <!-- FontAwesome File Link -->

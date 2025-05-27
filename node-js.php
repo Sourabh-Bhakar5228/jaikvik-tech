@@ -8,7 +8,7 @@
     <meta name="description" content="Build fast, scalable applications with Node.js at Jaikvik Technology. Leverage its event-driven architecture for modern web solutions.">
     <meta name="keywords" content="Node.js, JavaScript Runtime, Web Development, Jaikvik Technology">
     <!-- Favicon Link -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <!-- jQuery File Link -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- FontAwesome File Link -->

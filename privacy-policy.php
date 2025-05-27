@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jaikvik Technology - Privacy Policy</title>
     <!-- Favicon Link  -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <!-- Jquery File Link -->
     <script src="assets/js/jquery.js"></script>
     <!-- FontAwesome File Link -->
@@ -30,14 +30,14 @@
 
     <!-- ========== Start Breadcrumb Section ========== -->
     <div class="breadcrumb">
-        <img src="assets/img/breadcrumb/contact.png" alt="" width="100%">
+        <img src="https://jaikvik.in/lab/new-post-video/img/breadcrumb/contact.png" alt="" width="100%">
     </div>
     <!-- ========== End Breadcrumb Section ========== -->
 
     <!-- ========== Start Privacy Policy Section ========== -->
     <section class="ppSection">
         <div class="ppContent">
-            <img class="ppOne" src="assets/img/pp.png" alt="Privacy Policy">
+            <img class="ppOne" src="https://jaikvik.in/lab/new-post-video/img/pp.png" alt="Privacy Policy">
 
             <h2>Privacy Policy</h2>
             <p>At Jaikvik Technology, accessible from <a href="https://www.jaikviktechnology.com/">jaikvik Technology</a> one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Jaikvik Technology and how we use it.</p>

@@ -8,7 +8,7 @@
     <meta name="description" content="Explore Brand Management and Promotion at Jaikvik Technology. Learn strategies to amplify your brand’s identity, build equity, and connect with audiences through technical and human-centric approaches.">
     <meta name="keywords" content="Brand Management, Brand Promotion, Jaikvik Technology, Content Marketing, Social Media, Influencer Marketing">
     <!-- Favicon Link -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <!-- Jquery File Link -->
     <script src="assets/js/jquery.js"></script>
     <!-- FontAwesome File Link -->

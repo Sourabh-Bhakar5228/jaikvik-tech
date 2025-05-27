@@ -11,7 +11,7 @@
     <nav class="navBar">
         <div class="brandLogo">
             <a href="index.php">
-                <img src="assets/img/logo/logo-1.png" alt="Jaikvik Logo">
+                <img src="https://jaikvik.in/lab/new-post-video/img/logo/logo-1.png" alt="Jaikvik Logo">
             </a>
         </div>
         <div class="navLink" id="nav-menu">

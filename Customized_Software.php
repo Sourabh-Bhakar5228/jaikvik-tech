@@ -8,7 +8,7 @@
     <meta name="description" content="Explore tailored software solutions at Jaikvik Technology designed to meet your unique business needs. Enhance productivity, streamline workflows, and stay competitive with custom-built applications.">
     <meta name="keywords" content="Custom Software Solutions, Business Software, Jaikvik Technology, Workflow Automation">
     <!-- Favicon Link -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <!-- Jquery File Link -->
     <script src="assets/js/jquery.js"></script>
     <!-- FontAwesome File Link -->

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jaikvik Technology</title>
   <!-- Favicon Link  -->
-  <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+  <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <!-- Jquery File Link -->
     <script src="assets/js/jquery.js"></script>
     <!-- FontAwesome File Link -->
@@ -32,7 +32,7 @@
 
     <!-- ========== Start Breadcrumb Section ========== -->
     <div class="breadcrumb">
-        <img src="assets/img/breadcrumb/corporate-world-news.webp" alt="" width="100%">
+        <img src="https://jaikvik.in/lab/new-post-video/img/breadcrumb/corporate-world-news.webp" alt="" width="100%">
     </div>
     <!-- ========== End Breadcrumb Section ========== -->
 
