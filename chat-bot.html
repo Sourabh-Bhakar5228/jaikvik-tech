@@ -66,6 +66,16 @@
         border-radius: 8px;
         max-width: 80%;
         word-wrap: break-word;
+        opacity: 0;
+        transform: translateY(10px);
+        animation: messageAppear 0.3s ease-out forwards;
+      }
+
+      @keyframes messageAppear {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       .jkv-message.user {
@@ -87,6 +97,9 @@
         display: flex;
         align-items: center;
         gap: 5px;
+        animation: none;
+        opacity: 1;
+        transform: none;
       }
 
       .jkv-message.typing::before {
@@ -728,25 +741,38 @@
       let inactivityTimer;
       let messageIndex = 0;
       let conversationContext = [];
+      let conversationHistory = [];
+      let conversationFlow = [];
+      let typingTimeout;
+      let isTyping = false;
 
       const inactivityMessages = [
         "Need help with our services?",
-        "Any questions about Jaikvik Technology’s offerings?",
+        "Any questions about Jaikvik Technology's offerings?",
         "How can I assist you today?",
         "Curious about our software or digital marketing solutions?",
         "Interested in our corporate films or mobile apps?",
-        "Got a project in mind? Let’s discuss!",
+        "Got a project in mind? Let's discuss!",
       ];
 
-      // AI Responses
+      // Enhanced AI Responses with context-aware follow-ups
       const aiResponses = {
         greeting: {
-          keywords: ["hi", "hello", "hey"],
+          keywords: [
+            "hi",
+            "hello",
+            "hey",
+            "good morning",
+            "good afternoon",
+            "good evening",
+          ],
           priority: 1,
           responses: [
             "Hello! Welcome to Jaikvik Technology. How can I assist you today?",
             "Hey there! Excited to help with your tech needs!",
             "Hi! Ready to explore our innovative solutions?",
+            "Greetings! How can I help you with Jaikvik Technology's services today?",
+            "Hello! What brings you to Jaikvik Technology today?",
           ],
           followUp:
             "Interested in software development, mobile apps, or digital marketing?",
@@ -760,12 +786,19 @@
             "issue",
             "problem",
             "maintenance & support",
+            "trouble",
+            "error",
+            "bug",
+            "fix",
+            "assistance",
           ],
           priority: 2,
           responses: [
-            "I’m here to help! Please describe your issue or question.",
-            "Need support? Tell me more about what’s going on.",
-            "Let’s solve that! What’s the problem you’re facing?",
+            "I'm here to help! Please describe your issue or question.",
+            "Need support? Tell me more about what's going on.",
+            "Let's solve that! What's the problem you're facing?",
+            "I can help with that. Could you provide more details?",
+            "Support is my specialty. What do you need help with?",
           ],
           followUp: "Can you provide more details so I can assist better?",
           followUpThreshold: 0.5,
@@ -779,12 +812,19 @@
             "address",
             "reach",
             "get in touch",
+            "call",
+            "message",
+            "connect",
+            "speak to",
+            "talk to",
           ],
           priority: 3,
           responses: [
             `For quick assistance, message us on <a href="https://wa.me/+918307802850" target="_blank">WhatsApp (+918307802850)</a> or email <a href="mailto:info@jaikviktechnology.com">info@jaikviktechnology.com</a>. You can also call <a href="tel:+919310907227">+91-9310907227</a>. Visit us at A-82, Sector 63, Noida, UP.`,
             `Reach us at <a href="mailto:info@jaikviktechnology.com">info@jaikviktechnology.com</a> or <a href="tel:+919220826934">+91-9220826934</a>. Our office is at A-82, Sector 63, Noida, UP.`,
-            `Contact us via <a href="https://wa.me/+918307802850" target="_blank">WhatsApp (+918307802850)</a> or call <a href="tel:+911204200970">+91-120-4200970</a>. We’re here to help!`,
+            `Contact us via <a href="https://wa.me/+918307802850" target="_blank">WhatsApp (+918307802850)</a> or call <a href="tel:+911204200970">+91-120-4200970</a>. We're here to help!`,
+            `You can reach our team directly at <a href="tel:+919310907227">+91-9310907227</a> or visit our office at A-82, Sector 63, Noida, UP.`,
+            `For immediate assistance, please call <a href="tel:+919220826934">+91-9220826934</a> or email <a href="mailto:info@jaikviktechnology.com">info@jaikviktechnology.com</a>`,
           ],
           followUp:
             "Would you like to open our contact form for a detailed inquiry?",
@@ -816,12 +856,19 @@
             "event coverage",
             "services",
             "offerings",
+            "what do you offer",
+            "products",
+            "solutions",
+            "capabilities",
+            "expertise",
           ],
           priority: 2,
           responses: [
             "Our [SERVICE] solutions are designed to elevate your business. Want to learn how?",
             "We specialize in [SERVICE]. Interested in a tailored solution?",
-            "Jaikvik Technology’s [SERVICE] can transform your operations. Let’s discuss!",
+            "Jaikvik Technology's [SERVICE] can transform your operations. Let's discuss!",
+            "With our [SERVICE], we help businesses achieve their goals. Would you like details?",
+            "[SERVICE] is one of our core strengths. How can we assist you with this?",
           ],
           followUp:
             "Ready to discuss [SERVICE]? Open our contact form or reach out directly!",
@@ -875,29 +922,129 @@
           },
         },
         about: {
-          keywords: ["who are you", "about", "company", "jaikvik", "about us"],
+          keywords: [
+            "who are you",
+            "about",
+            "company",
+            "jaikvik",
+            "about us",
+            "what is jaikvik",
+            "tell me about",
+            "background",
+            "history",
+          ],
           priority: 2,
           responses: [
             "Jaikvik Technology Pvt Ltd is a Noida-based leader in software, mobile apps, digital marketing, and corporate film production.",
-            "We’re Jaikvik Technology, delivering innovative solutions from A-82, Sector 63, Noida, UP.",
+            "We're Jaikvik Technology, delivering innovative solutions from A-82, Sector 63, Noida, UP.",
             "Jaikvik Technology transforms businesses with cutting-edge tech and creative services.",
+            "We are Jaikvik Technology - experts in software development, digital marketing, and media production since 2011.",
+            "Jaikvik Technology is your technology partner offering end-to-end digital solutions for businesses.",
           ],
           followUp: "Want to know more about our services or contact us?",
           followUpThreshold: 0.5,
           intent: "informational",
         },
+        pricing: {
+          keywords: [
+            "price",
+            "cost",
+            "how much",
+            "quote",
+            "budget",
+            "affordable",
+            "expensive",
+            "pricing",
+            "rates",
+          ],
+          priority: 2,
+          responses: [
+            "Our pricing varies based on project requirements. Could you share more details about your needs?",
+            "We offer competitive pricing tailored to each project. Let's discuss your specific requirements.",
+            "Cost depends on the scope and complexity. Would you like a customized quote?",
+            "We provide value-based pricing for all our services. What exactly are you looking for?",
+            "Our solutions are competitively priced. Tell me more about your project for an accurate estimate.",
+          ],
+          followUp: "Would you like to discuss pricing for a specific service?",
+          followUpThreshold: 0.6,
+          intent: "commercial",
+        },
+        thanks: {
+          keywords: ["thank", "thanks", "appreciate", "grateful", "helpful"],
+          priority: 1,
+          responses: [
+            "You're welcome! Is there anything else I can help with?",
+            "Happy to help! Let me know if you have other questions.",
+            "My pleasure! Feel free to ask if you need more information.",
+            "Glad I could assist! What else can I do for you today?",
+            "You're very welcome! Don't hesitate to reach out for anything else.",
+          ],
+          followUp: "Would you like information about any other services?",
+          followUpThreshold: 0.4,
+          intent: "gratitude",
+        },
+        goodbye: {
+          keywords: ["bye", "goodbye", "see you", "later", "farewell"],
+          priority: 1,
+          responses: [
+            "Goodbye! Feel free to come back if you have more questions.",
+            "See you later! We're always here to help.",
+            "Have a great day! Don't hesitate to reach out again.",
+            "Bye for now! Remember we're just a message away.",
+            "Take care! Contact us anytime for assistance.",
+          ],
+          followUp: "",
+          followUpThreshold: 0,
+          intent: "farewell",
+        },
         default: {
           priority: 0,
           responses: [
-            "I’m not sure I understood that. Could you clarify?",
-            "Hmm, let’s try again. What do you mean?",
-            "Could you rephrase? I’m here to help!",
+            "I'm not sure I understood that. Could you clarify?",
+            "Hmm, let's try again. What do you mean?",
+            "Could you rephrase? I'm here to help!",
+            "I want to make sure I understand. Could you explain differently?",
+            "Let me check - did you mean something about our services?",
           ],
           followUp: "Anything else I can assist with?",
           followUpThreshold: 0.6,
           intent: "unknown",
         },
       };
+
+      // Enhanced conversation flow patterns
+      const conversationPatterns = [
+        {
+          name: "service inquiry",
+          steps: [
+            { type: "user", intent: "services" },
+            { type: "bot", intent: "informational" },
+            { type: "user", intent: "commercial" },
+            { type: "bot", intent: "commercial" },
+          ],
+          response:
+            "Would you like me to connect you with a specialist for a detailed consultation?",
+        },
+        {
+          name: "support request",
+          steps: [
+            { type: "user", intent: "help" },
+            { type: "bot", intent: "support" },
+            { type: "user", intent: "support" },
+          ],
+          response:
+            "I can escalate this to our support team. Would you like me to do that?",
+        },
+        {
+          name: "contact information",
+          steps: [
+            { type: "user", intent: "contact" },
+            { type: "bot", intent: "contact" },
+            { type: "user", intent: "contact" },
+          ],
+          response: "Would you like me to open the contact form for you?",
+        },
+      ];
 
       // Sanitize HTML
       function sanitizeHTML(str) {
@@ -947,10 +1094,11 @@
             log("Chatbot displayed");
             startInactivityTimer();
             updateTimestamps();
+            trackInteraction("chatbot_opened");
           } else {
             log("Chatbot element not found", "error");
           }
-        }, 10000);
+        }, 30000);
       }
 
       // Hide chatbot
@@ -964,6 +1112,7 @@
           }, 500);
           clearTimeout(inactivityTimer);
           log("Chatbot hidden");
+          trackInteraction("chatbot_closed");
         }
       }
 
@@ -1109,16 +1258,20 @@
         clearTimeout(inactivityTimer);
         inactivityTimer = setTimeout(() => {
           const messages = document.getElementById("jkvMessages");
-          const botMessage = document.createElement("div");
-          botMessage.className = "jkv-message bot";
-          botMessage.innerHTML = `${sanitizeHTML(
-            inactivityMessages[messageIndex]
-          )}<span class="timestamp">${getTimestamp()}</span>`;
-          messages.appendChild(botMessage);
-          messages.scrollTop = messages.scrollHeight;
-          messageIndex = (messageIndex + 1) % inactivityMessages.length;
+          if (messages && messages.children.length > 0) {
+            const botMessage = document.createElement("div");
+            botMessage.className = "jkv-message bot";
+            botMessage.innerHTML = `${sanitizeHTML(
+              inactivityMessages[messageIndex]
+            )}<span class="timestamp">${getTimestamp()}</span>`;
+            messages.appendChild(botMessage);
+            messages.scrollTop = messages.scrollHeight;
+            messageIndex = (messageIndex + 1) % inactivityMessages.length;
+            trackInteraction("inactivity_message_shown", {
+              message: inactivityMessages[messageIndex],
+            });
+          }
           startInactivityTimer();
-          log("Inactivity message sent: " + inactivityMessages[messageIndex]);
         }, 15000);
       }
 
@@ -1164,13 +1317,14 @@
           conversationContext.push({
             sender: "user",
             message: selectedValue,
-            category: null,
+            category: "services",
+            intent: "informational",
           });
 
           // Show typing indicator
           showTypingIndicator(messages);
 
-          // Simulate AI delay
+          // Simulate AI delay with realistic typing pattern
           setTimeout(() => {
             // Remove typing indicator
             removeTypingIndicator(messages);
@@ -1193,7 +1347,11 @@
               sender: "bot",
               message: response,
               category,
+              intent: aiResponses[category]?.intent || "unknown",
             });
+
+            // Check conversation patterns
+            checkConversationPatterns();
 
             // Show reach message
             const reachMessage = getReachMessage(selectedValue);
@@ -1207,6 +1365,7 @@
                 sender: "bot",
                 message: reachMessage,
                 category: "services",
+                intent: "informational",
               });
               trackInteraction("reach_message_displayed", {
                 service: selectedValue,
@@ -1217,6 +1376,55 @@
           }, 1000 + Math.random() * 500);
 
           select.value = "";
+        }
+      }
+
+      // Check conversation patterns for contextual responses
+      function checkConversationPatterns() {
+        if (conversationContext.length < 2) return;
+
+        const recentMessages = conversationContext.slice(-4);
+        const messageIntents = recentMessages.map((msg) => msg.intent);
+
+        for (const pattern of conversationPatterns) {
+          if (pattern.steps.length > recentMessages.length) continue;
+
+          let match = true;
+          for (let i = 0; i < pattern.steps.length; i++) {
+            const step = pattern.steps[i];
+            const msg =
+              recentMessages[recentMessages.length - pattern.steps.length + i];
+
+            if (msg.sender !== step.type || msg.intent !== step.intent) {
+              match = false;
+              break;
+            }
+          }
+
+          if (match) {
+            const messages = document.getElementById("jkvMessages");
+            if (messages) {
+              setTimeout(() => {
+                const followUpMessage = document.createElement("div");
+                followUpMessage.className = "jkv-message bot";
+                followUpMessage.innerHTML = `Bot: ${
+                  pattern.response
+                }<span class="timestamp">${getTimestamp()}</span>`;
+                messages.appendChild(followUpMessage);
+                messages.scrollTop = messages.scrollHeight;
+
+                conversationContext.push({
+                  sender: "bot",
+                  message: pattern.response,
+                  category: "followup",
+                  intent: "followup",
+                });
+
+                trackInteraction("pattern_response", { pattern: pattern.name });
+              }, 1500);
+            }
+            break;
+          }
         }
       }
 
@@ -1231,6 +1439,7 @@
         messages.innerHTML = "";
         messages.appendChild(initialMessage);
         conversationContext = [];
+        conversationFlow = [];
         if (input) {
           input.value = "";
           input.disabled = false;
@@ -1247,31 +1456,45 @@
         return aiResponses.services.reachMessages[lowerService] || null;
       }
 
-      // Get AI response
+      // Enhanced AI response with context awareness
       function getAIResponse(message, context) {
         const lowerMessage = message.toLowerCase().trim();
         let bestMatch = { category: "default", priority: -1 };
         let responseData;
 
+        // Check for exact matches first
         for (let key in aiResponses) {
-          // Skip 'default' or entries without keywords
+          if (key === "default") continue;
+
           if (
-            key === "default" ||
-            !aiResponses[key].keywords ||
-            !Array.isArray(aiResponses[key].keywords)
-          ) {
-            continue;
-          }
-          if (
-            aiResponses[key].keywords.some((keyword) =>
-              lowerMessage.includes(keyword)
+            aiResponses[key].keywords.some(
+              (keyword) => keyword.toLowerCase() === lowerMessage
             )
           ) {
-            if (aiResponses[key].priority > bestMatch.priority) {
-              bestMatch = {
-                category: key,
-                priority: aiResponses[key].priority,
-              };
+            bestMatch = {
+              category: key,
+              priority: aiResponses[key].priority,
+            };
+            break;
+          }
+        }
+
+        // If no exact match, check for partial matches
+        if (bestMatch.priority === -1) {
+          for (let key in aiResponses) {
+            if (key === "default" || !aiResponses[key].keywords) continue;
+
+            if (
+              aiResponses[key].keywords.some((keyword) =>
+                lowerMessage.includes(keyword.toLowerCase())
+              )
+            ) {
+              if (aiResponses[key].priority > bestMatch.priority) {
+                bestMatch = {
+                  category: key,
+                  priority: aiResponses[key].priority,
+                };
+              }
             }
           }
         }
@@ -1282,25 +1505,37 @@
             Math.floor(Math.random() * responseData.responses.length)
           ];
 
+        // Contextual replacements
         if (bestMatch.category === "services") {
           response = response.replace("[SERVICE]", message);
         }
 
+        // Context-aware follow-ups
         if (context.length > 0) {
-          const { category: lastCategory } = context[context.length - 1] || {};
+          const lastUserMessage = context
+            .filter((m) => m.sender === "user")
+            .pop();
+          const lastBotMessage = context
+            .filter((m) => m.sender === "bot")
+            .pop();
           const conversationLength = context.filter(
             (item) => item.sender === "user"
           ).length;
+
           const recentIntents = context
             .slice(-3)
             .map((item) => aiResponses[item.category]?.intent || "unknown");
+
           const isCasual =
             recentIntents.includes("casual") &&
             !recentIntents.includes("support") &&
             !recentIntents.includes("contact");
 
+          const isCommercial = recentIntents.includes("commercial");
+          const isInformational = recentIntents.includes("informational");
+
           if (
-            lastCategory === bestMatch.category &&
+            lastBotMessage?.category === bestMatch.category &&
             Math.random() < responseData.followUpThreshold
           ) {
             response = responseData.followUp.replace("[SERVICE]", message);
@@ -1315,14 +1550,26 @@
               "[SERVICE]",
               message
             )}`;
+          } else if (isCommercial && bestMatch.category === "services") {
+            response = `For pricing on ${message}, we'll need to understand your specific requirements. Would you like to discuss this with our sales team?`;
+          } else if (
+            isInformational &&
+            lastUserMessage?.intent === "informational"
+          ) {
+            response = `To expand on ${
+              lastUserMessage.message
+            }, ${response.toLowerCase()}`;
           }
         }
 
         return { response, category: bestMatch.category };
       }
 
-      // Show typing indicator
+      // Show typing indicator with realistic timing
       function showTypingIndicator(messages) {
+        if (isTyping) return;
+
+        isTyping = true;
         const typingMessage = document.createElement("div");
         typingMessage.className = "jkv-message typing";
         typingMessage.id = "jkvTypingIndicator";
@@ -1330,15 +1577,22 @@
         messages.appendChild(typingMessage);
         messages.scrollTop = messages.scrollHeight;
         log("Typing indicator shown");
+
+        // Random typing duration for realism
+        typingTimeout = setTimeout(() => {
+          removeTypingIndicator(messages);
+        }, 1000 + Math.random() * 2000);
       }
 
       // Remove typing indicator
       function removeTypingIndicator(messages) {
+        clearTimeout(typingTimeout);
         const typingMessage = document.getElementById("jkvTypingIndicator");
-        if (typingMessage) {
+        if (typingMessage && messages.contains(typingMessage)) {
           messages.removeChild(typingMessage);
           log("Typing indicator removed");
         }
+        isTyping = false;
       }
 
       // Update timestamps
@@ -1351,16 +1605,24 @@
             timestamp.textContent = getTimestamp();
           }
         });
-        log("Timestamps updated");
       }
 
       // Track interactions
       function trackInteraction(event, data = {}) {
         log(`Analytics event: ${event}, data: ${JSON.stringify(data)}`);
         // Implement analytics (e.g., send to server)
+        const analyticsData = {
+          event,
+          timestamp: new Date().toISOString(),
+          ...data,
+          conversationLength: conversationContext.filter(
+            (m) => m.sender === "user"
+          ).length,
+        };
+        conversationHistory.push(analyticsData);
       }
 
-      // Send message
+      // Send message with enhanced typing simulation
       async function sendJkvMessage() {
         const input = document.getElementById("jkvInput");
         const messages = document.getElementById("jkvMessages");
@@ -1399,26 +1661,40 @@
         messages.scrollTop = messages.scrollHeight;
 
         // Store user message
-        conversationContext.push({ sender: "user", message, category: null });
+        const { category, intent } = analyzeMessage(message);
+        conversationContext.push({
+          sender: "user",
+          message,
+          category,
+          intent,
+        });
 
-        // Show typing indicator
+        // Show typing indicator with realistic delay
         showTypingIndicator(messages);
 
         try {
-          // Simulate AI delay
-          await new Promise((resolve, reject) => {
-            const timeout = setTimeout(resolve, 1000 + Math.random() * 500);
-            setTimeout(() => reject(new Error("Response timeout")), 8000);
-          });
+          // Simulate AI processing time based on message length
+          const processingTime = Math.min(
+            2000,
+            Math.max(800, message.length * 20)
+          );
+          await new Promise((resolve) => setTimeout(resolve, processingTime));
 
           // Remove typing indicator
           removeTypingIndicator(messages);
 
           // Get AI response
-          const { response, category } = getAIResponse(
+          const { response, category: responseCategory } = getAIResponse(
             message,
             conversationContext
           );
+
+          // Show bot response with typing simulation for longer messages
+          if (response.length > 100) {
+            showTypingIndicator(messages);
+            await new Promise((resolve) => setTimeout(resolve, 800));
+            removeTypingIndicator(messages);
+          }
 
           // Show bot response
           const botMessage = document.createElement("div");
@@ -1431,13 +1707,20 @@
           conversationContext.push({
             sender: "bot",
             message: response,
-            category,
+            category: responseCategory,
+            intent: aiResponses[responseCategory]?.intent || "unknown",
           });
 
+          // Check conversation patterns for contextual follow-ups
+          checkConversationPatterns();
+
           // Show reach message if service-related
-          if (category === "services") {
+          if (responseCategory === "services") {
             const reachMessage = getReachMessage(message);
             if (reachMessage) {
+              // Add slight delay for better UX
+              await new Promise((resolve) => setTimeout(resolve, 500));
+
               const reachMessageElement = document.createElement("div");
               reachMessageElement.className = "jkv-message bot";
               reachMessageElement.innerHTML = `Bot: ${reachMessage}<span class="timestamp">${getTimestamp()}</span>`;
@@ -1447,12 +1730,17 @@
                 sender: "bot",
                 message: reachMessage,
                 category: "services",
+                intent: "informational",
               });
               trackInteraction("reach_message_displayed", { service: message });
             }
           }
 
-          trackInteraction("message_sent", { message, intent: category });
+          trackInteraction("message_sent", {
+            message,
+            intent: responseCategory,
+            responseLength: response.length,
+          });
         } catch (error) {
           log("Error processing message: " + error.message, "error");
           console.error(error);
@@ -1461,6 +1749,7 @@
           errorMessage.innerHTML = `Bot: Sorry, something went wrong. Please try again.<span class="timestamp">${getTimestamp()}</span>`;
           messages.appendChild(errorMessage);
           messages.scrollTop = messages.scrollHeight;
+          trackInteraction("message_error", { error: error.message });
         } finally {
           // Re-enable input
           log("Re-enabling input and button");
@@ -1473,11 +1762,74 @@
         startInactivityTimer();
       }
 
+      // Enhanced message analysis
+      function analyzeMessage(message) {
+        const lowerMessage = message.toLowerCase();
+        let category = "default";
+        let intent = "unknown";
+
+        // Check for exact matches first
+        for (const [key, data] of Object.entries(aiResponses)) {
+          if (
+            data.keywords?.some(
+              (keyword) => keyword.toLowerCase() === lowerMessage
+            )
+          ) {
+            category = key;
+            intent = data.intent;
+            break;
+          }
+        }
+
+        // If no exact match, check for partial matches
+        if (category === "default") {
+          for (const [key, data] of Object.entries(aiResponses)) {
+            if (
+              data.keywords?.some((keyword) =>
+                lowerMessage.includes(keyword.toLowerCase())
+              )
+            ) {
+              if (data.priority > aiResponses[category].priority) {
+                category = key;
+                intent = data.intent;
+              }
+            }
+          }
+        }
+
+        // Special cases
+        if (
+          lowerMessage.includes("how much") ||
+          lowerMessage.includes("price")
+        ) {
+          intent = "commercial";
+        }
+        if (lowerMessage.includes("thank")) {
+          intent = "gratitude";
+        }
+        if (lowerMessage.includes("bye") || lowerMessage.includes("goodbye")) {
+          intent = "farewell";
+        }
+
+        return { category, intent };
+      }
+
       // Initialize
       document.addEventListener("DOMContentLoaded", () => {
         log("Chatbot initialized");
         showJkvChat();
         updateTimestamps();
+
+        // Add event listeners for better interaction tracking
+        document
+          .getElementById("jkvServiceSelect")
+          ?.addEventListener("focus", () => {
+            trackInteraction("service_select_focused");
+          });
+
+        document.getElementById("jkvInput")?.addEventListener("focus", () => {
+          trackInteraction("input_field_focused");
+        });
       });
     </script>
   </body>
