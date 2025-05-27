@@ -7,7 +7,7 @@
     <title>Boost Your Business Growth with Powerful CRM Solutions</title>
     <meta name="description" content="Utilize the CRM solution from Jaikvik Technology that is customized for you to prioritize customer satisfaction and business effectiveness.">
     <meta name="keywords" content="CRM, Customer Relationship Management, Business Growth, Jaikvik Technology">
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <script src="assets/js/jquery.js"></script>
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">

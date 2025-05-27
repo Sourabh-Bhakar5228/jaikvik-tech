@@ -7,7 +7,7 @@
     <title>FILM & MEDIA PRODUCTION</title>
     <meta name="description" content="Explore Film and Media Production at Jaikvik Technology. Discover professional services in corporate videos, product explainers, TV commercials, YouTube ads, photoshoots, model shoots, interviews, and more.">
     <meta name="keywords" content="Film Production, Corporate Video, Product Explainer, TV Commercials, YouTube Ads, Photoshoot, Model Shoot, Interviews, Jaikvik Technology">
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <script src="assets/js/jquery.js"></script>
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">

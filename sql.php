@@ -8,7 +8,7 @@
     <meta name="description" content="Master SQL with Jaikvik Technology to manage and query relational databases efficiently for robust applications.">
     <meta name="keywords" content="SQL, Relational Database, Database Management, Jaikvik Technology">
     <!-- Favicon Link -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <!-- jQuery File Link -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- FontAwesome File Link -->

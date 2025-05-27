@@ -8,7 +8,7 @@
     <meta name="description" content="Stay updated with Corporate World News at Jaikvik Insights. Explore trends, mergers, acquisitions, and corporate strategies to stay ahead in the business world.">
     <meta name="keywords" content="Corporate World News, Business Insights, Mergers and Acquisitions, Corporate Strategies, Jaikvik Insights">
     <!-- Favicon Link -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <!-- Jquery File Link -->
     <script src="assets/js/jquery.js"></script>
     <!-- FontAwesome File Link -->

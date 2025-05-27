@@ -8,7 +8,7 @@
     <meta name="description" content="Empower your web projects with JavaScript and jQuery at Jaikvik Technology. Create dynamic, interactive applications with ease and efficiency.">
     <meta name="keywords" content="JavaScript, jQuery, Web Development, Jaikvik Technology">
     <!-- Favicon Link -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <!-- jQuery File Link -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- FontAwesome File Link -->

@@ -8,7 +8,7 @@
     <meta name="description" content="Discover Digital Marketing, Social Media Marketing, PPC, Meta Ads, YouTube Ads, and Brand Promotion at Jaikvik Technology. Learn strategies to boost your online presence and business growth.">
     <meta name="keywords" content="Digital Marketing, Social Media Marketing, PPC, Meta Ads, YouTube Ads, Brand Promotion, Jaikvik Technology">
     <!-- Favicon Link -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <!-- Jquery File Link -->
     <script src="assets/js/jquery.js"></script>
     <!-- FontAwesome File Link -->

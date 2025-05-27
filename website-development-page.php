@@ -8,7 +8,7 @@
     <meta name="description" content="Explore a comprehensive guide to website development at Jaikvik Technology. Learn how custom websites enhance digital presence, user interaction, and business growth with tailored design and functionality.">
     <meta name="keywords" content="Website Development, Custom Websites, Jaikvik Technology, Web Design, Digital Presence">
     <!-- Favicon Link -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <!-- Jquery File Link -->
     <script src="assets/js/jquery.js"></script>
     <!-- FontAwesome File Link -->

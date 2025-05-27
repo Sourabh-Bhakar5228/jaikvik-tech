@@ -8,7 +8,7 @@
     <meta name="description" content="Unlock the power of Python with Jaikvik Technology to build versatile, efficient applications for web, data science, and more.">
     <meta name="keywords" content="Python, Programming Language, Web Development, Data Science, Jaikvik Technology">
     <!-- Favicon Link -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <!-- jQuery File Link -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- FontAwesome File Link -->

@@ -8,7 +8,7 @@
     <meta name="description" content="Explore Social Media Marketing at Jaikvik Technology. Connect brands with audiences through strategic content, ads, and engagement to boost visibility, loyalty, and growth in the digital age.">
     <meta name="keywords" content="Social Media Marketing, Brand Engagement, Jaikvik Technology, Digital Marketing, Social Platforms">
     <!-- Favicon Link -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <!-- Jquery File Link -->
     <script src="assets/js/jquery.js"></script>
     <!-- FontAwesome File Link -->

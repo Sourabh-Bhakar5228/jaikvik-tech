@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jaikvik Technology - Blogs</title>
     <!-- Favicon Link  -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <!-- Jquery File Link -->
     <script src="assets/js/jquery.js"></script>
     <!-- FontAwesome File Link -->
@@ -126,7 +126,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/blog.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -150,7 +150,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/blog.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -174,7 +174,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/web.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/web.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -198,7 +198,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/ppc.jpg" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/ppc.jpg" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -222,7 +222,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/blog.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -246,7 +246,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/blog.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -270,7 +270,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/The Ultimate guide.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/The Ultimate guide.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -294,7 +294,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/why.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/why.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -318,7 +318,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/blog.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -342,7 +342,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/blog.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -366,7 +366,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/blog.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -390,7 +390,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/blog.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -414,7 +414,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/blog.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -438,7 +438,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/blog.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -462,7 +462,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/blog.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -486,7 +486,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/blog.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -510,7 +510,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/blog.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -534,7 +534,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/web.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/web.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -558,7 +558,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/ppc.jpg" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/ppc.jpg" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -582,7 +582,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/blog.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -606,7 +606,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/blog.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -630,7 +630,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/blog.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -654,7 +654,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/blog.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -678,7 +678,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/blog.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">
@@ -702,7 +702,7 @@
             <div class="col-lg-4">
                 <div class="blogPageCard">
                     <div class="blogImg">
-                        <img src="assets/img/blog/blog.png" alt="Blog Img">
+                        <img src="https://jaikvik.in/lab/new-post-video/img/blog/blog.png" alt="Blog Img">
                     </div>
                     <div class="blogCardContent">
                         <div class="blogPerson">

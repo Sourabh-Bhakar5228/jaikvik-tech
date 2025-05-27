@@ -8,7 +8,7 @@
     <meta name="description" content="Build dynamic, interactive web applications with React.js at Jaikvik Technology, leveraging its component-based architecture.">
     <meta name="keywords" content="React.js, JavaScript Framework, Web Development, Jaikvik Technology">
     <!-- Favicon Link -->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <!-- jQuery File Link -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- FontAwesome File Link -->
