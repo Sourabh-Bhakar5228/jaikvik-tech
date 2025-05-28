@@ -1,4 +1,41 @@
 // Product Swiper
+var swiper = new Swiper(".productSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  loop: true,
+  speed: 2000,
+  autoplay: {
+    delay: 2000,
+    // disableOnInteraction: false, // Set to true if you want autoplay to stop on interaction
+    // waitForTransition: false, // Set to true if you want autoplay to wait for transition completion
+    pauseOnMouseEnter: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+    clickable: true,
+  },
+  breakpoints: {
+    340: {
+      slidesPerView: 1.2,
+    },
+    640: {
+      slidesPerView: 2.5,
+    },
+    768: {
+      slidesPerView: 3.5,
+    },
+    1024: {
+      slidesPerView: 4.5,
+    },
+  },
+});
+// Product Swiper End
+// Product Swiper
 var swiper = new Swiper(".techslider", {
   slidesPerView: 1,
   spaceBetween: 10,
