@@ -17,7 +17,7 @@
     <!-- Bootstrap File Link  -->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <!-- Nav Css File Link  -->
-    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
     <!-- Css Fancy Box -->
     <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
     <!-- Css File Link  -->
@@ -106,7 +106,7 @@
         </div>
     </section>
     <!-- ========== End Privacy Policy Section ========== -->
-    
+
     <!-- Footer File Link  -->
     <?php include 'includes/footer.php' ?>
 

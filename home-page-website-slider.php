@@ -1,6 +1,6 @@
- <div class="clientHeading">
-     <h2 class="text-uppercase"><a href="#">Client Work <span>Explore All</span></a></h2>
- </div>
+ <!-- <div class="clientHeading">
+     <h2 class="text-uppercase"><a href="#">Client Work </a></h2>
+ </div> -->
 
 
  <!-- Website Slider  -->
@@ -131,4 +131,3 @@
          <div class="swiper-button-prev"></div>
      </div>
  </div>
-    

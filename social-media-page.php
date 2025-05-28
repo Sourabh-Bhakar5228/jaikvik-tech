@@ -4,18 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <meta name="description" content="Learn about Social Media Marketing (SMM) strategies, trends, and best practices to enhance your brand's online presence with Jaikvik Technology.">
     <title>Social Media Marketing - Jaikvik Technology</title>
     <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
-=======
+
     <title>SOCIAL MEDIA MARKETING - Connecting Brands with Audience</title>
     <meta name="description" content="Explore Social Media Marketing at Jaikvik Technology. Connect brands with audiences through strategic content, ads, and engagement to boost visibility, loyalty, and growth in the digital age.">
     <meta name="keywords" content="Social Media Marketing, Brand Engagement, Jaikvik Technology, Digital Marketing, Social Platforms">
     <!-- Favicon Link -->
     <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
     <!-- Jquery File Link -->
->>>>>>> 52634270abcf772d9e8ce639becb1b0cedeedb08
+
     <script src="assets/js/jquery.js"></script>
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">

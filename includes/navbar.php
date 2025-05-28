@@ -93,7 +93,7 @@
 <header>
     <div class="header-main sticky-nav">
         <div class="container-fluid laptop-view">
-            <div class="row align-items-center">
+            <div class="row align-items-center justify-content-center">
                 <div class="col-lg-1">
                     <div class="header-logo h1">
                         <a href="index.php">
@@ -101,7 +101,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-10">
+                <div class="col-lg-9">
                     <div class="main-menu d-flex">
                         <ul>
                             <li class="dropdown position-static text-uppercase"><a href="Customized_Software.php">Software Development <i class="pe-7s-angle-down"></i></a>
@@ -295,14 +295,17 @@
                                     </div>
                                 </ul>
                             </li>
-                            <!-- Language Menu Item with Popup Trigger, Placed After Film Production -->
-                            <li class="language-menu text-uppercase">
-                                <a href="javascript:void(0)" onclick="toggleTranslateDropdown()">Language</a>
-                            </li>
+
+
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2"></div>
+                <!-- Language Menu Item with Popup Trigger, Placed After Film Production -->
+                <div class="col-lg-2">
+                    <div class="language-menu text-uppercase">
+                        <a href="javascript:void(0)" onclick="toggleTranslateDropdown()">Language</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="position-relative">
