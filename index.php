@@ -335,7 +335,7 @@
         </div>
     </section>
 
-
+    <?php include 'try.php' ?>
 
     <!-- ========== End Product Section ========== -->
 

@@ -183,14 +183,10 @@
             height: 100%;
             display: block;
             object-fit: cover;
-            transition: var(--transition);
             position: absolute;
             top: 0;
             left: 0;
             z-index: 1;
-        }
-
-        .service-card-item:hover .card-main-img {
             opacity: 0;
             visibility: hidden;
         }
@@ -201,13 +197,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0;
-            transition: var(--transition);
-            z-index: 2;
-        }
-
-        .service-card-item:hover .card-gallery-slider {
             opacity: 1;
+            z-index: 2;
         }
 
         .card-gallery-slider .swiper-slide {
@@ -270,7 +261,7 @@
         }
 
         .card-content-wrapper a::after {
-            content: 'Learn More';
+            /* content: 'Learn More'; */
             position: absolute;
             bottom: 20px;
             left: 20px;
@@ -340,7 +331,6 @@
             border-radius: 0 !important;
         }
 
-        /* Responsive Styles */
         @media (max-width: 1400px) {
             .service-showcase-container {
                 max-width: 1200px;
@@ -653,18 +643,9 @@
 
         @media (hover: none) {
             .service-card-item.active {
-                transform: scale(var(--hover-scale)) !important;
+                transform: scale(1.25);
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), 0 0 30px rgba(192, 192, 192, 0.8) !important;
                 z-index: 20 !important;
-            }
-
-            .service-card-item.active .card-main-img {
-                opacity: 0 !important;
-                visibility: hidden !important;
-            }
-
-            .service-card-item.active .card-gallery-slider {
-                opacity: 1 !important;
             }
 
             .service-card-item.active .card-content-wrapper {
@@ -679,6 +660,48 @@
             .service-card-item.active .card-content-wrapper a::after {
                 opacity: 1 !important;
                 transform: translateY(0) !important;
+            }
+
+            @media (max-width: 1400px) {
+                .service-card-item.active {
+                    transform: scale(1.2);
+                }
+            }
+
+            @media (max-width: 1200px) {
+                .service-card-item.active {
+                    transform: scale(1.18);
+                }
+            }
+
+            @media (max-width: 992px) {
+                .service-card-item.active {
+                    transform: scale(1.15);
+                }
+            }
+
+            @media (max-width: 768px) {
+                .service-card-item.active {
+                    transform: scale(1.12);
+                }
+            }
+
+            @media (max-width: 576px) {
+                .service-card-item.active {
+                    transform: scale(1.1);
+                }
+            }
+
+            @media (max-width: 480px) {
+                .service-card-item.active {
+                    transform: scale(1.08);
+                }
+            }
+
+            @media (max-width: 400px) {
+                .service-card-item.active {
+                    transform: scale(1.05);
+                }
             }
         }
     </style>
@@ -699,12 +722,12 @@
                 <div class="swiper-slide service-slide-item">
                     <div class="service-card-item">
                         <span class="card-badge-tag">Popular</span>
-                        <img src="https://images.unsplash.com/photo-1630442923896-244dd3717b35?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8TW9iaWxlJTIwQXBwJTIwRGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D" class="card-main-img" alt="Mobile App Development">
+                        <img src="https://images.unsplash.com/photo-1630442923896-244dd3717b35?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8TW9iaWxlJTIwQXBwJTIwRGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D" class="card-main-img" alt="Mobile App Development">
                         <div class="card-gallery-slider swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1721080250995-5a83519eb2a0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8TW9iaWxlJTIwQXBwJTIwRGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3Ds" alt="Mobile App 1"></div>
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1517292987719-0369a794ec0f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fE1vYmlsZSUyMEFwcCUyMERldmVsb3BtZW50fGVufDB8fDB8fHww" alt="Mobile App 2"></div>
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fE1vYmlsZSUyMEFwcCUyMERldmVsb3BtZW50fGVufDB8fDB8fHww" alt="Mobile App 3"></div>
+                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1721080250995-5a83519eb2a0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8TW9iaWxlJTIwQXBwJTIwRGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D" alt="Mobile App Gallery 1"></div>
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1517292987719-0369a794ec0f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fE1vYmlsZSUyMEFwcCUyMERldmVsb3BtZW50fGVufDB8fDB8fHww" alt="Mobile App Gallery 2"></div>
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fE1vYmlsZSUyMEFwcCUyMERldmVsb3BtZW50fGVufDB8fDB8fHww" alt="Mobile App Gallery 3"></div>
                             </div>
                         </div>
                         <div class="card-content-wrapper">
@@ -714,17 +737,16 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Service 2 -->
                 <div class="swiper-slide service-slide-item">
                     <div class="service-card-item">
                         <span class="card-badge-tag">Featured</span>
-                        <img src="https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8V2ViJTIwRGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D" class="card-main-img" alt="Web Development">
+                        <img src="https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8V2ViJTIwRGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D" class="card-main-img" alt="Web Development">
                         <div class="card-gallery-slider swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8V2ViJTIwRGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D" alt="Web Dev 1"></div>
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fFdlYiUyMERldmVsb3BtZW50fGVufDB8fDB8fHww" alt="Web Dev 2"></div>
-                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1678565869434-c81195861939?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fFdlYiUyMERldmVsb3BtZW50fGVufDB8fDB8fHww" alt="Web Dev 3"></div>
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8V2ViJTIwRGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D" alt="Web Development Gallery 1"></div>
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fFdlYiUyMERldmVsb3BtZW50fGVufDB8fDB8fHww" alt="Web Development Gallery 2"></div>
+                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1678565869434-c81195861939?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fFdlYiUyMERldmVsb3BtZW50fGVufDB8fDB8fHww" alt="Web Development Gallery 3"></div>
                             </div>
                         </div>
                         <div class="card-content-wrapper">
@@ -734,26 +756,24 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Service 3 -->
                 <div class="swiper-slide service-slide-item">
                     <div class="service-card-item">
-                        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8VUklMkZVWCUyMERlc2lnbnxlbnwwfHwwfHx8MA%3D%3D" class="card-main-img" alt="UI/UX Design">
+                        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8VUklMkZVWCUyMERlc2lnbnxlbnwwfHwwfHx8MA%3D%3D" class="card-main-img" alt="Film Production">
                         <div class="card-gallery-slider swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fFVJJTJGVVglMjBEZXNpZ258ZW58MHx8MHx8fDA%3D" alt="UI/UX 1"></div>
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1602576666092-bf6447a729fc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fFVJJTJGVVglMjBEZXNpZ258ZW58MHx8MHx8fDA%3D" alt="UI/UX 2"></div>
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1602576666092-bf6447a729fc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fFVJJTJGVVglMjBEZXNpZ258ZW58MHx8MHx8fDA%3D" alt="UI/UX 3"></div>
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fFVJJTJGVVglMjBEZXNpZ258ZW58MHx8MHx8fDA%3D" alt="Film Production Gallery 1"></div>
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1602576666092-bf6447a729fc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fFVJJTJGVVglMjBEZXNpZ258ZW58MHx8MHx8fDA%3D" alt="Film Production Gallery 2"></div>
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1586717799252-bd134ad00779?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fFVJJTJGVVglMjBEZXNpZ258ZW58MHx8MHx8fDA%3D" alt="Film Production Gallery 3"></div>
                             </div>
                         </div>
                         <div class="card-content-wrapper">
                             <h3>Film Production</h3>
-                            <p>Crafting compelling visual stories through creative direction, professional cinematography, and seamless.</p>
+                            <p>Crafting compelling visual stories through creative direction, professional cinematography, and seamless editing.</p>
                             <a href="Film_production.php"></a>
                         </div>
                     </div>
                 </div>
-
                 <!-- Service 4 -->
                 <div class="swiper-slide service-slide-item">
                     <div class="service-card-item">
@@ -761,9 +781,9 @@
                         <img src="https://plus.unsplash.com/premium_photo-1681488262364-8aeb1b6aac56?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RSUyMGNvbW1lcmNlJTIwU29sdXRpb25zfGVufDB8fDB8fHww" class="card-main-img" alt="E-commerce Solutions">
                         <div class="card-gallery-slider swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1684785618727-378a3a5e91c5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fEUlMjBjb21tZXJjZSUyMFNvbHV0aW9uc3xlbnwwfHwwfHx8MA%3D%3D" alt="E-commerce 1"></div>
-                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1661456268709-bac8e7f21e51?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fEUlMjBjb21tZXJjZSUyMFNvbHV0aW9uc3xlbnwwfHwwfHx8MA%3D%3D" alt="E-commerce 2"></div>
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1726138383736-3c848a2c7769?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fEUlMjBjb21tZXJjZSUyMFNvbHV0aW9uc3xlbnwwfHwwfHx8MA%3D%3D" alt="E-commerce 3"></div>
+                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1684785618727-378a3a5e91c5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fEUlMjBjb21tZXJjZSUyMFNvbHV0aW9uc3xlbnwwfHwwfHx8MA%3D%3D" alt="E-commerce Gallery 1"></div>
+                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1661456268709-bac8e7f21e51?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fEUlMjBjb21tZXJjZSUyMFNvbHV0aW9uc3xlbnwwfHwwfHx8MA%3D%3D" alt="E-commerce Gallery 2"></div>
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1726138383736-3c848a2c7769?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fEUlMjBjb21tZXJjZSUyMFNvbHV0aW9uc3xlbnwwfHwwfHx8MA%3D%3D" alt="E-commerce Gallery 3"></div>
                             </div>
                         </div>
                         <div class="card-content-wrapper">
@@ -773,16 +793,15 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Service 5 -->
                 <div class="swiper-slide service-slide-item">
                     <div class="service-card-item">
                         <img src="https://plus.unsplash.com/premium_photo-1683120968693-9af51578770e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q2xvdWQlMjBTZXJ2aWNlc3xlbnwwfHwwfHx8MA%3D%3D" class="card-main-img" alt="Cloud Services">
                         <div class="card-gallery-slider swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1683836722608-60ab4d1b58e5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Q2xvdWQlMjBTZXJ2aWNlc3xlbnwwfHwwfHx8MA%3D%3D" alt="Cloud 1"></div>
-                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1681487942927-e1a2786e6036?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Q2xvdWQlMjBTZXJ2aWNlc3xlbnwwfHwwfHx8MA%3D%3D" alt="Cloud 2"></div>
-                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1683288706548-e8b6bb72fe86?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fENsb3VkJTIwU2VydmljZXN8ZW58MHx8MHx8fDA%3D" alt="Cloud 3"></div>
+                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1683836722608-60ab4d1b58e5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Q2xvdWQlMjBTZXJ2aWNlc3xlbnwwfHwwfHx8MA%3D%3D" alt="Cloud Services Gallery 1"></div>
+                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1681487942927-e1a2786e6036?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Q2xvdWQlMjBTZXJ2aWNlc3xlbnwwfHwwfHx8MA%3D%3D" alt="Cloud Services Gallery 2"></div>
+                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1683288706548-e8b6bb72fe86?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fENsb3VkJTIwU2VydmljZXN8ZW58MHx8MHx8fDA%3D" alt="Cloud Services Gallery 3"></div>
                             </div>
                         </div>
                         <div class="card-content-wrapper">
@@ -792,17 +811,16 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Service 6 -->
                 <div class="swiper-slide service-slide-item">
                     <div class="service-card-item">
                         <span class="card-badge-tag">New</span>
-                        <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RGlnaXRhbCUyME1hcmtldGluZ3xlbnwwfHwwfHx8MA%3D%3D" class="card-main-img" alt="Digital Marketing">
+                        <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RGlnaXRhbCUyME1hcmtldGluZ3xlbnwwfHwwfHx8MA%3D%3D" class="card-main-img" alt="Digital Marketing">
                         <div class="card-gallery-slider swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1537731121640-bc1c4aba9b80?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fERpZ2l0YWwlMjBNYXJrZXRpbmd8ZW58MHx8MHx8fDA%3D" alt="Digital Marketing 1"></div>
-                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1683262038148-2ac280407276?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fERpZ2l0YWwlMjBNYXJrZXRpbmd8ZW58MHx8MHx8fDA%3D" alt="Digital Marketing 2"></div>
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fERpZ2l0YWwlMjBNYXJrZXRpbmd8ZW58MHx8MHx8fDA%3D" alt="Digital Marketing 3"></div>
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1537731121640-29c85a43dcfe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fERpZ2l0YWwlMjBNYXJrZXRpbmd8ZW58MHx8MHx8fDA%3D" alt="Digital Marketing Gallery 1"></div>
+                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1683262038148-2ac280407276?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fERpZ2l0YWwlMjBNYXJrZXRpbmd8ZW58MHx8MHx8fDA%3D" alt="Digital Marketing Gallery 2"></div>
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fERpZ2l0YWwlMjBNYXJrZXRpbmd8ZW58MHx8MHx8fDA%3D" alt="Digital Marketing Gallery 3"></div>
                             </div>
                         </div>
                         <div class="card-content-wrapper">
@@ -812,16 +830,15 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Service 7 -->
                 <div class="swiper-slide service-slide-item">
                     <div class="service-card-item">
-                        <img src="https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q3liZXJzZWN1cml0eXxlbnwwfHwwfHx8MA%3D%3D" class="card-main-img" alt="Cybersecurity">
+                        <img src="https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q3liZXJzZWN1cml0eXxlbnwwfHwwfHx8MA%3D%3D" class="card-main-img" alt="PPC, Meta, YouTube Ads">
                         <div class="card-gallery-slider swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Q3liZXJzZWN1cml0eXxlbnwwfHwwfHx8MA%3D%3D" alt="Cybersecurity 1"></div>
-                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1674669009418-2643aa58b11b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Q3liZXJzZWN1cml0eXxlbnwwfHwwfHx8MA%3D%3D" alt="Cybersecurity 2"></div>
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q3liZXJzZWN1cml0eXxlbnwwfHwwfHx8MA%3D%3D" alt="Cybersecurity 3"></div>
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Q3liZXJzZWN1cml0eXxlbnwwfHwwfHx8MA%3D%3D" alt="Ads Gallery 1"></div>
+                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1674669009418-2643aa58b11b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Q3liZXJzZWN1cml0eXxlbnwwfHwwfHx8MA%3D%3D" alt="Ads Gallery 2"></div>
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q3liZXJzZWN1cml0eXxlbnwwfHwwfHx8MA%3D%3D" alt="Ads Gallery 3"></div>
                             </div>
                         </div>
                         <div class="card-content-wrapper">
@@ -831,17 +848,16 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Service 8 -->
                 <div class="swiper-slide service-slide-item">
                     <div class="service-card-item">
                         <span class="card-badge-tag">Trending</span>
-                        <img src="https://plus.unsplash.com/premium_photo-1726666269043-fb16e54646d0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QUklMjBTb2x1dGlvbnN8ZW58MHx8MHx8fDA%3D" class="card-main-img" alt="AI Solutions">
+                        <img src="https://plus.unsplash.com/premium_photo-1726666269043-fb16e54646d0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QUklMjBTb2x1dGlvbnN8ZW58MHx8MHx8fDA%3D" class="card-main-img" alt="Social Media">
                         <div class="card-gallery-slider swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1661727567905-01e580328c2d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QUklMjBTb2x1dGlvbnN8ZW58MHx8MHx8fDA%3D" alt="AI Solutions 1"></div>
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1738003667850-a2fb736e31b3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8QUklMjBTb2x1dGlvbnN8ZW58MHx8MHx8fDA%3D" alt="AI Solutions 2"></div>
-                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWl8ZW58MHx8MHx8fDA%3D" alt="AI Solutions 3"></div>
+                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1661727567905-01e580328c2d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QUklMjBTb2x1dGlvbnN8ZW58MHx8MHx8fDA%3D" alt="Social Media Gallery 1"></div>
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1738003667850-a2fb736e31b3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8QUklMjBTb2x1dGlvbnN8ZW58MHx8MHx8fDA%3D" alt="Social Media Gallery 2"></div>
+                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWl8ZW58MHx8MHx8fDA%3D" alt="Social Media Gallery 3"></div>
                             </div>
                         </div>
                         <div class="card-content-wrapper">
@@ -897,15 +913,15 @@
                         spaceBetween: 15
                     },
                     640: {
-                        slidesPerView: 2.2,
+                        slidesPerView: 2.1,
                         spaceBetween: 18
                     },
                     768: {
-                        slidesPerView: 2.2,
+                        slidesPerView: 2.1,
                         spaceBetween: 20
                     },
                     992: {
-                        slidesPerView: 3.2,
+                        slidesPerView: 3.1,
                         spaceBetween: 22
                     },
                     1200: {
@@ -913,7 +929,7 @@
                         spaceBetween: 25
                     },
                     1400: {
-                        slidesPerView: 4.2,
+                        slidesPerView: 4.1,
                         spaceBetween: 25
                     }
                 },
@@ -924,9 +940,9 @@
                 }
             });
 
-            // Initialize hover gallery sliders (inner sliders) with lazy loading
+            // Initialize gallery sliders
             const gallerySliders = [];
-            document.querySelectorAll('.card-gallery-slider').forEach((sliderEl, index) => {
+            document.querySelectorAll('.card-gallery-slider').forEach((sliderEl) => {
                 const gallerySlider = new Swiper(sliderEl, {
                     slidesPerView: 1,
                     loop: true,
@@ -955,74 +971,57 @@
                                     img.loading = 'lazy';
                                     img.onload = () => this.update();
                                     img.onerror = () => {
-                                        console.log('Failed to load image:', img.src);
-                                        img.src = 'https://picsum.photos/600/400'; // Fallback image
+                                        console.warn('Failed to load image:', img.src);
+                                        img.src = 'https://via.placeholder.com/600x400';
                                     };
                                 }
                             });
+                            this.autoplay.start();
                         }
                     }
                 });
                 gallerySliders.push(gallerySlider);
 
                 const serviceCard = sliderEl.closest('.service-card-item');
-                if (!serviceCard) return; // Safety check
+                if (!serviceCard) return;
 
-                // Desktop hover handling for inner slider
+                // Desktop hover
                 serviceCard.addEventListener('mouseenter', () => {
                     serviceCard.classList.add('active');
-                    gallerySlider.autoplay.start();
-                    gallerySlider.update();
                     mainServiceSlider.autoplay.stop();
                 });
 
                 serviceCard.addEventListener('mouseleave', () => {
                     serviceCard.classList.remove('active');
-                    gallerySlider.autoplay.stop();
-                    gallerySlider.slideTo(0);
                     mainServiceSlider.autoplay.start();
                 });
 
-                // Touch device handling for inner slider
+                // Touch devices
                 serviceCard.addEventListener('click', function(e) {
-                    // Allow link navigation
-                    if (e.target.closest('a')) {
-                        return; // Let the browser handle the link
-                    }
-                    e.preventDefault(); // Prevent default for non-link clicks
+                    if (e.target.closest('a')) return;
+                    e.preventDefault();
                     document.querySelectorAll('.service-card-item.active').forEach(card => {
-                        if (card !== serviceCard) {
-                            card.classList.remove('active');
-                            const slider = card.querySelector('.card-gallery-slider')?.swiper;
-                            if (slider) {
-                                slider.autoplay.stop();
-                                slider.slideTo(0);
-                            }
-                        }
+                        if (card !== serviceCard) card.classList.remove('active');
                     });
 
                     if (serviceCard.classList.contains('active')) {
                         serviceCard.classList.remove('active');
-                        gallerySlider.autoplay.stop();
-                        gallerySlider.slideTo(0);
                         mainServiceSlider.autoplay.start();
                     } else {
                         serviceCard.classList.add('active');
-                        gallerySlider.autoplay.start();
-                        gallerySlider.update();
                         mainServiceSlider.autoplay.stop();
                     }
                 });
 
-                // Ensure links don't trigger card click behavior
+                // Prevent link clicks from triggering card click
                 serviceCard.querySelectorAll('.card-content-wrapper a').forEach(link => {
                     link.addEventListener('click', function(e) {
-                        e.stopPropagation(); // Prevent card click handler
+                        e.stopPropagation();
                     });
                 });
             });
 
-            // Stop main slider when hovering over entire section
+            // Stop main slider on section hover
             const showcaseSection = document.querySelector('.service-showcase-container');
             if (showcaseSection) {
                 showcaseSection.addEventListener('mouseenter', () => {
@@ -1035,22 +1034,17 @@
                 });
             }
 
-            // Close active card when clicking outside
+            // Close active card on outside click
             document.addEventListener('click', function(e) {
                 if (!e.target.closest('.service-card-item')) {
                     document.querySelectorAll('.service-card-item.active').forEach(card => {
                         card.classList.remove('active');
-                        const slider = card.querySelector('.card-gallery-slider')?.swiper;
-                        if (slider) {
-                            slider.autoplay.stop();
-                            slider.slideTo(0);
-                        }
                     });
                     mainServiceSlider.autoplay.start();
                 }
             });
 
-            // Force update all sliders after initialization
+            // Force update sliders
             setTimeout(() => {
                 mainServiceSlider.update();
                 gallerySliders.forEach(slider => slider.update());

@@ -3565,6 +3565,7 @@ body {
     .swiper-wrapper {
       .swiper-slide {
         .reviewCard {
+          height: 310px;
           background-color: var(--colorFour);
           padding: 15px 20px;
           border-radius: 5px;
