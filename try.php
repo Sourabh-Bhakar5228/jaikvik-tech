@@ -12,7 +12,7 @@
         :root {
             --colorRed: #ff0000;
             /* Define your red color */
-            --colorBlack: #000000;
+            --colorBlack: #141414;
             /* Define your black color */
         }
 
