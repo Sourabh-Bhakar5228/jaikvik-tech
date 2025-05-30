@@ -11,9 +11,13 @@
     <style>
         :root {
             --colorRed: #ff0000;
+<<<<<<< HEAD
             /* Define your red color */
             --colorBlack: #141414;
             /* Define your black color */
+=======
+            --colorBlack: #000000;
+>>>>>>> b27c365 (update ptoduct slider)
         }
 
         .bhakar-section {
@@ -28,11 +32,9 @@
             margin-bottom: 30px;
             font-weight: 700;
             color: white;
-
         }
 
         .bhakar-heading h2 a {
-            /* color: #333; */
             text-decoration: none;
         }
 
@@ -43,6 +45,7 @@
             box-shadow: 0 5px 15px rgba(90, 89, 89, 0.1);
             transition: transform 0.3s ease;
             height: 100%;
+            width: 100%;
         }
 
         .bhakar-card:hover {
@@ -50,36 +53,33 @@
         }
 
         .bhakar-card-icon {
+
             position: absolute;
-            top: 10px;
-            left: 10px;
+            top: 0;
+            left: 0;
             z-index: 3;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: transparent; /* Removed background to match original large number styling */
         }
 
         .bhakar-card-icon img {
-            width: 164px;
-            height: 215px;
+            width: 120px; /* Restored original size */
+            height: 180px;
             position: absolute;
-            right: 46px;
-            top: -22px;
+            right: 3px; /* Restored original positioning */
+        color: red;
+            top: -15px;
         }
 
         .bhakar-card-img {
             position: relative;
             overflow: hidden;
-            height: 200px;
+            height: 180px;
+            width: 100% !important;
         }
 
         .bhakar-card-img .image {
             width: 100%;
-            height: auto;
+            height: 100%;
             position: absolute;
             left: 0;
         }
@@ -92,8 +92,13 @@
         }
 
         .bhakar-card-img:hover .main-image {
-            display: none;
+            display: block;
         }
+
+           /* .bhakar-card-icon img:hover {
+            display: block;
+        } */
+
 
         .bhakar-card-img:hover .hover-image {
             display: block;
@@ -125,14 +130,12 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            /* max-width: 1200px; */
             padding: 0 10px;
             z-index: 10;
         }
 
         .bhakar-swiper:hover .bhakar-nav {
             opacity: 1;
-            /* Show navigation buttons on hover */
         }
 
         .bhakar-swiper-button-prev {
@@ -270,6 +273,13 @@
             .bhakar-swiper-button-prev::after {
                 font-size: 14px;
             }
+
+            .bhakar-card-icon img {
+                width: 120px; /* Reduced size for smaller screens */
+                height: 160px;
+                right: 30px; /* Adjusted positioning */
+                top: -15px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -290,6 +300,13 @@
             .bhakar-swiper-button-next::after,
             .bhakar-swiper-button-prev::after {
                 font-size: 12px;
+            }
+
+            .bhakar-card-icon img {
+                width: 80px; /* Further reduced for very small screens */
+                height: 105px;
+                right: 20px; /* Adjusted positioning */
+                top: -10px;
             }
         }
     </style>
@@ -698,7 +715,7 @@
         (function($) {
             var swiper = new Swiper('.bhakar-swiper', {
                 slidesPerView: 1,
-                spaceBetween: 50,
+                spaceBetween: 100, // Increased significantly to accommodate large number images
                 loop: true,
                 autoplay: {
                     delay: 3000,
@@ -715,15 +732,15 @@
                 breakpoints: {
                     640: {
                         slidesPerView: 2,
-                        spaceBetween: 20,
+                        spaceBetween: 120, // Increased spacing
                     },
                     768: {
                         slidesPerView: 3,
-                        spaceBetween: 30,
+                        spaceBetween: 140, // Increased spacing
                     },
                     1024: {
-                        slidesPerView: 5,
-                        spaceBetween: 60,
+                        slidesPerView: 4.5,
+                        spaceBetween: 140, // Increased spacing to ensure no overlap
                     },
                 }
             });
