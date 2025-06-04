@@ -47,7 +47,7 @@
                     <img src="https://jaikvik.in/lab/new-post-video/img/rotate-3.png" alt="" class="rotate-3">
                 </div>
             </div>
-            <div class="col-lg-8 col-md-8  cursor-pointer">
+            <div class="col-lg-9 col-md-8  cursor-pointer">
                 <div class="heroBanner" id="heroBanner">
                     <video id="heroVideo" loop preload="metadata">
                         <source src="https://jaikvik.in/lab/new-post-video/img/home-banner/Jaikvin Technology Video 5.mp4" type="video/mp4">
