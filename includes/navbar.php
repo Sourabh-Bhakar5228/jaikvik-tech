@@ -27,8 +27,6 @@
                     <a class="btn btn-sm me-2 whatsapp-icon" href="javascript:void(0)" onclick="toggleWhatsAppPopup()">
                         <i class="fab fa-whatsapp text-white"></i>
                     </a>
-                    <!-- Hidden Google Translate Element (kept for potential future use, but not used) -->
-                    <div id="google_translate_element" style="display: none;"></div>
                     <!-- WhatsApp Popup -->
                     <div id="whatsapp_popup" class="popup">
                         <div class="popup-content">
@@ -93,7 +91,7 @@
 <header>
     <div class="header-main sticky-nav">
         <div class="container-fluid laptop-view">
-            <div class="row align-items-center justify-content-center">
+            <div class="row align-items-center ">
                 <div class="col-lg-1">
                     <div class="header-logo h1">
                         <a href="index.php">
@@ -101,8 +99,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-9">
-                    <div class="main-menu d-flex">
+                <div class="col-lg-10">
+                    <div class="main-menu d-flex justify-content-between align-items-center">
                         <ul>
                             <li class="dropdown position-static text-uppercase"><a href="Customized_Software.php">Software Development <i class="pe-7s-angle-down"></i></a>
                                 <ul class="mega-menu d-block">
@@ -295,15 +293,20 @@
                                     </div>
                                 </ul>
                             </li>
-
-
                         </ul>
-                    </div>
-                </div>
-                <!-- Language Menu Item with Popup Trigger, Placed After Film Production -->
-                <div class="col-lg-2">
-                    <div class="language-menu text-uppercase">
-                        <a href="javascript:void(0)" onclick="toggleTranslateDropdown()">Language</a>
+                        <div class="language">
+                            <a href="javascript:void(0)" onclick="toggleLanguagePopup()" class="language-btn">Language</a>
+                            <!-- Language Popup -->
+                            <div id="language_popup" class="language-popup">
+                                <div class="language-popup-content">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h6 class="mb-0">Select Language</h6>
+                                        <a href="javascript:void(0)" onclick="toggleLanguagePopup()" class="close-btn">×</a>
+                                    </div>
+                                    <div id="google_translate_element"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -447,15 +450,12 @@
                                     </a></li>
                             </ul>
                         </li>
-                        <!-- Language Menu Item with Popup Trigger -->
-                        <li class="language-menu">
-                            <a href="javascript:void(0)" onclick="toggleTranslateDropdown()"><span class="menu-text">Language</span></a>
-                        </li>
                     </ul>
                 </li>
                 <li><a href="blog.php"><span class="menu-text">Blogs</span></a></li>
                 <li><a href="career.php"><span class="menu-text">Careers</span></a></li>
                 <li><a href="contact-us.php"><span class="menu-text">Contact Us</span></a></li>
+                <li><a href="javascript:void(0)" onclick="toggleLanguagePopup()"><span class="menu-text">Language</span></a></li>
             </ul>
         </div>
         <!-- OffCanvas Menu End -->
@@ -469,22 +469,14 @@
     </div>
 </div>
 
-<!-- Language Translate Popup -->
-<div id="translate_popup" class="translate-popup">
-    <div class="translate-popup-content">
-        <div class="d-flex justify-content-between align-items-center mb-2">
-            <h6 class="mb-0">Select Language</h6>
-            <a href="javascript:void(0)" onclick="toggleTranslateDropdown()" class="close-btn">×</a>
-        </div>
-        <div id="google_translate_element_popup" style="padding: 10px;"></div>
-    </div>
-</div>
-
 <!-- Font Awesome for Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 <!-- Google fonts for Poppins -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Google Translate Script -->
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <!-- Styles -->
 <style>
@@ -568,9 +560,28 @@
         animation: slideIn 0.3s ease-out;
     }
 
+    /* Language Popup Styles */
+    .language-popup {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        z-index: 1000;
+    }
+
+    .language-popup-content {
+        background: linear-gradient(135deg, #535151, #f8f9fa);
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+        font-family: 'Poppins', sans-serif;
+        animation: slideIn 0.3s ease-out;
+    }
+
     @keyframes slideIn {
         from {
-            transform: translateY(-50px);
+            transform: translateY(-10px);
             opacity: 0;
         }
 
@@ -580,22 +591,25 @@
         }
     }
 
-    .popup-content h6 {
-        font-size: 22px;
+    .popup-content h6,
+    .language-popup-content h6 {
+        font-size: 18px;
         color: #1a1a1a;
         margin: 0;
         font-weight: 600;
     }
 
-    .popup-content .close-btn {
+    .popup-content .close-btn,
+    .language-popup-content .close-btn {
         text-decoration: none;
         color: #333;
-        font-size: 28px;
+        font-size: 20px;
         line-height: 1;
         transition: color 0.3s ease;
     }
 
-    .popup-content .close-btn:hover {
+    .popup-content .close-btn:hover,
+    .language-popup-content .close-btn:hover {
         color: #ff4444;
     }
 
@@ -608,7 +622,6 @@
         transition: all 0.3s ease;
         background: #67606054;
         resize: vertical;
-        /* Allows vertical resize for textarea */
     }
 
     .popup-content .form-control:focus {
@@ -651,73 +664,42 @@
         transform: translateY(-2px);
     }
 
-    /* Translate Popup Styles */
-    .translate-popup {
-        display: none;
-        position: fixed;
-        top: 80px;
-        /* Align with main menu */
-        right: 20px;
-        z-index: 1000;
-        font-family: 'Poppins', sans-serif;
+    /* Language Button Styles */
+    .language {
+        position: relative;
+        left: 90px;
     }
 
-    .translate-popup-content {
-        background: linear-gradient(135deg, #535151, #f8f9fa);
-        border-radius: 8px;
-        padding: 15px;
-        width: 250px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-        animation: slideInRight 0.3s ease-out;
-    }
-
-    @keyframes slideInRight {
-        from {
-            transform: translateX(50px);
-            opacity: 0;
-        }
-
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-
-    .translate-popup-content h6 {
-        font-size: 16px;
-        color: #1a1a1a;
-        margin: 0;
-        font-weight: 600;
-    }
-
-    .translate-popup-content .close-btn {
+    .language-btn {
+        color: #fff;
         text-decoration: none;
-        color: #333;
-        font-size: 20px;
-        line-height: 1;
+        padding: 8px 12px;
+        display: block;
         transition: color 0.3s ease;
+        /* font-family: 'Poppins', sans-serif; */
+        font-size: 18px;
+        font-weight: 500;
+        /* border: 1px solid #fff; */
+        border-radius: 5px;
     }
 
-    .translate-popup-content .close-btn:hover {
-        color: #ff4444;
+    .language-btn:hover {
+        color: #ddd;
+        background: rgba(255, 255, 255, 0.1);
     }
 
-    #google_translate_element_popup select {
+    /* Google Translate Styles */
+    #google_translate_element {
+        margin-top: 8px;
+    }
+
+    .goog-te-combo {
         width: 100%;
-        padding: 8px;
+        padding: 6px;
         border-radius: 5px;
         border: 1px solid #ccc;
-        font-size: 14px;
-        background: #fff;
-        color: #333;
-        cursor: pointer;
         font-family: 'Poppins', sans-serif;
-    }
-
-    #google_translate_element_popup select:focus {
-        outline: none;
-        border-color: #605e5e;
-        box-shadow: 0 0 5px rgba(96, 94, 94, 0.3);
+        font-size: 12px;
     }
 
     /* Main Menu Styles */
@@ -741,32 +723,6 @@
         transition: color 0.3s ease;
     }
 
-    .main-menu ul li.language-menu {
-        margin-left: auto;
-        /* Pushes Language to the right */
-    }
-
-    .main-menu ul li.language-menu a {
-        color: #ff0000;
-        /* Red color */
-    }
-
-    .main-menu ul li.language-menu a:hover {
-        color: #8b0000;
-        /* Dark red on hover */
-    }
-
-    /* Offcanvas Menu Styles */
-    .offcanvas-menu ul li.language-menu a {
-        color: #ff0000;
-        /* Red color */
-    }
-
-    .offcanvas-menu ul li.language-menu a:hover {
-        color: #8b0000;
-        /* Dark red on hover */
-    }
-
     /* Responsive Design */
     @media (max-width: 576px) {
         .popup-content {
@@ -775,7 +731,7 @@
         }
 
         .popup-content h6 {
-            font-size: 18px;
+            font-size: 16px;
         }
 
         .popup-content .form-control {
@@ -788,21 +744,27 @@
             padding: 10px;
         }
 
-        .translate-popup {
-            top: 60px;
-            right: 10px;
+        .language-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
         }
 
-        .translate-popup-content {
-            width: 200px;
-            padding: 10px;
+        .language-popup-content {
+            width: 90%;
+            max-width: 250px;
+            padding: 15px;
         }
 
-        .translate-popup-content h6 {
+        .language-popup-content h6 {
             font-size: 14px;
         }
 
-        #google_translate_element_popup select {
+        .goog-te-combo {
             font-size: 12px;
             padding: 6px;
         }
@@ -834,7 +796,6 @@
         padding: 8px 12px;
         width: 80%;
         opacity: 1;
-        /* Text is always visible */
     }
 
     @media (max-width: 991px) {
@@ -870,41 +831,19 @@
         popup.style.display = popup.style.display === 'flex' ? 'none' : 'flex';
     }
 
-    // Toggle Google Translate Popup
-    function toggleTranslateDropdown() {
-        var popup = document.getElementById('translate_popup');
-        if (popup.style.display === 'block') {
-            popup.style.display = 'none';
-        } else {
-            popup.style.display = 'block';
-            setTimeout(function() {
-                var select = document.querySelector('#google_translate_element_popup select');
-                if (select) {
-                    select.click();
-                    select.focus();
-                }
-            }, 100);
-        }
+    // Toggle Language Popup
+    function toggleLanguagePopup() {
+        var popup = document.getElementById('language_popup');
+        popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
     }
-
-    // Close Translate Popup When Clicking Outside
-    document.addEventListener('click', function(event) {
-        var popup = document.getElementById('translate_popup');
-        var languageLinks = document.querySelectorAll('.main-menu ul li.language-menu a, .offcanvas-menu ul li.language-menu a');
-        var isLanguageLink = Array.from(languageLinks).some(link => link.contains(event.target));
-        var isPopup = popup.contains(event.target);
-
-        if (!isLanguageLink && !isPopup && popup.style.display === 'block') {
-            popup.style.display = 'none';
-        }
-    });
 
     // Google Translate Initialization
     function googleTranslateElementInit() {
         new google.translate.TranslateElement({
             pageLanguage: 'en',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-        }, 'google_translate_element_popup');
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
     }
 
     // Form Validation
@@ -987,7 +926,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('whatsapp_popup').style.display = 'none';
         document.getElementById('quote_popup').style.display = 'none';
-        document.getElementById('translate_popup').style.display = 'none';
+        document.getElementById('language_popup').style.display = 'none';
     });
 
     // Highlight active link
@@ -1070,5 +1009,3 @@
         mobileOffCanvasMenu();
     })(jQuery);
 </script>
-
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

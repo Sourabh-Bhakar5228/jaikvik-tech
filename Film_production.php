@@ -1336,99 +1336,11 @@
 
 
 
-        <section class="film-workflow-visual">
-            <h2 class="film-title">Film Production Workflow</h2>
-            <div class="film-workflow-container">
-                <div class="film-workflow-diagram">
-                    <svg viewBox="0 0 700 700">
-                        <circle cx="350" cy="350" r="120" />
-                        <circle cx="350" cy="350" r="180" />
-                        <circle cx="350" cy="350" r="240" />
-                        <circle cx="350" cy="350" r="300" />
-                    </svg>
-                    <div class="film-workflow-core">Production Workflow</div>
-                    <div class="film-workflow-label" style="top: 8%; left: 50%; transform: translateX(-50%);">Pre-Production</div>
-                    <div class="film-workflow-label" style="top: 18%; left: 8%; transform: translateY(-50%);">Scriptwriting</div>
-                    <div class="film-workflow-label" style="top: 50%; left: 4%; transform: translateY(-50%);">Filming</div>
-                    <div class="film-workflow-label" style="bottom: 18%; left: 8%; transform: translateY(50%);">Post-Production</div>
-                    <div class="film-workflow-label" style="bottom: 8%; right: 8%; transform: translateY(50%);">Distribution</div>
-                    <div class="film-workflow-label" style="top: 50%; right: 4%; transform: translateY(-50%);">Editing</div>
-                    <div class="film-workflow-label" style="top: 18%; right: 8%; transform: translateY(-50%);">Storyboarding</div>
-                    <div class="film-workflow-label" style="top: 38%; left: 18%; transform: translate(-50%, -50%);">Casting</div>
-                    <div class="film-workflow-label" style="top: 38%; right: 18%; transform: translate(50%, -50%);">Analytics</div>
-                </div>
-            </div>
-        </section>
 
 
         <?php include 'film-industry-rearsch.php' ?>
+        <?php include 'contact-inner-page.php' ?>
 
-        <section class="film-stats-contact">
-            <div class="film-stats-panel">
-                <h2 class="film-title">Rising Numbers, Building Confidence</h2>
-                <div class="film-stats-container">
-                    <div class="film-stat-card">
-                        <h3>1050+</h3>
-                        <p>Global Clients Served</p>
-                    </div>
-                    <div class="film-stat-card">
-                        <h3>25+</h3>
-                        <p>Countries Served</p>
-                    </div>
-                    <div class="film-stat-card">
-                        <h3>07+</h3>
-                        <p>Years of Trust</p>
-                    </div>
-                    <div class="film-stat-card">
-                        <h3>2500+</h3>
-                        <p>Projects Completed</p>
-                    </div>
-                    <div class="film-stat-card">
-                        <h3>95%</h3>
-                        <p>Client Retention</p>
-                    </div>
-                    <div class="film-stat-card">
-                        <h3>50+</h3>
-                        <p>Team of Professionals</p>
-                    </div>
-                </div>
-                <div class="film-certifications-list">
-                    <div>
-                        <p class="film-description">4.9 Star Customer Rating by 250+ verified customers</p>
-                    </div>
-                    <div>
-                        <p class="film-description">Adobe Premiere Pro Certification completed by .. on June 28, 2023</p>
-                    </div>
-                </div>
-            </div>
-            <div class="film-contact-panel">
-                <h2 class="film-title">Let's Discuss Your Project</h2>
-                <p class="film-description">Fill out the form and our team will get back to you</p>
-                <form aria-label="Contact Form">
-                    <input type="text" class="film-contact-input" placeholder="Name" required aria-label="Name">
-                    <input type="email" class="film-contact-input" placeholder="Email" required aria-label="Email">
-                    <input type="tel" class="film-contact-input" placeholder="Phone Number" required aria-label="Phone Number">
-                    <label>What services interest you?</label>
-                    <div class="film-service-options">
-                        <label><input type="checkbox" name="service" value="corporate-video" aria-label="Corporate Video"> Corporate Video</label>
-                        <label><input type="checkbox" name="service" value="product-explainer" aria-label="Product Explainer"> Product Explainer</label>
-                        <label><input type="checkbox" name="service" value="tv-commercial" aria-label="TV Commercial"> TV Commercial</label>
-                        <label><input type="checkbox" name="service" value="youtube-ads" aria-label="YouTube Ads"> YouTube Ads</label>
-                        <label><input type="checkbox" name="service" value="photoshoot" aria-label="Photoshoot"> Photoshoot</label>
-                        <label><input type="checkbox" name="service" value="model-shoot" aria-label="Model Shoot"> Model Shoot</label>
-                        <label><input type="checkbox" name="service" value="interview" aria-label="Interview"> Interview</label>
-                        <label><input type="checkbox" name="service" value="production-packages" aria-label="Production Packages"> Production Packages</label>
-                        <label><input type="checkbox" name="service" value="others" aria-label="Others"> Others</label>
-                    </div>
-                    <textarea class="film-contact-textarea" placeholder="Write Your Message" required aria-label="Message"></textarea>
-                    <div class="film-captcha-verification">
-                        <label><input type="checkbox" required aria-label="CAPTCHA Verification"> I'm not a robot</label>
-                        <span>reCAPTCHA Privacy - Terms</span>
-                    </div>
-                    <button type="submit" class="film-submit-button" aria-label="Submit Contact Form">Submit</button>
-                </form>
-            </div>
-        </section>
     </div>
     <?php include 'includes/footer.php' ?>
 

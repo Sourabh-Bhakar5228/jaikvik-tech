@@ -4,18 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <meta name="description" content="Discover the power of Digital Marketing with Jaikvik Technology’s expert strategies to boost brand visibility, engagement, and conversions.">
-    <title>Digital Marketing - Jaikvik Technology</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
-=======
-    <title>Digital Marketing, Social Media, PPC, Meta, YouTube Ads & Brand Promotion</title>
-    <meta name="description" content="Discover Digital Marketing, Social Media Marketing, PPC, Meta Ads, YouTube Ads, and Brand Promotion at Jaikvik Technology. Learn strategies to boost your online presence and business growth.">
-    <meta name="keywords" content="Digital Marketing, Social Media Marketing, PPC, Meta Ads, YouTube Ads, Brand Promotion, Jaikvik Technology">
-    <!-- Favicon Link -->
+    <title>Unlock the Power of Digital Marketing with Jaikvik Technology</title>
+    <meta name="description" content="Transform your business with expert digital marketing strategies, from SEO and social media to PPC and content creation, designed to boost visibility and conversions.">
+    <meta name="keywords" content="Digital Marketing, SEO, Social Media Marketing, PPC, Content Marketing, Jaikvik Technology">
     <link rel="icon" type="image/x-icon" href="https://jaikvik.in/lab/new-post-video/img/logo/favicon.png">
-    <!-- Jquery File Link -->
->>>>>>> 52634270abcf772d9e8ce639becb1b0cedeedb08
     <script src="assets/js/jquery.js"></script>
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
@@ -29,62 +21,186 @@
     <style>
         :root {
             --smm-primary-color: #ffffff;
-            /* Text color: White */
             --smm-secondary-color: #ffffff;
-            /* Secondary text color: White */
             --smm-accent-color: #ff0000;
-            /* Button color: Red */
             --smm-light-gray: #1a1a1a;
-            /* Section background: Dark Grey */
             --smm-medium-gray: #ffffff;
-            /* Text color for readability: White */
             --smm-dark-gray: #000000;
-            /* Main background: Black */
             --smm-highlight-color: #1a1a1a;
-            /* Highlight: Dark Grey */
-            --smm-font-primary: 'Roboto', sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
         }
 
         body {
-            font-family: var(--smm-font-primary);
             color: var(--smm-primary-color);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
             background: var(--smm-dark-gray);
-            line-height: 1.6;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Section */
+        .smm-hero-section {
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-4.0.3&auto=format&fit=crop&w=740&q=80') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            color: var(--smm-primary-color);
+            text-align: center;
+            z-index: 2;
+            overflow: hidden;
+            background-color: var(--smm-light-gray);
+        }
+
+        .smm-hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
         }
 
         .smm-container {
-            width: 100%;
-            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            animation: smm-slideIn 1.2s ease-out forwards;
             padding: 0 20px;
-        }
-
-        .smm-hero-section {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, var(--smm-highlight-color), var(--smm-accent-color));
-            color: var(--smm-secondary-color);
-            border-radius: 0 0 20px 20px;
-        }
-
-        .smm-hero-section h1 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-        }
-
-        .smm-hero-section p {
-            font-size: 1.2rem;
-            max-width: 800px;
+            width: 100%;
+            /* max-width: 1200px; */
             margin: 0 auto;
+        }
+
+        .smm-container h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            white-space: nowrap;
+            border-right: 3px solid var(--smm-accent-color);
+            animation: smm-typing 4s steps(50, end), smm-blink-caret 0.8s step-end infinite;
+            margin: 0 auto;
+            color: var(--smm-primary-color);
+        }
+
+        .smm-container p {
+            font-size: 1.1rem;
+            margin: 20px 0;
+            animation: smm-fadeIn 1.5s ease-out forwards 0.5s;
+            opacity: 0;
+            color: var(--smm-primary-color);
+        }
+
+        @keyframes smm-slideIn {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes smm-typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes smm-blink-caret {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        @keyframes smm-fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Text Animation */
+        .smm-heading {
+            position: relative;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--smm-primary-color);
+            margin-bottom: 25px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .smm-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--smm-accent-color);
+            transition: width 0.7s ease-out;
+        }
+
+        .smm-heading.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .smm-heading.visible::after {
+            width: 100%;
+        }
+
+        .smm-heading::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--smm-light-gray);
+            animation: smm-revealText 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            transform-origin: left;
+        }
+
+        @keyframes smm-revealText {
+            0% {
+                transform: scaleX(1);
+            }
+
+            100% {
+                transform: scaleX(0);
+            }
         }
 
         .smm-text-section {
-            padding: 60px 20px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 30px 20px;
+            position: relative;
+            z-index: 4;
+            background: var(--smm-dark-gray);
+        }
+
+        .smm-text {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--smm-medium-gray);
+            font-weight: 300;
         }
 
         .smm-content-block {
@@ -99,7 +215,7 @@
             opacity: 0;
             transform: translateY(40px);
             transition: opacity 1s ease-out, transform 1s ease-out;
-            overflow: hidden;
+            align-items: center;
         }
 
         .smm-content-block.visible {
@@ -107,137 +223,157 @@
             transform: translateY(0);
         }
 
-        .smm-block-content {
-            flex: 1;
-        }
-
-        .smm-heading {
-            font-size: 2rem;
-            color: var(--smm-medium-gray);
-            margin-bottom: 15px;
-        }
-
-        .smm-text {
-            font-size: 1.1rem;
-            color: var(--smm-medium-gray);
-            margin-bottom: 20px;
-        }
-
-        .smm-content-block img {
+        .smm-image-container img {
             width: 100%;
-            max-width: 100%;
-            height: auto;
-            object-fit: contain;
+            max-width: 550px;
+            max-height: 900px;
             border-radius: 12px;
             transition: transform 0.5s ease, filter 0.5s ease;
             filter: brightness(80%) contrast(110%);
+            align-self: center;
         }
 
-        .smm-content-block img:hover {
+        .smm-image-container img:hover {
             transform: scale(1.03);
             filter: brightness(100%) contrast(110%);
         }
 
+        .smm-block-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            width: 100%;
+        }
+
         .smm-expand-btn {
             background: var(--smm-accent-color);
-            color: var(--smm-secondary-color);
+            color: var(--smm-primary-color);
             border: none;
-            padding: 12px 24px;
-            font-size: 1rem;
-            border-radius: 25px;
+            padding: 10px 20px;
+            border-radius: 30px;
             cursor: pointer;
-            transition: background 0.3s ease, transform 0.2s ease;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: auto;
+        }
+
+        .smm-expand-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
         }
 
         .smm-expand-btn:hover {
-            background: var(--smm-highlight-color);
-            transform: translateY(-2px);
+            background: #cc0000;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
-        .smm-ellipsis {
-            display: inline;
-        }
-
-        .smm-expand-content {
-            display: none;
+        .smm-expand-btn:hover::before {
+            left: 100%;
         }
 
         .smm-questions-section {
             background: var(--smm-light-gray);
-            padding: 30px;
+            padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
             margin-top: 40px;
         }
 
-        details {
-            margin-bottom: 15px;
-            padding: 15px;
+        .smm-questions-section details {
+            margin-bottom: 10px;
+            padding: 10px;
             background: var(--smm-dark-gray);
             border-radius: 8px;
-            transition: background 0.3s ease;
+            color: var(--smm-primary-color);
         }
 
-        details[open] {
-            background: var(--smm-highlight-color);
-        }
-
-        summary {
-            font-weight: bold;
+        .smm-questions-section summary {
+            font-weight: 500;
             cursor: pointer;
+            padding: 10px;
             font-size: 1.1rem;
+        }
+
+        .smm-questions-section p {
+            margin: 10px 0 0 20px;
+            font-size: 1rem;
+            line-height: 1.6;
             color: var(--smm-medium-gray);
         }
 
-        details p {
-            margin-top: 10px;
-            font-size: 1rem;
-            color: var(--smm-medium-gray);
-            padding-left: 20px;
+        @media (min-width: 576px) {
+            .smm-container h1 {
+                font-size: 2.5rem;
+            }
+
+            .smm-container p {
+                font-size: 1.2rem;
+            }
+
+            .smm-content-block {
+                padding: 25px;
+            }
+
+            .smm-heading {
+                font-size: 1.75rem;
+            }
+
+            .smm-text {
+                font-size: 1.05rem;
+            }
         }
 
         @media (min-width: 768px) {
+            .smm-container h1 {
+                font-size: 3rem;
+            }
+
             .smm-content-block {
                 flex-direction: row;
+                padding: 30px;
                 align-items: center;
-                gap: 40px;
+                justify-content: space-between;
             }
 
             .smm-content-block:nth-child(even) {
                 flex-direction: row-reverse;
             }
 
+            .smm-image-container img {
+                max-height: 450px;
+                flex: 0 0 auto;
+            }
+
             .smm-block-content {
                 flex: 1;
-            }
-
-            .smm-content-block img {
-                max-width: 550px;
-                height: auto;
-                object-fit: contain;
-            }
-
-            .smm-hero-section h1 {
-                font-size: 3.5rem;
-            }
-
-            .smm-hero-section p {
-                font-size: 1.4rem;
+                max-width: 50%;
             }
         }
 
-        @media (max-width: 767px) {
+        @media (min-width: 992px) {
+            .smm-container h1 {
+                font-size: 3.5rem;
+            }
+
+            .smm-content-block {
+                padding: 40px;
+            }
+
             .smm-heading {
-                font-size: 1.8rem;
-            }
-
-            .smm-text {
-                font-size: 1rem;
-            }
-
-            .smm-content-block img {
-                max-height: 300px;
-                object-fit: contain;
+                font-size: 2rem;
             }
         }
     </style>
@@ -245,12 +381,13 @@
 
 <body>
     <?php include 'includes/navbar.php' ?>
-    <div class="smm-hero-section">
+    <!-- Hero Section -->
+    <section class="smm-hero-section" id="smm-hero-section" aria-label="Digital Marketing Hero">
         <div class="smm-container">
-            <h1>Unlock the Power of Digital Marketing with Jaikvik Technology</h1>
+            <h1>Unlock the Power of Digital <br> Marketing with Jaikvik Technology</h1>
             <p>Transform your business with expert digital marketing strategies, from SEO and social media to PPC and content creation, designed to boost visibility and conversions.</p>
         </div>
-    </div>
+    </section>
 
     <div class="smm-text-section">
         <div class="smm-container">
@@ -264,14 +401,18 @@
                             <br>Jaikvik Technology helps you harness digital marketing to expand brand reach, engage customers, and stay competitive in the digital world.
                         </span>
                     </p>
-                    <button class="smm-expand-btn" data-section="0" aria-label="Digital Marketing Introduction">Read More</button>
+                    <button class="smm-expand-btn" data-section="0" aria-label="Toggle Digital Marketing Introduction">Read More</button>
                 </div>
-                <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-4.0.3&auto=format&fit=crop&w=740&q=80" alt="Digital Marketing Overview">
+                <div class="smm-image-container">
+                    <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-4.0.3&auto=format&fit=crop&w=740&q=80" alt="Digital Marketing Overview">
+                </div>
             </div>
 
             <!-- Evolution of Digital Marketing -->
             <div class="smm-content-block">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2b6e3c?ixlib=rb-4.0.3c&format&fit=crop&w=740&q=80" alt="Evolution of Digital Marketing">
+                <div class="smm-image-container">
+                    <img src="https://img.freepik.com/free-photo/digital-marketing-with-icons-business-people_53876-94833.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Evolution of Digital Marketing">
+                </div>
                 <div class="smm-block-content">
                     <h2 class="smm-heading">Evolution of Digital Marketing</h2>
                     <p class="smm-text">
@@ -290,7 +431,7 @@
                     <h2 class="smm-heading">Significance of Digital Marketing</h2>
                     <p class="smm-text">
                         Digital marketing matters:<br>
-                        • <b>Wider Reach:</b> Connects globally via social media, search engines.<br>
+                        • <strong>Wider Reach:</strong> Connects globally via social media, search engines.<br>
                         • <strong>Cost-Effective:</strong> Budget-friendly with high ROI compared to traditional ads.<br>
                         • <strong>Targeted Ads:</strong> Reaches specific demographics via ads.<br>
                         • <strong>Measurable Results:</strong> Provides real-time campaign insights.<br>
@@ -298,14 +439,18 @@
                             <br>Jaikvik Technology ensures your business thrives in the digital-first world with strategic campaigns.
                         </span>
                     </p>
-                    <button class="bsmm-expand-btn" data-section="2" aria-label="Toggle Significance of aDigital Marketing">Read More</button>
+                    <button class="smm-expand-btn" data-section="2" aria-label="Toggle Significance of Digital Marketing">Read More</button>
                 </div>
-                <img src="https://images.unsplash.com/photo-1516321315098-34e857adf62b?ixlib=rb-4.0.3&auto=format&fit=crop&w=740&q=80" alt="Significance of Digital Marketing">
+                <div class="smm-image-container">
+                    <img src="https://img.freepik.com/free-photo/marketing-ideas-share-research-planning-concept_53876-127431.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Significance of Digital Marketing">
+                </div>
             </div>
 
             <!-- Basics of Digital Marketing -->
             <div class="smm-content-block">
-                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=740&q=80" alt="Basics of Digital Marketing">
+                <div class="smm-image-container">
+                    <img src="https://img.freepik.com/premium-vector/rocket-boosting-digital-marketing-social-media-with-smartphone_112255-1435.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Basics of Digital Marketing">
+                </div>
                 <div class="smm-block-content">
                     <h2 class="smm-heading">Basics of Digital Marketing</h2>
                     <p class="smm-text">
@@ -334,12 +479,16 @@
                     </p>
                     <button class="smm-expand-btn" data-section="4" aria-label="Toggle Components of Digital Marketing">Read More</button>
                 </div>
-                <img src="https://images.unsplash.com/photo-1551288049-b1f3a0a9c3d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=740&q=80" alt="Components of Digital Marketing">
+                <div class="smm-image-container">
+                    <img src="https://img.freepik.com/free-vector/digital-marketing-landing-page_33099-1726.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Components of Digital Marketing">
+                </div>
             </div>
 
             <!-- LinkedIn Marketing -->
             <div class="smm-content-block">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=740&q=80" alt="LinkedIn Marketing">
+                <div class="smm-image-container">
+                    <img src="https://img.freepik.com/free-vector/flat-design-linkedin-mockup_23-2149217511.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="LinkedIn Marketing">
+                </div>
                 <div class="smm-block-content">
                     <h2 class="smm-heading">LinkedIn Marketing</h2>
                     <p class="smm-text">
@@ -368,12 +517,16 @@
                     </p>
                     <button class="smm-expand-btn" data-section="6" aria-label="Toggle Benefits of Digital Marketing">Read More</button>
                 </div>
-                <img src="https://images.unsplash.com/photo-1516321315098-34e857adf62b?ixlib=rb-4.0.3&auto=format&fit=crop&w=740&q=80" alt="Benefits of Digital Marketing">
+                <div class="smm-image-container">
+                    <img src="https://img.freepik.com/free-photo/man-suit-standing-office-with-clipboard-pointing-poster-with-words_1098-17121.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Benefits of Digital Marketing">
+                </div>
             </div>
 
             <!-- Digital Marketing Trends -->
             <div class="smm-content-block">
-                <img src="https://images.unsplash.com/photo-1516321315098-34e857adf62b?ixlib=rb-4.0.3&auto=format&fit=crop&w=740&q=80" alt="Digital Marketing Trends">
+                <div class="smm-image-container">
+                    <img src="https://img.freepik.com/free-photo/creative-monitor-tech-digitally-generated-desk_1134-719.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Digital Marketing Trends">
+                </div>
                 <div class="smm-block-content">
                     <h2 class="smm-heading">Digital Marketing Trends</h2>
                     <p class="smm-text">
@@ -405,12 +558,16 @@
                     </p>
                     <button class="smm-expand-btn" data-section="8" aria-label="Toggle Digital Marketing Strategies">Read More</button>
                 </div>
-                <img src="https://images.unsplash.com/photo-1551288049-b1f3a0a9c3d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=740&q=80" alt="Digital Marketing Strategies">
+                <div class="smm-image-container">
+                    <img src="https://img.freepik.com/free-photo/creative-monitor-tech-digitally-generated-desk_1134-719.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Digital Marketing Strategies">
+                </div>
             </div>
 
             <!-- SEO Techniques -->
             <div class="smm-content-block">
-                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=740&q=80" alt="SEO Techniques">
+                <div class="smm-image-container">
+                    <img src="https://img.freepik.com/free-vector/female-multitasking-work_23-2148390868.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="SEO Techniques">
+                </div>
                 <div class="smm-block-content">
                     <h2 class="smm-heading">SEO Techniques</h2>
                     <p class="smm-text">
@@ -441,12 +598,16 @@
                     </p>
                     <button class="smm-expand-btn" data-section="10" aria-label="Toggle SMM Strategies">Read More</button>
                 </div>
-                <img src="https://images.unsplash.com/photo-1516321315098-34e857adf62b?ixlib=rb-4.0.3&auto=format&fit=crop&w=740&q=80" alt="SMM Strategies">
+                <div class="smm-image-container">
+                    <img src="https://img.freepik.com/premium-vector/social-media-marketing_773186-810.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="SMM Strategies">
+                </div>
             </div>
 
             <!-- SEO vs. SMM Balance -->
             <div class="smm-content-block">
-                <img src="https://images.unsplash.com/photo-1551288049-b1f3a0a9c3d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=740&q=80" alt="SEO vs. SMM">
+                <div class="smm-image-container">
+                    <img src="https://img.freepik.com/premium-vector/social-media-marketing_773186-810.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="SEO vs. SMM">
+                </div>
                 <div class="smm-block-content">
                     <h2 class="smm-heading">SEO vs. SMM Balance</h2>
                     <p class="smm-text">
@@ -475,12 +636,16 @@
                     </p>
                     <button class="smm-expand-btn" data-section="12" aria-label="Toggle Data and Analytics">Read More</button>
                 </div>
-                <img src="https://images.unsplash.com/photo-1516321315098-34e857adf62b?ixlib=rb-4.0.3&auto=format&fit=crop&w=740&q=80" alt="Data and Analytics">
+                <div class="smm-image-container">
+                    <img src="https://img.freepik.com/free-photo/business-achievement-improvement-success-result_53876-123860.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Data and Analytics">
+                </div>
             </div>
 
             <!-- Digital Marketing Challenges -->
             <div class="smm-content-block">
-                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=740&q=80" alt="Digital Marketing Challenges">
+                <div class="smm-image-container">
+                    <img src="https://img.freepik.com/premium-photo/creative-idea-png-sticker-mixed-media-transparent-background_53876-1038065.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Digital Marketing Challenges">
+                </div>
                 <div class="smm-block-content">
                     <h2 class="smm-heading">Digital Marketing Challenges</h2>
                     <p class="smm-text">
@@ -511,12 +676,16 @@
                     </p>
                     <button class="smm-expand-btn" data-section="14" aria-label="Toggle Future Trends">Read More</button>
                 </div>
-                <img src="https://images.unsplash.com/photo-1516321315098-34e857adf62b?ixlib=rb-4.0.3&auto=format&fit=crop&w=740&q=80" alt="Future Trends">
+                <div class="smm-image-container">
+                    <img src="https://img.freepik.com/free-vector/marketing-conversion-flat-background_23-2148002911.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Future Trends">
+                </div>
             </div>
 
             <!-- Actionable Tips for Beginners -->
             <div class="smm-content-block">
-                <img src="https://images.unsplash.com/photo-1551288049-b1f3a0a9c3d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=740&q=80" alt="Beginner Tips">
+                <div class="smm-image-container">
+                    <img src="https://img.freepik.com/free-vector/marketing-conversion-flat-background_23-2148002911.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Beginner Tips">
+                </div>
                 <div class="smm-block-content">
                     <h2 class="smm-heading">Actionable Tips for Beginners</h2>
                     <p class="smm-text">
@@ -544,7 +713,9 @@
                     </p>
                     <button class="smm-expand-btn" data-section="16" aria-label="Toggle Conclusion">Read More</button>
                 </div>
-                <img src="https://images.unsplash.com/photo-1516321315098-34e857adf62b?ixlib=rb-4.0.3&auto=format&fit=crop&w=740&q=80" alt="Conclusion">
+                <div class="smm-image-container">
+                    <img src="https://img.freepik.com/premium-vector/digital-marketing-illustration_112255-2905.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Conclusion">
+                </div>
             </div>
 
             <!-- FAQ Section -->
@@ -593,48 +764,57 @@
             </div>
         </div>
     </div>
+
+    <?php include 'digital-market-reacrch.php' ?>
+    <?php include 'contact-inner-page.php' ?>
     <?php include 'includes/footer.php' ?>
 
-    <!-- JavaScript File Links -->
-    <script src="assets/js/bootstrapJs.js"></script>
-    <script src="assets/js/swiperJs.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/jquery.easing.min.js"></script>
-    <script src="assets/js/progressBar.min.js"></script>
     <script>
-        // Animation on scroll
-        const contentBlocks = document.querySelectorAll('.smm-content-block');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1
+        window.addEventListener('load', () => {
+            smmInitAnimations();
         });
 
-        contentBlocks.forEach(block => observer.observe(block));
-
-        // Read More button functionality
-        const expandButtons = document.querySelectorAll('.smm-expand-btn');
-        expandButtons.forEach(button => {
+        document.querySelectorAll('.smm-expand-btn').forEach(button => {
             button.addEventListener('click', () => {
                 const section = button.getAttribute('data-section');
-                const contentBlock = button.closest('.smm-content-block');
-                const expandContent = contentBlock.querySelector('.smm-expand-content');
-                const ellipsis = contentBlock.querySelector('.smm-ellipsis');
-
-                if (expandContent.style.display === 'none' || expandContent.style.display === '') {
-                    expandContent.style.display = 'inline';
-                    ellipsis.style.display = 'none';
+                const content = button.parentElement.querySelector('.smm-expand-content');
+                const ellipsis = button.parentElement.querySelector('.smm-ellipsis');
+                if (content.style.display === 'none' || !content.style.display) {
+                    content.style.display = 'inline';
+                    if (ellipsis) ellipsis.style.display = 'none';
                     button.textContent = 'Read Less';
                 } else {
-                    expandContent.style.display = 'none';
-                    ellipsis.style.display = 'inline';
+                    content.style.display = 'none';
+                    if (ellipsis) ellipsis.style.display = 'inline';
                     button.textContent = 'Read More';
+                }
+            });
+        });
+
+        function smmInitAnimations() {
+            const elements = document.querySelectorAll('.smm-content-block, .smm-heading');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            elements.forEach(element => observer.observe(element));
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 }
             });
         });

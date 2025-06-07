@@ -749,10 +749,10 @@
                         <p>The foundation of Jaikvik Technology India Private Limited rests in the vision and leadership of our Managing Director Mr. Vikas Jaiswal, a seasoned professional with over 15 years of rich experience in the fields of software development and finance.</p>
                         <p>Mr. Jaiswal has built his expertise through key roles in some of India’s most renowned organizations, including:</p>
                         <ul>
-                            <li>Dell</li>
-                            <li>Airtel</li>
-                            <li>Care Ratings Ltd.</li>
-                            <li>Resurgent India Ltd.</li>
+                            Dell,
+                            Airtel,
+                            Care Ratings Ltd.,
+                            Resurgent India Ltd.,
                         </ul>
                         <p>Hailing from a background rich in technology and process management, he engaged in a deep understanding of finance, allowing him to pave the way to innovation while ensuring business viability and growth.</p>
                         <p>His skills, however, beyond technical acumen, germinate from dynamic thought leadership and values that he holds. His style of leadership is one to get his hands dirty, and at all levels, he instils integrity, collaboration, and performance excellence.</p>
@@ -765,12 +765,12 @@
                         <p>The CEO and director of Jaikvik Technology India Private Limited, Mr. Kranti Parashar has emerged as an eminent figure in Indian industry circles with his wide exposure into different domains comprising financial levels, advertising, and communication sectors for nearly over 17 years. With a great focus on execution, he entered the higher levels of leadership with an MBA background, excelling at strategic planning and relationship building.</p>
                         <p>He has found roles of very important stature in some of the country´s leading organizations throughout his career such as:</p>
                         <ul>
-                            <li>Tata Teleservices Ltd</li>
-                            <li>Kotak Mahindra Bank</li>
-                            <li>Aegon Religare</li>
-                            <li>Care Ratings Ltd.</li>
-                            <li>Indiamart Intermesh Ltd.</li>
-                            <li>Resurgent India Ltd.</li>
+                            Tata Teleservices Ltd.,
+                            Kotak Mahindra Bank,
+                            Aegon Religare,
+                            Care Ratings Ltd.,
+                            Indiamart Intermesh Ltd.,
+                            Resurgent India Ltd.,
                         </ul>
                         <p>His professional strengths include Relationship Management, Financial Management, Marketing Strategy, and Team Leadership. Mr. Parashar is strong at networking with key players in the industry, as well as making strategic decisions great for the foundation of Jaikvik Technology's client-centric model along with its penetration into new verticals.</p>
                         <p>Mr. Kranti Parashar with his pragmatic approach, cheerful nature, and much zeal joins the purposes of achieving integrated technology and branding solutions for enabling business transformations across sectors.</p>

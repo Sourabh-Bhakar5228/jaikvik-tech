@@ -6,7 +6,7 @@
  <!-- Website Slider  -->
  <div class="swiper websiteSwiper">
      <div class="websiteHeading">
-         <h2 class="text-uppercase"><a href="#">Website <span>Explore All</span></a></h2>
+         <h2 class="text-uppercase"><a href="index.php">Website </a></h2>
      </div>
      <div class="swiper-wrapper">
          <!-- Original 12 Slides -->

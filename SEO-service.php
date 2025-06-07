@@ -1291,98 +1291,10 @@
             </div>
         </div>
 
-        <section class="brand-integration-visual">
-            <h2 class="brand-heading">SEO Services Integration</h2>
-            <div class="brand-visual-container">
-                <div class="brand-visual-diagram">
-                    <svg viewBox="0 0 700 700">
-                        <circle cx="350" cy="350" r="120" />
-                        <circle cx="350" cy="350" r="180" />
-                        <circle cx="350" cy="350" r="240" />
-                        <circle cx="350" cy="350" r="300" />
-                    </svg>
-                    <div class="brand-core-circle">SEO Integration</div>
-                    <div class="brand-visual-label" style="top: 8%; left: 50%; transform: translateX(-50%);">Website Audit</div>
-                    <div class="brand-visual-label" style="top: 18%; left: 8%; transform: translateY(-50%);">On-Page SEO</div>
-                    <div class="brand-visual-label" style="top: 50%; left: 4%; transform: translateY(-50%);">Off-Page SEO</div>
-                    <div class="brand-visual-label" style="bottom: 18%; left: 8%; transform: translateY(50%);">Technical SEO</div>
-                    <div class="brand-visual-label" style="bottom: 8%; right: 8%; transform: translateY(50%);">Keyword Research</div>
-                    <div class="brand-visual-label" style="top: 50%; right: 4%; transform: translateY(-50%);">Content Optimization</div>
-                    <div class="brand-visual-label" style="top: 18%; right: 8%; transform: translateY(-50%);">Backlink Strategy</div>
-                    <div class="brand-visual-label" style="top: 38%; left: 18%; transform: translate(-50%, -50%);">Site Speed</div>
-                    <div class="brand-visual-label" style="top: 38%; right: 18%; transform: translate(50%, -50%);">Analytics Tracking</div>
-                </div>
-            </div>
-        </section>
         <?php include 'seo-reasrch.php' ?>
+        <?php include 'contact-inner-page.php' ?>
 
-        <section class="brand-stats-contact">
-            <div class="brand-stats-panel">
-                <h2 class="brand-heading">Rising Numbers, Building Confidence</h2>
-                <div class="brand-stats-container">
-                    <div class="brand-stat-card">
-                        <h3>1050+</h3>
-                        <p>Global Clients Served</p>
-                    </div>
-                    <div class="brand-stat-card">
-                        <h3>25+</h3>
-                        <p>Countries Served</p>
-                    </div>
-                    <div class="brand-stat-card">
-                        <h3>07+</h3>
-                        <p>Years of Trust</p>
-                    </div>
-                    <div class="brand-stat-card">
-                        <h3>2500+</h3>
-                        <p>Websites Optimized</p>
-                    </div>
-                    <div class="brand-stat-card">
-                        <h3>95%</h3>
-                        <p>Client Retention</p>
-                    </div>
-                    <div class="brand-stat-card">
-                        <h3>50+</h3>
-                        <p>Team of Professionals</p>
-                    </div>
-                </div>
-                <div class="brand-certifications-list">
-                    <div>
-                        <p class="brand-text">4.9 Star Customer Rating by 250+ verified customers</p>
-                    </div>
-                    <div>
-                        <p class="brand-text">Google SEO Certification completed by .. on June 28, 2023</p>
-                    </div>
-                </div>
-            </div>
-            <div class="brand-contact-panel">
-                <h2 class="brand-heading">Let's Discuss Now</h2>
-                <p class="brand-text">Fill out the form and our team will get back to you</p>
-                <form aria-label="Contact Form">
-                    <input type="text" class="brand-contact-input" placeholder="Name" required aria-label="Name">
-                    <input type="email" class="brand-contact-input" placeholder="Email" required aria-label="Email">
-                    <input type="tel" class="brand-contact-input" placeholder="Phone Number" required aria-label="Phone Number">
-                    <label>What services interest you?</label>
-                    <div class="brand-checkbox-options">
-                        <label><input type="checkbox" name="service" value="web-design" aria-label="Web Design / Development"> Web Design / Development</label>
-                        <label><input type="checkbox" name="service" value="seo" aria-label="Search Engine Optimization"> Search Engine Optimization (SEO)</label>
-                        <label><input type="checkbox" name="service" value="ecommerce" aria-label="eCommerce"> eCommerce</label>
-                        <label><input type="checkbox" name="service" value="mobile-app" aria-label="Mobile App"> Mobile App</label>
-                        <label><input type="checkbox" name="service" value="brand-promotion" aria-label="Brand Promotion"> Brand Promotion</label>
-                        <label><input type="checkbox" name="service" value="ppc" aria-label="Pay Per Click"> Pay Per Click (PPC)</label>
-                        <label><input type="checkbox" name="service" value="content" aria-label="Content Writing"> Content Writing</label>
-                        <label><input type="checkbox" name="service" value="smo" aria-label="Social Media"> Social Media (SMO)</label>
-                        <label><input type="checkbox" name="service" value="hosting" aria-label="Web Hosting / Maintenance"> Web Hosting / Maintenance</label>
-                        <label><input type="checkbox" name="service" value="others" aria-label="Others"> Others</label>
-                    </div>
-                    <textarea class="brand-contact-textarea" placeholder="Write Your Message" required aria-label="Message"></textarea>
-                    <div class="brand-captcha-verification">
-                        <label><input type="checkbox" required aria-label="CAPTCHA Verification"> I'm not a robot</label>
-                        <span>reCAPTCHA Privacy - Terms</span>
-                    </div>
-                    <button type="submit" class="brand-submit-btn" aria-label="Submit Contact Form">Submit</button>
-                </form>
-            </div>
-        </section>
+
     </div>
     <?php include 'includes/footer.php' ?>
 

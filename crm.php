@@ -222,7 +222,6 @@
             transform: translateY(40px);
             transition: opacity 1s ease-out, transform 1s ease-out;
             align-items: center;
-            /* Center content vertically on mobile */
         }
 
         .jt-content-block.visible {
@@ -234,16 +233,10 @@
             width: 100%;
             max-width: 550px;
             max-height: 900px;
-            /* Fixed height to prevent resizing */
-            /* object-fit: cover; */
-            /* Prevents stretching */
-            /* aspect-ratio: 16 / 9; */
-            /* Maintains consistent proportions */
             border-radius: 12px;
             transition: transform 0.5s ease, filter 0.5s ease;
             filter: brightness(80%) contrast(110%);
             align-self: center;
-            /* Center image horizontally */
         }
 
         .jt-content-block img:hover {
@@ -256,9 +249,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            /* Align text to start for readability */
             justify-content: center;
-            /* Center text vertically in row layout */
             width: 100%;
         }
 
@@ -419,201 +410,6 @@
             }
         }
 
-        .jt-stats-contact {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin: 30px 0;
-            background: var(--jt-light-gray);
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-            border: 1px solid var(--jt-highlight-color);
-        }
-
-        .jt-stats-contact.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .jt-stats-panel,
-        .jt-contact-panel {
-            flex: 1;
-        }
-
-        .jt-stats-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-
-        .jt-stat-card {
-            background: var(--jt-light-gray);
-            padding: 15px;
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.4s ease;
-            border: 1px solid var(--jt-highlight-color);
-            opacity: 0;
-            transform: translateY(25px);
-        }
-
-        .jt-stat-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .jt-stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-            border-color: var(--jt-accent-color);
-        }
-
-        .jt-stat-card h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--jt-primary-color);
-            margin: 0;
-        }
-
-        .jt-stat-card p {
-            font-size: 0.85rem;
-            font-weight: 400;
-            color: var(--jt-medium-gray);
-            margin: 8px 0 0;
-        }
-
-        .jt-certifications-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 15px;
-        }
-
-        .jt-certifications-list p {
-            font-size: 0.85rem;
-            font-weight: 400;
-            color: var(--jt-medium-gray);
-            text-align: center;
-        }
-
-        .jt-certification-img {
-            width: 100%;
-            max-width: 200px;
-            border-radius: 12px;
-            margin-top: 10px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .jt-contact-panel form {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .jt-contact-input,
-        .jt-contact-textarea {
-            padding: 10px;
-            border: 1px solid var(--jt-highlight-color);
-            border-radius: 6px;
-            background: var(--jt-light-gray);
-            color: var(--jt-primary-color);
-            font-size: 0.9rem;
-            transition: all 0.4s ease;
-            width: 100%;
-        }
-
-        .jt-contact-input:hover,
-        .jt-contact-textarea:hover {
-            border-color: var(--jt-accent-color);
-            box-shadow: 0 0 6px rgba(0, 0, 0, 0.12);
-        }
-
-        .jt-contact-input:focus,
-        .jt-contact-textarea:focus {
-            outline: none;
-            border-color: var(--jt-accent-color);
-            box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
-        }
-
-        .jt-contact-textarea {
-            resize: vertical;
-            height: 100px;
-        }
-
-        .jt-checkbox-options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 10px;
-            margin: 8px 0;
-        }
-
-        .jt-checkbox-options label {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-weight: 400;
-            color: var(--jt-medium-gray);
-            transition: color 0.4s ease;
-            cursor: pointer;
-            font-size: 0.85rem;
-        }
-
-        .jt-checkbox-options label:hover {
-            color: var(--jt-primary-color);
-        }
-
-        .jt-captcha-verification {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.85rem;
-            color: var(--jt-medium-gray);
-            margin: 8px 0;
-        }
-
-        .jt-submit-btn {
-            background: var(--jt-accent-color);
-            color: var(--jt-primary-color);
-            border: none;
-            padding: 10px;
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            margin-top: 8px;
-        }
-
-        .jt-submit-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .jt-submit-btn:hover {
-            background: #cc0000;
-        }
-
-        .jt-submit-btn:hover::before {
-            left: 100%;
-        }
-
-        /* Media Queries */
         @media (min-width: 576px) {
             .jt-hero-content h1 {
                 font-size: 2.5rem;
@@ -656,9 +452,7 @@
                 flex-direction: row;
                 padding: 30px;
                 align-items: center;
-                /* Center content vertically in row layout */
                 justify-content: space-between;
-                /* Space out text and image */
             }
 
             .jt-content-block:nth-child(even) {
@@ -667,27 +461,12 @@
 
             .jt-content-block img {
                 max-height: 450px;
-                /* Adjusted for larger screens */
                 flex: 0 0 auto;
-                /* Prevent image from shrinking */
             }
 
             .jt-block-content {
                 flex: 1;
                 max-width: 50%;
-                /* Limit text width for balance */
-            }
-
-            .jt-stats-contact {
-                flex-direction: row;
-            }
-
-            .jt-stats-container {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            }
-
-            .jt-checkbox-options {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             }
 
             .jt-visual-diagram {
@@ -835,7 +614,8 @@
                             ● The crux of CRM, as a tool, is to enable impactful donor engagement.<br>
                             <strong>5. B2B Enterprises</strong><br>
                             CRMs for B2B businesses are considered handy for generating leads, nurturing relationships, and making sales forecasts. Their common application includes the management of long-term contracts and for effective execution of inter-divisional coordination.<br>
-                            <strong>6. Education</strong><br>
+                            <strong>6.繋が
+                                Education</strong><br>
                             ● CRMs are used by schools, colleges, and training centers to manage student applications, monitor enrollment data, and maintain alumni relationships.<br>
                             ● They help enhance interdepartmental communication, staff communication, and communication with guardians.<br>
                             <strong>7. Hospitality</strong><br>
@@ -943,100 +723,8 @@
             </div>
         </div>
 
-        <section class="jt-integration-visual">
-            <h2 class="jt-section-heading">CRM Integration Overview</h2>
-            <div class="jt-visual-container">
-                <div class="jt-visual-diagram">
-                    <svg viewBox="0 0 700 700">
-                        <circle cx="350" cy="350" r="120" />
-                        <circle cx="350" cy="350" r="180" />
-                        <circle cx="350" cy="350" r="240" />
-                        <circle cx="350" cy="350" r="300" />
-                    </svg>
-                    <div class="jt-core-circle">Data Integration</div>
-                    <div class="jt-visual-label" style="top: 8%; left: 50%; transform: translateX(-50%);">Marketing Segmentation</div>
-                    <div class="jt-visual-label" style="top: 18%; left: 8%; transform: translateY(-50%);">Journey Orchestration</div>
-                    <div class="jt-visual-label" style="top: 50%; left: 4%; transform: translateY(-50%);">Kiosk Studio</div>
-                    <div class="jt-visual-label" style="bottom: 18%; left: 8%; transform: translateY(50%);">Predictive AI & BI</div>
-                    <div class="jt-visual-label" style="bottom: 8%; right: 8%; transform: translateY(50%);">Advanced Analytics</div>
-                    <div class="jt-visual-label" style="top: 65%; right: 4%; transform: translateY(-50%);">ChatGPT Integration</div>
-                    <div class="jt-visual-label" style="top: 18%; right: 8%; transform: translateY(-50%);">Sales Enablement</div>
-                    <div class="jt-visual-label" style="top: 38%; left: 18%; transform: translate(-50%, -50%);">CRO</div>
-                    <div class="jt-visual-label" style="top: 38%; right: 18%; transform: translate(50%, -50%);">Sales Force Automation</div>
-                </div>
-            </div>
-        </section>
-
         <?php include 'crm-industry-research-bar-graph.php' ?>
-
-        <section class="jt-stats-contact">
-            <div class="jt-stats-panel">
-                <h2 class="jt-section-heading">Rising Numbers, Building Confidence</h2>
-                <div class="jt-stats-container">
-                    <div class="jt-stat-card">
-                        <h3>600+</h3>
-                        <p>Global Clients Served</p>
-                    </div>
-                    <div class="jt-stat-card">
-                        <h3>18+</h3>
-                        <p>Countries Served</p>
-                    </div>
-                    <div class="jt-stat-card">
-                        <h3>09+</h3>
-                        <p>Years of Trust</p>
-                    </div>
-                    <div class="jt-stat-card">
-                        <h3>1500+</h3>
-                        <p>Projects Completed</p>
-                    </div>
-                    <div class="jt-stat-card">
-                        <h3>95%</h3>
-                        <p>Client Retention</p>
-                    </div>
-                    <div class="jt-stat-card">
-                        <h3>50+</h3>
-                        <p>Team of Professionals</p>
-                    </div>
-                </div>
-                <div class="jt-certifications-list">
-                    <div>
-                        <p class="jt-section-text">4.9 Star Customer Rating by 250+ verified customers</p>
-                    </div>
-                    <div>
-                        <p class="jt-section-text">Google Ads Creative Certification completed by .. on June 28, 2023</p>
-                        <img src="https://img.freepik.com/free-vector/gradient-crm-illustration_23-2149379653.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_hybrid&w=740" alt="Certification Badge" class="jt-certification-img">
-                    </div>
-                </div>
-            </div>
-            <div class="jt-contact-panel">
-                <h2 class="jt-section-heading">Let's Discuss Now</h2>
-                <p class="jt-section-text">Fill out the form and our team will get back to you</p>
-                <form aria-label="Contact Form">
-                    <input type="text" class="jt-contact-input" placeholder="Name" required aria-label="Name">
-                    <input type="email" class="jt-contact-input" placeholder="Email" required aria-label="Email">
-                    <input type="tel" class="jt-contact-input" placeholder="Phone Number" required aria-label="Phone Number">
-                    <label>What services interest you?</label>
-                    <div class="jt-checkbox-options">
-                        <label><input type="checkbox" name="service" value="web-design" aria-label="Web Design / Development"> Web Design / Development</label>
-                        <label><input type="checkbox" name="service" value="seo" aria-label="Search Engine Optimization"> Search Engine Optimization (SEO)</label>
-                        <label><input type="checkbox" name="service" value="ecommerce" aria-label="eCommerce"> eCommerce</label>
-                        <label><input type="checkbox" name="service" value="mobile-app" aria-label="Mobile App"> Mobile App</label>
-                        <label><input type="checkbox" name="service" value="crm" aria-label="CRM Development"> CRM Development</label>
-                        <label><input type="checkbox" name="service" value="ppc" aria-label="Pay Per Click"> Pay Per Click (PPC)</label>
-                        <label><input type="checkbox" name="service" value="content" aria-label="Content Writing"> Content Writing</label>
-                        <label><input type="checkbox" name="service" value="smo" aria-label="Social Media"> Social Media (SMO)</label>
-                        <label><input type="checkbox" name="service" value="hosting" aria-label="Web Hosting / Maintenance"> Web Hosting / Maintenance</label>
-                        <label><input type="checkbox" name="service" value="others" aria-label="Others"> Others</label>
-                    </div>
-                    <textarea class="jt-contact-textarea" placeholder="Write Your Message" required aria-label="Message"></textarea>
-                    <div class="jt-captcha-verification">
-                        <label><input type="checkbox" required aria-label="CAPTCHA Verification"> I'm not a robot</label>
-                        <span>reCAPTCHA Privacy - Terms</span>
-                    </div>
-                    <button type="submit" class="jt-submit-btn" aria-label="Submit Contact Form">Submit</button>
-                </form>
-            </div>
-        </section>
+        <?php include 'contact-inner-page.php' ?>
     </div>
 
     <?php include 'includes/footer.php' ?>
@@ -1064,7 +752,7 @@
         });
 
         function jtInitAnimations() {
-            const elements = document.querySelectorAll('.jt-content-block, .jt-stats-contact, .jt-integration-visual, .jt-stat-card, .jt-section-heading');
+            const elements = document.querySelectorAll('.jt-content-block, .jt-integration-visual, .jt-section-heading');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {

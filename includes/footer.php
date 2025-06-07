@@ -239,12 +239,12 @@
             <div class="footerLink">
                 <h3>Our Services</h3>
                 <ul>
-                    <li><a href="digital-marketing.php">Digital Marketing</a></li>
                     <li><a href="mobile-application.php">Software Development</a></li>
-                    <li><a href="Film_production.php">Film Making</a></li>
-                    <li><a href="SEO-service.php">SEO (Search Engine Optimization)</a></li>
-                    <li><a href="">E-Commerce</a></li>
                     <li><a href="website-development-page.php">Website Development</a></li>
+                    <li><a href="digital-marketing.php">Digital Marketing</a></li>
+                    <li><a href="SEO-service.php">SEO (Search Engine Optimization)</a></li>
+                    <li><a href="Film_production.php">Film Making</a></li>
+                    <li><a href="website-development-page.php">E-Commerce</a></li>
                 </ul>
             </div>
         </div>

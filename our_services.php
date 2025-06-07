@@ -711,12 +711,12 @@
                 <div class="swiper-slide service-slide-item">
                     <div class="service-card-item">
                         <span class="card-badge-tag">Popular</span>
-                        <img src="https://images.unsplash.com/photo-1630442923896-244dd3717b35?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8TW9iaWxlJTIwQXBwJTIwRGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D" class="card-main-img" alt="Mobile App Development">
+                        <img src="https://img.freepik.com/free-vector/app-development-banner_33099-1720.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" class="card-main-img" alt="Mobile App Development">
                         <div class="card-gallery-slider swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1721080250995-5a83519eb2a0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8TW9iaWxlJTIwQXBwJTIwRGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D" alt="Mobile App Gallery 1"></div>
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1517292987719-0369a794ec0f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fE1vYmlsZSUyMEFwcCUyMERldmVsb3BtZW50fGVufDB8fDB8fHww" alt="Mobile App Gallery 2"></div>
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fE1vYmlsZSUyMEFwcCUyMERldmVsb3BtZW50fGVufDB8fDB8fHww" alt="Mobile App Gallery 3"></div>
+                                <div class="swiper-slide"><img src="https://img.freepik.com/free-vector/realistic-ui-ux-background_23-2149046824.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Mobile App Gallery 1"></div>
+                                <div class="swiper-slide"><img src="https://img.freepik.com/premium-vector/app-development-isometric-stock-illustration-eps-10-file_357500-4225.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Mobile App Gallery 2"></div>
+                                <div class="swiper-slide"><img src="https://img.freepik.com/premium-vector/app-development-isometric-stock-illustration-eps-10-file_357500-4225.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Mobile App Gallery 3"></div>
                             </div>
                         </div>
                         <div class="card-content-wrapper">
@@ -730,12 +730,12 @@
                 <div class="swiper-slide service-slide-item">
                     <div class="service-card-item">
                         <span class="card-badge-tag">Featured</span>
-                        <img src="https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8V2ViJTIwRGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D" class="card-main-img" alt="Web Development">
+                        <img src="https://img.freepik.com/premium-photo/web-development-coding-programming-internet-technology-business-concept_628331-833.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" class="card-main-img" alt="Web Development">
                         <div class="card-gallery-slider swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8V2ViJTIwRGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D" alt="Web Development Gallery 1"></div>
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fFdlYiUyMERldmVsb3BtZW50fGVufDB8fDB8fHww" alt="Web Development Gallery 2"></div>
-                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1678565869434-c81195861939?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fFdlYiUyMERldmVsb3BtZW50fGVufDB8fDB8fHww" alt="Web Development Gallery 3"></div>
+                                <div class="swiper-slide"><img src="https://img.freepik.com/free-vector/website-development-banner_33099-1687.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Web Development Gallery 1"></div>
+                                <div class="swiper-slide"><img src="https://img.freepik.com/free-photo/programming-background-collage_23-2149901783.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Web Development Gallery 2"></div>
+                                <div class="swiper-slide"><img src="https://img.freepik.com/premium-vector/programmer-multi-language-information-infographic-concept-computer-screen_999616-1274.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Web Development Gallery 3"></div>
                             </div>
                         </div>
                         <div class="card-content-wrapper">
@@ -748,12 +748,12 @@
                 <!-- Service 3 -->
                 <div class="swiper-slide service-slide-item">
                     <div class="service-card-item">
-                        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8VUklMkZVWCUyMERlc2lnbnxlbnwwfHwwfHx8MA%3D%3D" class="card-main-img" alt="Film Production">
+                        <img src="https://img.freepik.com/free-psd/3d-cinema-icon-illustration-with-clapperboard_23-2150629821.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740">
                         <div class="card-gallery-slider swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fFVJJTJGVVglMjBEZXNpZ258ZW58MHx8MHx8fDA%3D" alt="Film Production Gallery 1"></div>
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1602576666092-bf6447a729fc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fFVJJTJGVVglMjBEZXNpZ258ZW58MHx8MHx8fDA%3D" alt="Film Production Gallery 2"></div>
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1586717799252-bd134ad00779?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fFVJJTJGVVglMjBEZXNpZ258ZW58MHx8MHx8fDA%3D" alt="Film Production Gallery 3"></div>
+                                <div class="swiper-slide"><img src="https://img.freepik.com/free-photo/close-up-clapperboard_23-2147681346.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Film Production Gallery 1"></div>
+                                <div class="swiper-slide"><img src="https://img.freepik.com/premium-vector/poster-movie-camera-chalk_8382-342.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Film Production Gallery 2"></div>
+                                <div class="swiper-slide"><img src="https://img.freepik.com/free-photo/3d-render-movie-maker-3d-illustration-design_460848-9858.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Film Production Gallery 3"></div>
                             </div>
                         </div>
                         <div class="card-content-wrapper">
@@ -767,12 +767,12 @@
                 <div class="swiper-slide service-slide-item">
                     <div class="service-card-item">
                         <span class="card-badge-tag">Hot</span>
-                        <img src="https://plus.unsplash.com/premium_photo-1681488262364-8aeb1b6aac56?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RSUyMGNvbW1lcmNlJTIwU29sdXRpb25zfGVufDB8fDB8fHww" class="card-main-img" alt="E-commerce Solutions">
+                        <img src="https://img.freepik.com/free-photo/showing-cart-trolley-shopping-online-sign-graphic_53876-133967.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" class="card-main-img" alt="E-commerce Solutions">
                         <div class="card-gallery-slider swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1684785618727-378a3a5e91c5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fEUlMjBjb21tZXJjZSUyMFNvbHV0aW9uc3xlbnwwfHwwfHx8MA%3D%3D" alt="E-commerce Gallery 1"></div>
-                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1661456268709-bac8e7f21e51?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fEUlMjBjb21tZXJjZSUyMFNvbHV0aW9uc3xlbnwwfHwwfHx8MA%3D%3D" alt="E-commerce Gallery 2"></div>
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1726138383736-3c848a2c7769?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fEUlMjBjb21tZXJjZSUyMFNvbHV0aW9uc3xlbnwwfHwwfHx8MA%3D%3D" alt="E-commerce Gallery 3"></div>
+                                <div class="swiper-slide"><img src="https://img.freepik.com/free-vector/worldwide-e-commerce-concept_23-2147657845.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="E-commerce Gallery 1"></div>
+                                <div class="swiper-slide"><img src="https://img.freepik.com/free-vector/worldwide-e-commerce-concept_23-2147657845.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="E-commerce Gallery 2"></div>
+                                <div class="swiper-slide"><img src="https://img.freepik.com/free-vector/worldwide-e-commerce-concept_23-2147657845.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="E-commerce Gallery 3"></div>
                             </div>
                         </div>
                         <div class="card-content-wrapper">
@@ -785,12 +785,12 @@
                 <!-- Service 5 -->
                 <div class="swiper-slide service-slide-item">
                     <div class="service-card-item">
-                        <img src="https://plus.unsplash.com/premium_photo-1683120968693-9af51578770e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q2xvdWQlMjBTZXJ2aWNlc3xlbnwwfHwwfHx8MA%3D%3D" class="card-main-img" alt="Cloud Services">
+                        <img src="https://img.freepik.com/free-vector/isometric-cloud-storage-background_52683-1098.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740">
                         <div class="card-gallery-slider swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1683836722608-60ab4d1b58e5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Q2xvdWQlMjBTZXJ2aWNlc3xlbnwwfHwwfHx8MA%3D%3D" alt="Cloud Services Gallery 1"></div>
-                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1681487942927-e1a2786e6036?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Q2xvdWQlMjBTZXJ2aWNlc3xlbnwwfHwwfHx8MA%3D%3D" alt="Cloud Services Gallery 2"></div>
-                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1683288706548-e8b6bb72fe86?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fENsb3VkJTIwU2VydmljZXN8ZW58MHx8MHx8fDA%3D" alt="Cloud Services Gallery 3"></div>
+                                <div class="swiper-slide"><img src="https://img.freepik.com/free-vector/cloud-technology-storage-transfer-data-isometric-mobile-phone-data-downloading_39422-877.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Cloud Services Gallery 1"></div>
+                                <div class="swiper-slide"><img src="https://img.freepik.com/free-vector/big-data-source-data-center-cloud-computing-cloud-storage-isometric-concept-server-room-rack_39422-964.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Cloud Services Gallery 2"></div>
+                                <div class="swiper-slide"><img src="https://img.freepik.com/free-vector/big-data-source-data-center-cloud-computing-cloud-storage-isometric-concept-server-room-rack_39422-964.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Cloud Services Gallery 3"></div>
                             </div>
                         </div>
                         <div class="card-content-wrapper">
@@ -804,12 +804,12 @@
                 <div class="swiper-slide service-slide-item">
                     <div class="service-card-item">
                         <span class="card-badge-tag">New</span>
-                        <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RGlnaXRhbCUyME1hcmtldGluZ3xlbnwwfHwwfHx8MA%3D%3D" class="card-main-img" alt="Digital Marketing">
+                        <img src="https://img.freepik.com/free-photo/digital-marketing-with-icons-business-people_53876-94833.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" class="card-main-img" alt="Digital Marketing">
                         <div class="card-gallery-slider swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1537731121640-29c85a43dcfe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fERpZ2l0YWwlMjBNYXJrZXRpbmd8ZW58MHx8MHx8fDA%3D" alt="Digital Marketing Gallery 1"></div>
-                                <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1683262038148-2ac280407276?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fERpZ2l0YWwlMjBNYXJrZXRpbmd8ZW58MHx8MHx8fDA%3D" alt="Digital Marketing Gallery 2"></div>
-                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fERpZ2l0YWwlMjBNYXJrZXRpbmd8ZW58MHx8MHx8fDA%3D" alt="Digital Marketing Gallery 3"></div>
+                                <div class="swiper-slide"><img src="https://img.freepik.com/premium-vector/poster-with-words-digital-marketing-it_823925-2306.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Digital Marketing Gallery 1"></div>
+                                <div class="swiper-slide"><img src="https://img.freepik.com/premium-vector/poster-with-words-digital-marketing-it_823925-2306.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Digital Marketing Gallery 2"></div>
+                                <div class="swiper-slide"><img src="https://img.freepik.com/premium-vector/poster-with-words-digital-marketing-it_823925-2306.jpg?uid=R186472209&ga=GA1.1.455755995.1738954286&semt=ais_items_boosted&w=740" alt="Digital Marketing Gallery 3"></div>
                             </div>
                         </div>
                         <div class="card-content-wrapper">
